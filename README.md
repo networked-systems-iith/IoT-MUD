@@ -4,7 +4,7 @@ Step 1: Go To Flow Rules Folder.
 
 Step 2: Unzip the JSON folder to get the Json files of each IOT Devices
 
-Step 3: Run the Flowrules.ipynb file and the obtained rules are stored in Data folder named "ACL_All_IOT_Devices.csv"
+Step 3: Run the Flowrules.ipynb file and the obtained rules are stored in "ACL_All_IOT_Devices.csv"
 
 Step 4: Remove the duplicate records from the file and name it as project_data_final.xlsx
 
