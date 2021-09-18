@@ -1,0 +1,16 @@
+sEth,dEth,typEth,Source,Destination,proto,sPort,dPort,action
+9e:8d:de:80:29:28,ff:ff:ff:ff:ff:ff,0x0800,s1b.time.edu.cn,dcape-na.amazon.com,17,123,443,forward
+*,9e:8d:de:80:29:28,0x0800,fr.pool.ntp.org,softwareupdates.amazon.com,17,123,80,forward
+9e:8d:de:80:29:28,ff:ff:ff:ff:ff:ff,0x0800,de.pool.ntp.org,3.north-america.pool.ntp.org,17,123,53,forward
+9e:8d:de:80:29:28,ff:ff:ff:ff:ff:ff,0x0006,us.pool.ntp.org,224.0.0.22/32,17,123,67,forward
+*,9e:8d:de:80:29:28,0x0800,ca.pool.ntp.org,239.255.255.250/32,17,123,33434,forward
+9e:8d:de:80:29:28,ff:ff:ff:ff:ff:ff,0x0800,0.cn.pool.ntp.org,255.255.255.255/32,17,123,50000,forward
+*,9e:8d:de:80:29:28,0x0800,uk.pool.ntp.org,ntp-g7g.amazon.com,17,123,3478,forward
+*,9e:8d:de:80:29:28,0x0800,time-b.nist.gov,todo-ta-g7g.amazon.com,17,123,5104,forward
+9e:8d:de:80:29:28,ff:ff:ff:ff:ff:ff,0x0800,ru.pool.ntp.org,*,17,123,8777,forward
+9e:8d:de:80:29:28,ff:ff:ff:ff:ff:ff,0x0800,1.asia.pool.ntp.org,www.example.org,17,123,41954,forward
+9e:8d:de:80:29:28,ff:ff:ff:ff:ff:ff,0x0800,devs.tplinkcloud.com,*,6,50443,1935,forward
+*,9e:8d:de:80:29:28,*,iconfig.august.com,*,6,443,*,forward
+9e:8d:de:80:29:28,*,*,*,tech.carematix.com,6,*,8777,forward
+*,9e:8d:de:80:29:28,*,ssl.gstatic.com,*,6,80,*,forward
+*,*,*,*,*,*,*,*,deny
