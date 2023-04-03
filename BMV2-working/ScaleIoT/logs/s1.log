@@ -1,0 +1,2796 @@
+Calling target program-options parser
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'tbl_act': act - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'MyIngress.ipv4_lpm': NoAction - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'tbl_scaleIoT508': scaleIoT508 - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'tbl_scaleIoT512': scaleIoT512 - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'MyIngress.sMAC_exact': MyIngress.default_action_one - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'MyIngress.sMAC_default': MyIngress.drop - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'tbl_scaleIoT521': scaleIoT521 - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'tbl_scaleIoT523': scaleIoT523 - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'MyIngress.dMAC_exact': NoAction - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'MyIngress.dMAC_default': MyIngress.drop - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'tbl_scaleIoT528': scaleIoT528 - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'tbl_scaleIoT530': scaleIoT530 - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'MyIngress.typEth_exact': NoAction - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'MyIngress.typEth_default': MyIngress.drop - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'tbl_scaleIoT535': scaleIoT535 - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'tbl_scaleIoT537': scaleIoT537 - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'MyIngress.proto_exact': NoAction - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'MyIngress.proto_default': MyIngress.drop - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'tbl_scaleIoT542': scaleIoT542 - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'tbl_scaleIoT544': scaleIoT544 - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'MyIngress.sPort_exact': NoAction - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'MyIngress.sPort_default': MyIngress.drop - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'tbl_scaleIoT549': scaleIoT549 - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'tbl_scaleIoT551': scaleIoT551 - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'MyIngress.dPort_exact': NoAction - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'MyIngress.dPort_default': MyIngress.drop - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'tbl_scaleIoT556': scaleIoT556 - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'tbl_scaleIoT558': scaleIoT558 - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'MyIngress.srcIP_exact': NoAction - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'MyIngress.srcIP_default': MyIngress.drop - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'tbl_scaleIoT563': scaleIoT563 - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'tbl_scaleIoT565': scaleIoT565 - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'MyIngress.dstIP_exact': NoAction - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'MyIngress.dstIP_default': MyIngress.drop - 
+[08:34:01.437] [bmv2] [D] [thread 23652] Set default default entry for table 'tbl_scaleIoT570': scaleIoT570 - 
+Adding interface s1-eth1 as port 1
+[08:34:01.439] [bmv2] [D] [thread 23652] Adding interface s1-eth1 as port 1
+Adding interface s1-eth2 as port 2
+[08:34:01.470] [bmv2] [D] [thread 23652] Adding interface s1-eth2 as port 2
+Server listening on 0.0.0.0:50051
+[08:34:01.499] [bmv2] [I] [thread 23652] Starting Thrift server on port 9090
+[08:34:01.499] [bmv2] [I] [thread 23652] Thrift server was started
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Processing packet received on port 1
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Parser 'parser': start
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Extracting header 'ethernet'
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Parser state 'start': key is 86dd
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] Bytes parsed: 14
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Parser 'parser': end
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Pipeline 'ingress': start
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] Applying table 'tbl_act'
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Looking up key:
+
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Table 'tbl_act': miss
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Action entry is act - 
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] Action act
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] Primitive (no source info)
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Table 'MyIngress.ipv4_lpm': miss
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Action entry is NoAction - 
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] Action NoAction
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] scaleIoT.p4(507) Condition "hdr.tcp.isValid()" (node_4) is false
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] scaleIoT.p4(511) Condition "hdr.udp.isValid()" (node_6) is false
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] Applying table 'MyIngress.sMAC_exact'
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Looking up key:
+* hdr.ethernet.sEth   : 9a4e36a4bf12
+
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Table 'MyIngress.sMAC_exact': miss
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Action entry is MyIngress.default_action_one - 
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] Action MyIngress.default_action_one
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] scaleIoT.p4(220) Primitive meta.stub_current_state_value = 0
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] scaleIoT.p4(518) Condition "meta.flag==0" (node_9) is true
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] Applying table 'MyIngress.sMAC_default'
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Looking up key:
+* meta.stub_current_state_value: 000000
+
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Table 'MyIngress.sMAC_default': miss
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Action entry is MyIngress.drop - 
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] Action MyIngress.drop
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] scaleIoT.p4(190) Primitive meta.dropFlag = 1
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] scaleIoT.p4(191) Primitive mark_to_drop(standard_metadata)
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] scaleIoT.p4(521) Condition "meta.dropFlag == 1" (node_11) is true
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] Applying table 'tbl_scaleIoT521'
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Looking up key:
+
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Table 'tbl_scaleIoT521': miss
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Action entry is scaleIoT521 - 
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] Action scaleIoT521
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] scaleIoT.p4(521) Primitive return
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] Condition "node_13" (node_13) is true
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] Condition "node_20" (node_20) is true
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] Condition "node_27" (node_27) is true
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] Condition "node_34" (node_34) is true
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] Condition "node_41" (node_41) is true
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] Condition "node_48" (node_48) is true
+[08:34:01.654] [bmv2] [T] [thread 23662] [0.0] [cxt 0] Condition "node_55" (node_55) is true
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Pipeline 'ingress': end
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Egress port is 511
+[08:34:01.654] [bmv2] [D] [thread 23662] [0.0] [cxt 0] Dropping packet at the end of ingress
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Processing packet received on port 2
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Parser 'parser': start
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Extracting header 'ethernet'
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Parser state 'start': key is 86dd
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] Bytes parsed: 14
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Parser 'parser': end
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Pipeline 'ingress': start
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] Applying table 'tbl_act'
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Looking up key:
+
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Table 'tbl_act': miss
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Action entry is act - 
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] Action act
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] Primitive (no source info)
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Table 'MyIngress.ipv4_lpm': miss
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Action entry is NoAction - 
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] Action NoAction
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] scaleIoT.p4(507) Condition "hdr.tcp.isValid()" (node_4) is false
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] scaleIoT.p4(511) Condition "hdr.udp.isValid()" (node_6) is false
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] Applying table 'MyIngress.sMAC_exact'
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Looking up key:
+* hdr.ethernet.sEth   : d2e92fe7818b
+
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Table 'MyIngress.sMAC_exact': miss
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Action entry is MyIngress.default_action_one - 
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] Action MyIngress.default_action_one
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] scaleIoT.p4(220) Primitive meta.stub_current_state_value = 0
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] scaleIoT.p4(518) Condition "meta.flag==0" (node_9) is true
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] Applying table 'MyIngress.sMAC_default'
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Looking up key:
+* meta.stub_current_state_value: 000000
+
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Table 'MyIngress.sMAC_default': miss
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Action entry is MyIngress.drop - 
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] Action MyIngress.drop
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] scaleIoT.p4(190) Primitive meta.dropFlag = 1
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] scaleIoT.p4(191) Primitive mark_to_drop(standard_metadata)
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] scaleIoT.p4(521) Condition "meta.dropFlag == 1" (node_11) is true
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] Applying table 'tbl_scaleIoT521'
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Looking up key:
+
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Table 'tbl_scaleIoT521': miss
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Action entry is scaleIoT521 - 
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] Action scaleIoT521
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] scaleIoT.p4(521) Primitive return
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] Condition "node_13" (node_13) is true
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] Condition "node_20" (node_20) is true
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] Condition "node_27" (node_27) is true
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] Condition "node_34" (node_34) is true
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] Condition "node_41" (node_41) is true
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] Condition "node_48" (node_48) is true
+[08:34:02.006] [bmv2] [T] [thread 23662] [1.0] [cxt 0] Condition "node_55" (node_55) is true
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Pipeline 'ingress': end
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Egress port is 511
+[08:34:02.006] [bmv2] [D] [thread 23662] [1.0] [cxt 0] Dropping packet at the end of ingress
+[08:34:02.169] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Processing packet received on port 1
+[08:34:02.169] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Parser 'parser': start
+[08:34:02.169] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:34:02.169] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Extracting header 'ethernet'
+[08:34:02.169] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Parser state 'start': key is 86dd
+[08:34:02.169] [bmv2] [T] [thread 23662] [2.0] [cxt 0] Bytes parsed: 14
+[08:34:02.169] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Parser 'parser': end
+[08:34:02.169] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Pipeline 'ingress': start
+[08:34:02.169] [bmv2] [T] [thread 23662] [2.0] [cxt 0] Applying table 'tbl_act'
+[08:34:02.169] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Looking up key:
+
+[08:34:02.169] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Table 'tbl_act': miss
+[08:34:02.169] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Action entry is act - 
+[08:34:02.169] [bmv2] [T] [thread 23662] [2.0] [cxt 0] Action act
+[08:34:02.169] [bmv2] [T] [thread 23662] [2.0] [cxt 0] Primitive (no source info)
+[08:34:02.169] [bmv2] [T] [thread 23662] [2.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:34:02.169] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:34:02.170] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Table 'MyIngress.ipv4_lpm': miss
+[08:34:02.170] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Action entry is NoAction - 
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] Action NoAction
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] scaleIoT.p4(507) Condition "hdr.tcp.isValid()" (node_4) is false
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] scaleIoT.p4(511) Condition "hdr.udp.isValid()" (node_6) is false
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] Applying table 'MyIngress.sMAC_exact'
+[08:34:02.170] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Looking up key:
+* hdr.ethernet.sEth   : 9a4e36a4bf12
+
+[08:34:02.170] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Table 'MyIngress.sMAC_exact': miss
+[08:34:02.170] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Action entry is MyIngress.default_action_one - 
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] Action MyIngress.default_action_one
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] scaleIoT.p4(220) Primitive meta.stub_current_state_value = 0
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] scaleIoT.p4(518) Condition "meta.flag==0" (node_9) is true
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] Applying table 'MyIngress.sMAC_default'
+[08:34:02.170] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Looking up key:
+* meta.stub_current_state_value: 000000
+
+[08:34:02.170] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Table 'MyIngress.sMAC_default': miss
+[08:34:02.170] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Action entry is MyIngress.drop - 
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] Action MyIngress.drop
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] scaleIoT.p4(190) Primitive meta.dropFlag = 1
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] scaleIoT.p4(191) Primitive mark_to_drop(standard_metadata)
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] scaleIoT.p4(521) Condition "meta.dropFlag == 1" (node_11) is true
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] Applying table 'tbl_scaleIoT521'
+[08:34:02.170] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Looking up key:
+
+[08:34:02.170] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Table 'tbl_scaleIoT521': miss
+[08:34:02.170] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Action entry is scaleIoT521 - 
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] Action scaleIoT521
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] scaleIoT.p4(521) Primitive return
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] Condition "node_13" (node_13) is true
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] Condition "node_20" (node_20) is true
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] Condition "node_27" (node_27) is true
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] Condition "node_34" (node_34) is true
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] Condition "node_41" (node_41) is true
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] Condition "node_48" (node_48) is true
+[08:34:02.170] [bmv2] [T] [thread 23662] [2.0] [cxt 0] Condition "node_55" (node_55) is true
+[08:34:02.170] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Pipeline 'ingress': end
+[08:34:02.170] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Egress port is 511
+[08:34:02.170] [bmv2] [D] [thread 23662] [2.0] [cxt 0] Dropping packet at the end of ingress
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Processing packet received on port 2
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Parser 'parser': start
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Extracting header 'ethernet'
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Parser state 'start': key is 86dd
+[08:34:02.296] [bmv2] [T] [thread 23662] [3.0] [cxt 0] Bytes parsed: 14
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Parser 'parser': end
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Pipeline 'ingress': start
+[08:34:02.296] [bmv2] [T] [thread 23662] [3.0] [cxt 0] Applying table 'tbl_act'
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Looking up key:
+
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Table 'tbl_act': miss
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Action entry is act - 
+[08:34:02.296] [bmv2] [T] [thread 23662] [3.0] [cxt 0] Action act
+[08:34:02.296] [bmv2] [T] [thread 23662] [3.0] [cxt 0] Primitive (no source info)
+[08:34:02.296] [bmv2] [T] [thread 23662] [3.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Table 'MyIngress.ipv4_lpm': miss
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Action entry is NoAction - 
+[08:34:02.296] [bmv2] [T] [thread 23662] [3.0] [cxt 0] Action NoAction
+[08:34:02.296] [bmv2] [T] [thread 23662] [3.0] [cxt 0] scaleIoT.p4(507) Condition "hdr.tcp.isValid()" (node_4) is false
+[08:34:02.296] [bmv2] [T] [thread 23662] [3.0] [cxt 0] scaleIoT.p4(511) Condition "hdr.udp.isValid()" (node_6) is false
+[08:34:02.296] [bmv2] [T] [thread 23662] [3.0] [cxt 0] Applying table 'MyIngress.sMAC_exact'
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Looking up key:
+* hdr.ethernet.sEth   : d2e92fe7818b
+
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Table 'MyIngress.sMAC_exact': miss
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Action entry is MyIngress.default_action_one - 
+[08:34:02.296] [bmv2] [T] [thread 23662] [3.0] [cxt 0] Action MyIngress.default_action_one
+[08:34:02.296] [bmv2] [T] [thread 23662] [3.0] [cxt 0] scaleIoT.p4(220) Primitive meta.stub_current_state_value = 0
+[08:34:02.296] [bmv2] [T] [thread 23662] [3.0] [cxt 0] scaleIoT.p4(518) Condition "meta.flag==0" (node_9) is true
+[08:34:02.296] [bmv2] [T] [thread 23662] [3.0] [cxt 0] Applying table 'MyIngress.sMAC_default'
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Looking up key:
+* meta.stub_current_state_value: 000000
+
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Table 'MyIngress.sMAC_default': miss
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Action entry is MyIngress.drop - 
+[08:34:02.296] [bmv2] [T] [thread 23662] [3.0] [cxt 0] Action MyIngress.drop
+[08:34:02.296] [bmv2] [T] [thread 23662] [3.0] [cxt 0] scaleIoT.p4(190) Primitive meta.dropFlag = 1
+[08:34:02.296] [bmv2] [T] [thread 23662] [3.0] [cxt 0] scaleIoT.p4(191) Primitive mark_to_drop(standard_metadata)
+[08:34:02.296] [bmv2] [T] [thread 23662] [3.0] [cxt 0] scaleIoT.p4(521) Condition "meta.dropFlag == 1" (node_11) is true
+[08:34:02.296] [bmv2] [T] [thread 23662] [3.0] [cxt 0] Applying table 'tbl_scaleIoT521'
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Looking up key:
+
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Table 'tbl_scaleIoT521': miss
+[08:34:02.296] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Action entry is scaleIoT521 - 
+[08:34:02.296] [bmv2] [T] [thread 23662] [3.0] [cxt 0] Action scaleIoT521
+[08:34:02.296] [bmv2] [T] [thread 23662] [3.0] [cxt 0] scaleIoT.p4(521) Primitive return
+[08:34:02.297] [bmv2] [T] [thread 23662] [3.0] [cxt 0] Condition "node_13" (node_13) is true
+[08:34:02.297] [bmv2] [T] [thread 23662] [3.0] [cxt 0] Condition "node_20" (node_20) is true
+[08:34:02.297] [bmv2] [T] [thread 23662] [3.0] [cxt 0] Condition "node_27" (node_27) is true
+[08:34:02.297] [bmv2] [T] [thread 23662] [3.0] [cxt 0] Condition "node_34" (node_34) is true
+[08:34:02.297] [bmv2] [T] [thread 23662] [3.0] [cxt 0] Condition "node_41" (node_41) is true
+[08:34:02.297] [bmv2] [T] [thread 23662] [3.0] [cxt 0] Condition "node_48" (node_48) is true
+[08:34:02.297] [bmv2] [T] [thread 23662] [3.0] [cxt 0] Condition "node_55" (node_55) is true
+[08:34:02.297] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Pipeline 'ingress': end
+[08:34:02.297] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Egress port is 511
+[08:34:02.297] [bmv2] [D] [thread 23662] [3.0] [cxt 0] Dropping packet at the end of ingress
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Processing packet received on port 2
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Parser 'parser': start
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Extracting header 'ethernet'
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Parser state 'start': key is 86dd
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] Bytes parsed: 14
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Parser 'parser': end
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Pipeline 'ingress': start
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] Applying table 'tbl_act'
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Looking up key:
+
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Table 'tbl_act': miss
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Action entry is act - 
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] Action act
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] Primitive (no source info)
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Table 'MyIngress.ipv4_lpm': miss
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Action entry is NoAction - 
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] Action NoAction
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] scaleIoT.p4(507) Condition "hdr.tcp.isValid()" (node_4) is false
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] scaleIoT.p4(511) Condition "hdr.udp.isValid()" (node_6) is false
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] Applying table 'MyIngress.sMAC_exact'
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Looking up key:
+* hdr.ethernet.sEth   : d2e92fe7818b
+
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Table 'MyIngress.sMAC_exact': miss
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Action entry is MyIngress.default_action_one - 
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] Action MyIngress.default_action_one
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] scaleIoT.p4(220) Primitive meta.stub_current_state_value = 0
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] scaleIoT.p4(518) Condition "meta.flag==0" (node_9) is true
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] Applying table 'MyIngress.sMAC_default'
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Looking up key:
+* meta.stub_current_state_value: 000000
+
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Table 'MyIngress.sMAC_default': miss
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Action entry is MyIngress.drop - 
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] Action MyIngress.drop
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] scaleIoT.p4(190) Primitive meta.dropFlag = 1
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] scaleIoT.p4(191) Primitive mark_to_drop(standard_metadata)
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] scaleIoT.p4(521) Condition "meta.dropFlag == 1" (node_11) is true
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] Applying table 'tbl_scaleIoT521'
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Looking up key:
+
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Table 'tbl_scaleIoT521': miss
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Action entry is scaleIoT521 - 
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] Action scaleIoT521
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] scaleIoT.p4(521) Primitive return
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] Condition "node_13" (node_13) is true
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] Condition "node_20" (node_20) is true
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] Condition "node_27" (node_27) is true
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] Condition "node_34" (node_34) is true
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] Condition "node_41" (node_41) is true
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] Condition "node_48" (node_48) is true
+[08:34:03.031] [bmv2] [T] [thread 23662] [4.0] [cxt 0] Condition "node_55" (node_55) is true
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Pipeline 'ingress': end
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Egress port is 511
+[08:34:03.031] [bmv2] [D] [thread 23662] [4.0] [cxt 0] Dropping packet at the end of ingress
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Processing packet received on port 2
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Parser 'parser': start
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Extracting header 'ethernet'
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Parser state 'start': key is 86dd
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] Bytes parsed: 14
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Parser 'parser': end
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Pipeline 'ingress': start
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] Applying table 'tbl_act'
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Looking up key:
+
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Table 'tbl_act': miss
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Action entry is act - 
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] Action act
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] Primitive (no source info)
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Table 'MyIngress.ipv4_lpm': miss
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Action entry is NoAction - 
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] Action NoAction
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] scaleIoT.p4(507) Condition "hdr.tcp.isValid()" (node_4) is false
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] scaleIoT.p4(511) Condition "hdr.udp.isValid()" (node_6) is false
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] Applying table 'MyIngress.sMAC_exact'
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Looking up key:
+* hdr.ethernet.sEth   : d2e92fe7818b
+
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Table 'MyIngress.sMAC_exact': miss
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Action entry is MyIngress.default_action_one - 
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] Action MyIngress.default_action_one
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] scaleIoT.p4(220) Primitive meta.stub_current_state_value = 0
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] scaleIoT.p4(518) Condition "meta.flag==0" (node_9) is true
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] Applying table 'MyIngress.sMAC_default'
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Looking up key:
+* meta.stub_current_state_value: 000000
+
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Table 'MyIngress.sMAC_default': miss
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Action entry is MyIngress.drop - 
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] Action MyIngress.drop
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] scaleIoT.p4(190) Primitive meta.dropFlag = 1
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] scaleIoT.p4(191) Primitive mark_to_drop(standard_metadata)
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] scaleIoT.p4(521) Condition "meta.dropFlag == 1" (node_11) is true
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] Applying table 'tbl_scaleIoT521'
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Looking up key:
+
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Table 'tbl_scaleIoT521': miss
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Action entry is scaleIoT521 - 
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] Action scaleIoT521
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] scaleIoT.p4(521) Primitive return
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] Condition "node_13" (node_13) is true
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] Condition "node_20" (node_20) is true
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] Condition "node_27" (node_27) is true
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] Condition "node_34" (node_34) is true
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] Condition "node_41" (node_41) is true
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] Condition "node_48" (node_48) is true
+[08:34:03.031] [bmv2] [T] [thread 23662] [5.0] [cxt 0] Condition "node_55" (node_55) is true
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Pipeline 'ingress': end
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Egress port is 511
+[08:34:03.031] [bmv2] [D] [thread 23662] [5.0] [cxt 0] Dropping packet at the end of ingress
+[08:34:03.195] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Processing packet received on port 1
+[08:34:03.195] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Parser 'parser': start
+[08:34:03.195] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:34:03.195] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Extracting header 'ethernet'
+[08:34:03.195] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Parser state 'start': key is 86dd
+[08:34:03.195] [bmv2] [T] [thread 23662] [6.0] [cxt 0] Bytes parsed: 14
+[08:34:03.195] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Parser 'parser': end
+[08:34:03.195] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Pipeline 'ingress': start
+[08:34:03.195] [bmv2] [T] [thread 23662] [6.0] [cxt 0] Applying table 'tbl_act'
+[08:34:03.195] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Looking up key:
+
+[08:34:03.195] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Table 'tbl_act': miss
+[08:34:03.195] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Action entry is act - 
+[08:34:03.195] [bmv2] [T] [thread 23662] [6.0] [cxt 0] Action act
+[08:34:03.195] [bmv2] [T] [thread 23662] [6.0] [cxt 0] Primitive (no source info)
+[08:34:03.195] [bmv2] [T] [thread 23662] [6.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:34:03.195] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:34:03.195] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Table 'MyIngress.ipv4_lpm': miss
+[08:34:03.195] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Action entry is NoAction - 
+[08:34:03.195] [bmv2] [T] [thread 23662] [6.0] [cxt 0] Action NoAction
+[08:34:03.195] [bmv2] [T] [thread 23662] [6.0] [cxt 0] scaleIoT.p4(507) Condition "hdr.tcp.isValid()" (node_4) is false
+[08:34:03.195] [bmv2] [T] [thread 23662] [6.0] [cxt 0] scaleIoT.p4(511) Condition "hdr.udp.isValid()" (node_6) is false
+[08:34:03.195] [bmv2] [T] [thread 23662] [6.0] [cxt 0] Applying table 'MyIngress.sMAC_exact'
+[08:34:03.195] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Looking up key:
+* hdr.ethernet.sEth   : 9a4e36a4bf12
+
+[08:34:03.195] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Table 'MyIngress.sMAC_exact': miss
+[08:34:03.195] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Action entry is MyIngress.default_action_one - 
+[08:34:03.195] [bmv2] [T] [thread 23662] [6.0] [cxt 0] Action MyIngress.default_action_one
+[08:34:03.195] [bmv2] [T] [thread 23662] [6.0] [cxt 0] scaleIoT.p4(220) Primitive meta.stub_current_state_value = 0
+[08:34:03.195] [bmv2] [T] [thread 23662] [6.0] [cxt 0] scaleIoT.p4(518) Condition "meta.flag==0" (node_9) is true
+[08:34:03.195] [bmv2] [T] [thread 23662] [6.0] [cxt 0] Applying table 'MyIngress.sMAC_default'
+[08:34:03.195] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Looking up key:
+* meta.stub_current_state_value: 000000
+
+[08:34:03.195] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Table 'MyIngress.sMAC_default': miss
+[08:34:03.195] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Action entry is MyIngress.drop - 
+[08:34:03.196] [bmv2] [T] [thread 23662] [6.0] [cxt 0] Action MyIngress.drop
+[08:34:03.196] [bmv2] [T] [thread 23662] [6.0] [cxt 0] scaleIoT.p4(190) Primitive meta.dropFlag = 1
+[08:34:03.196] [bmv2] [T] [thread 23662] [6.0] [cxt 0] scaleIoT.p4(191) Primitive mark_to_drop(standard_metadata)
+[08:34:03.196] [bmv2] [T] [thread 23662] [6.0] [cxt 0] scaleIoT.p4(521) Condition "meta.dropFlag == 1" (node_11) is true
+[08:34:03.196] [bmv2] [T] [thread 23662] [6.0] [cxt 0] Applying table 'tbl_scaleIoT521'
+[08:34:03.196] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Looking up key:
+
+[08:34:03.196] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Table 'tbl_scaleIoT521': miss
+[08:34:03.196] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Action entry is scaleIoT521 - 
+[08:34:03.196] [bmv2] [T] [thread 23662] [6.0] [cxt 0] Action scaleIoT521
+[08:34:03.196] [bmv2] [T] [thread 23662] [6.0] [cxt 0] scaleIoT.p4(521) Primitive return
+[08:34:03.196] [bmv2] [T] [thread 23662] [6.0] [cxt 0] Condition "node_13" (node_13) is true
+[08:34:03.196] [bmv2] [T] [thread 23662] [6.0] [cxt 0] Condition "node_20" (node_20) is true
+[08:34:03.196] [bmv2] [T] [thread 23662] [6.0] [cxt 0] Condition "node_27" (node_27) is true
+[08:34:03.196] [bmv2] [T] [thread 23662] [6.0] [cxt 0] Condition "node_34" (node_34) is true
+[08:34:03.196] [bmv2] [T] [thread 23662] [6.0] [cxt 0] Condition "node_41" (node_41) is true
+[08:34:03.196] [bmv2] [T] [thread 23662] [6.0] [cxt 0] Condition "node_48" (node_48) is true
+[08:34:03.196] [bmv2] [T] [thread 23662] [6.0] [cxt 0] Condition "node_55" (node_55) is true
+[08:34:03.196] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Pipeline 'ingress': end
+[08:34:03.196] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Egress port is 511
+[08:34:03.196] [bmv2] [D] [thread 23662] [6.0] [cxt 0] Dropping packet at the end of ingress
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Processing packet received on port 1
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Parser 'parser': start
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Extracting header 'ethernet'
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Parser state 'start': key is 86dd
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] Bytes parsed: 14
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Parser 'parser': end
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Pipeline 'ingress': start
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] Applying table 'tbl_act'
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Looking up key:
+
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Table 'tbl_act': miss
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Action entry is act - 
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] Action act
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] Primitive (no source info)
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Table 'MyIngress.ipv4_lpm': miss
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Action entry is NoAction - 
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] Action NoAction
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] scaleIoT.p4(507) Condition "hdr.tcp.isValid()" (node_4) is false
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] scaleIoT.p4(511) Condition "hdr.udp.isValid()" (node_6) is false
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] Applying table 'MyIngress.sMAC_exact'
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Looking up key:
+* hdr.ethernet.sEth   : 9a4e36a4bf12
+
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Table 'MyIngress.sMAC_exact': miss
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Action entry is MyIngress.default_action_one - 
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] Action MyIngress.default_action_one
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] scaleIoT.p4(220) Primitive meta.stub_current_state_value = 0
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] scaleIoT.p4(518) Condition "meta.flag==0" (node_9) is true
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] Applying table 'MyIngress.sMAC_default'
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Looking up key:
+* meta.stub_current_state_value: 000000
+
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Table 'MyIngress.sMAC_default': miss
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Action entry is MyIngress.drop - 
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] Action MyIngress.drop
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] scaleIoT.p4(190) Primitive meta.dropFlag = 1
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] scaleIoT.p4(191) Primitive mark_to_drop(standard_metadata)
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] scaleIoT.p4(521) Condition "meta.dropFlag == 1" (node_11) is true
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] Applying table 'tbl_scaleIoT521'
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Looking up key:
+
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Table 'tbl_scaleIoT521': miss
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Action entry is scaleIoT521 - 
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] Action scaleIoT521
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] scaleIoT.p4(521) Primitive return
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] Condition "node_13" (node_13) is true
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] Condition "node_20" (node_20) is true
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] Condition "node_27" (node_27) is true
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] Condition "node_34" (node_34) is true
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] Condition "node_41" (node_41) is true
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] Condition "node_48" (node_48) is true
+[08:34:03.196] [bmv2] [T] [thread 23662] [7.0] [cxt 0] Condition "node_55" (node_55) is true
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Pipeline 'ingress': end
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Egress port is 511
+[08:34:03.196] [bmv2] [D] [thread 23662] [7.0] [cxt 0] Dropping packet at the end of ingress
+[08:34:03.477] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Processing packet received on port 1
+[08:34:03.477] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Parser 'parser': start
+[08:34:03.477] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:34:03.477] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Extracting header 'ethernet'
+[08:34:03.477] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Parser state 'start': key is 86dd
+[08:34:03.477] [bmv2] [T] [thread 23662] [8.0] [cxt 0] Bytes parsed: 14
+[08:34:03.477] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Parser 'parser': end
+[08:34:03.477] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Pipeline 'ingress': start
+[08:34:03.477] [bmv2] [T] [thread 23662] [8.0] [cxt 0] Applying table 'tbl_act'
+[08:34:03.477] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Looking up key:
+
+[08:34:03.477] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Table 'tbl_act': miss
+[08:34:03.477] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Action entry is act - 
+[08:34:03.477] [bmv2] [T] [thread 23662] [8.0] [cxt 0] Action act
+[08:34:03.477] [bmv2] [T] [thread 23662] [8.0] [cxt 0] Primitive (no source info)
+[08:34:03.477] [bmv2] [T] [thread 23662] [8.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:34:03.477] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:34:03.477] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Table 'MyIngress.ipv4_lpm': miss
+[08:34:03.477] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Action entry is NoAction - 
+[08:34:03.477] [bmv2] [T] [thread 23662] [8.0] [cxt 0] Action NoAction
+[08:34:03.477] [bmv2] [T] [thread 23662] [8.0] [cxt 0] scaleIoT.p4(507) Condition "hdr.tcp.isValid()" (node_4) is false
+[08:34:03.477] [bmv2] [T] [thread 23662] [8.0] [cxt 0] scaleIoT.p4(511) Condition "hdr.udp.isValid()" (node_6) is false
+[08:34:03.477] [bmv2] [T] [thread 23662] [8.0] [cxt 0] Applying table 'MyIngress.sMAC_exact'
+[08:34:03.477] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Looking up key:
+* hdr.ethernet.sEth   : 9a4e36a4bf12
+
+[08:34:03.477] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Table 'MyIngress.sMAC_exact': miss
+[08:34:03.477] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Action entry is MyIngress.default_action_one - 
+[08:34:03.477] [bmv2] [T] [thread 23662] [8.0] [cxt 0] Action MyIngress.default_action_one
+[08:34:03.477] [bmv2] [T] [thread 23662] [8.0] [cxt 0] scaleIoT.p4(220) Primitive meta.stub_current_state_value = 0
+[08:34:03.477] [bmv2] [T] [thread 23662] [8.0] [cxt 0] scaleIoT.p4(518) Condition "meta.flag==0" (node_9) is true
+[08:34:03.477] [bmv2] [T] [thread 23662] [8.0] [cxt 0] Applying table 'MyIngress.sMAC_default'
+[08:34:03.477] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Looking up key:
+* meta.stub_current_state_value: 000000
+
+[08:34:03.477] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Table 'MyIngress.sMAC_default': miss
+[08:34:03.477] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Action entry is MyIngress.drop - 
+[08:34:03.477] [bmv2] [T] [thread 23662] [8.0] [cxt 0] Action MyIngress.drop
+[08:34:03.477] [bmv2] [T] [thread 23662] [8.0] [cxt 0] scaleIoT.p4(190) Primitive meta.dropFlag = 1
+[08:34:03.477] [bmv2] [T] [thread 23662] [8.0] [cxt 0] scaleIoT.p4(191) Primitive mark_to_drop(standard_metadata)
+[08:34:03.477] [bmv2] [T] [thread 23662] [8.0] [cxt 0] scaleIoT.p4(521) Condition "meta.dropFlag == 1" (node_11) is true
+[08:34:03.478] [bmv2] [T] [thread 23662] [8.0] [cxt 0] Applying table 'tbl_scaleIoT521'
+[08:34:03.478] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Looking up key:
+
+[08:34:03.478] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Table 'tbl_scaleIoT521': miss
+[08:34:03.478] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Action entry is scaleIoT521 - 
+[08:34:03.478] [bmv2] [T] [thread 23662] [8.0] [cxt 0] Action scaleIoT521
+[08:34:03.478] [bmv2] [T] [thread 23662] [8.0] [cxt 0] scaleIoT.p4(521) Primitive return
+[08:34:03.478] [bmv2] [T] [thread 23662] [8.0] [cxt 0] Condition "node_13" (node_13) is true
+[08:34:03.478] [bmv2] [T] [thread 23662] [8.0] [cxt 0] Condition "node_20" (node_20) is true
+[08:34:03.478] [bmv2] [T] [thread 23662] [8.0] [cxt 0] Condition "node_27" (node_27) is true
+[08:34:03.478] [bmv2] [T] [thread 23662] [8.0] [cxt 0] Condition "node_34" (node_34) is true
+[08:34:03.478] [bmv2] [T] [thread 23662] [8.0] [cxt 0] Condition "node_41" (node_41) is true
+[08:34:03.478] [bmv2] [T] [thread 23662] [8.0] [cxt 0] Condition "node_48" (node_48) is true
+[08:34:03.478] [bmv2] [T] [thread 23662] [8.0] [cxt 0] Condition "node_55" (node_55) is true
+[08:34:03.478] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Pipeline 'ingress': end
+[08:34:03.478] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Egress port is 511
+[08:34:03.478] [bmv2] [D] [thread 23662] [8.0] [cxt 0] Dropping packet at the end of ingress
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Processing packet received on port 2
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Parser 'parser': start
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Extracting header 'ethernet'
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Parser state 'start': key is 86dd
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] Bytes parsed: 14
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Parser 'parser': end
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Pipeline 'ingress': start
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] Applying table 'tbl_act'
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Looking up key:
+
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Table 'tbl_act': miss
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Action entry is act - 
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] Action act
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] Primitive (no source info)
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Table 'MyIngress.ipv4_lpm': miss
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Action entry is NoAction - 
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] Action NoAction
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] scaleIoT.p4(507) Condition "hdr.tcp.isValid()" (node_4) is false
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] scaleIoT.p4(511) Condition "hdr.udp.isValid()" (node_6) is false
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] Applying table 'MyIngress.sMAC_exact'
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Looking up key:
+* hdr.ethernet.sEth   : d2e92fe7818b
+
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Table 'MyIngress.sMAC_exact': miss
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Action entry is MyIngress.default_action_one - 
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] Action MyIngress.default_action_one
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] scaleIoT.p4(220) Primitive meta.stub_current_state_value = 0
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] scaleIoT.p4(518) Condition "meta.flag==0" (node_9) is true
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] Applying table 'MyIngress.sMAC_default'
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Looking up key:
+* meta.stub_current_state_value: 000000
+
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Table 'MyIngress.sMAC_default': miss
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Action entry is MyIngress.drop - 
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] Action MyIngress.drop
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] scaleIoT.p4(190) Primitive meta.dropFlag = 1
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] scaleIoT.p4(191) Primitive mark_to_drop(standard_metadata)
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] scaleIoT.p4(521) Condition "meta.dropFlag == 1" (node_11) is true
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] Applying table 'tbl_scaleIoT521'
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Looking up key:
+
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Table 'tbl_scaleIoT521': miss
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Action entry is scaleIoT521 - 
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] Action scaleIoT521
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] scaleIoT.p4(521) Primitive return
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] Condition "node_13" (node_13) is true
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] Condition "node_20" (node_20) is true
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] Condition "node_27" (node_27) is true
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] Condition "node_34" (node_34) is true
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] Condition "node_41" (node_41) is true
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] Condition "node_48" (node_48) is true
+[08:34:03.606] [bmv2] [T] [thread 23662] [9.0] [cxt 0] Condition "node_55" (node_55) is true
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Pipeline 'ingress': end
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Egress port is 511
+[08:34:03.606] [bmv2] [D] [thread 23662] [9.0] [cxt 0] Dropping packet at the end of ingress
+[08:34:06.899] [bmv2] [W] [thread 23682] [P4Runtime] p4::tmp::P4DeviceConfig is deprecated
+[08:34:06.907] [bmv2] [D] [thread 23682] Set default default entry for table 'tbl_act': act - 
+[08:34:06.907] [bmv2] [D] [thread 23682] Set default default entry for table 'MyIngress.ipv4_lpm': NoAction - 
+[08:34:06.907] [bmv2] [D] [thread 23682] Set default default entry for table 'tbl_scaleIoT508': scaleIoT508 - 
+[08:34:06.907] [bmv2] [D] [thread 23682] Set default default entry for table 'tbl_scaleIoT512': scaleIoT512 - 
+[08:34:06.907] [bmv2] [D] [thread 23682] Set default default entry for table 'MyIngress.sMAC_exact': MyIngress.default_action_one - 
+[08:34:06.907] [bmv2] [D] [thread 23682] Set default default entry for table 'MyIngress.sMAC_default': MyIngress.drop - 
+[08:34:06.907] [bmv2] [D] [thread 23682] Set default default entry for table 'tbl_scaleIoT521': scaleIoT521 - 
+[08:34:06.907] [bmv2] [D] [thread 23682] Set default default entry for table 'tbl_scaleIoT523': scaleIoT523 - 
+[08:34:06.907] [bmv2] [D] [thread 23682] Set default default entry for table 'MyIngress.dMAC_exact': NoAction - 
+[08:34:06.907] [bmv2] [D] [thread 23682] Set default default entry for table 'MyIngress.dMAC_default': MyIngress.drop - 
+[08:34:06.907] [bmv2] [D] [thread 23682] Set default default entry for table 'tbl_scaleIoT528': scaleIoT528 - 
+[08:34:06.907] [bmv2] [D] [thread 23682] Set default default entry for table 'tbl_scaleIoT530': scaleIoT530 - 
+[08:34:06.907] [bmv2] [D] [thread 23682] Set default default entry for table 'MyIngress.typEth_exact': NoAction - 
+[08:34:06.907] [bmv2] [D] [thread 23682] Set default default entry for table 'MyIngress.typEth_default': MyIngress.drop - 
+[08:34:06.907] [bmv2] [D] [thread 23682] Set default default entry for table 'tbl_scaleIoT535': scaleIoT535 - 
+[08:34:06.907] [bmv2] [D] [thread 23682] Set default default entry for table 'tbl_scaleIoT537': scaleIoT537 - 
+[08:34:06.908] [bmv2] [D] [thread 23682] Set default default entry for table 'MyIngress.proto_exact': NoAction - 
+[08:34:06.908] [bmv2] [D] [thread 23682] Set default default entry for table 'MyIngress.proto_default': MyIngress.drop - 
+[08:34:06.908] [bmv2] [D] [thread 23682] Set default default entry for table 'tbl_scaleIoT542': scaleIoT542 - 
+[08:34:06.908] [bmv2] [D] [thread 23682] Set default default entry for table 'tbl_scaleIoT544': scaleIoT544 - 
+[08:34:06.908] [bmv2] [D] [thread 23682] Set default default entry for table 'MyIngress.sPort_exact': NoAction - 
+[08:34:06.908] [bmv2] [D] [thread 23682] Set default default entry for table 'MyIngress.sPort_default': MyIngress.drop - 
+[08:34:06.908] [bmv2] [D] [thread 23682] Set default default entry for table 'tbl_scaleIoT549': scaleIoT549 - 
+[08:34:06.908] [bmv2] [D] [thread 23682] Set default default entry for table 'tbl_scaleIoT551': scaleIoT551 - 
+[08:34:06.908] [bmv2] [D] [thread 23682] Set default default entry for table 'MyIngress.dPort_exact': NoAction - 
+[08:34:06.908] [bmv2] [D] [thread 23682] Set default default entry for table 'MyIngress.dPort_default': MyIngress.drop - 
+[08:34:06.908] [bmv2] [D] [thread 23682] Set default default entry for table 'tbl_scaleIoT556': scaleIoT556 - 
+[08:34:06.908] [bmv2] [D] [thread 23682] Set default default entry for table 'tbl_scaleIoT558': scaleIoT558 - 
+[08:34:06.908] [bmv2] [D] [thread 23682] Set default default entry for table 'MyIngress.srcIP_exact': NoAction - 
+[08:34:06.908] [bmv2] [D] [thread 23682] Set default default entry for table 'MyIngress.srcIP_default': MyIngress.drop - 
+[08:34:06.908] [bmv2] [D] [thread 23682] Set default default entry for table 'tbl_scaleIoT563': scaleIoT563 - 
+[08:34:06.908] [bmv2] [D] [thread 23682] Set default default entry for table 'tbl_scaleIoT565': scaleIoT565 - 
+[08:34:06.908] [bmv2] [D] [thread 23682] Set default default entry for table 'MyIngress.dstIP_exact': NoAction - 
+[08:34:06.908] [bmv2] [D] [thread 23682] Set default default entry for table 'MyIngress.dstIP_default': MyIngress.drop - 
+[08:34:06.908] [bmv2] [D] [thread 23682] Set default default entry for table 'tbl_scaleIoT570': scaleIoT570 - 
+[08:34:06.913] [bmv2] [D] [thread 23682] simple_switch target has been notified of a config swap
+[08:34:06.921] [bmv2] [D] [thread 23683] Entry 0 added to table 'MyIngress.ipv4_lpm'
+[08:34:06.921] [bmv2] [D] [thread 23683] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[08:34:07.254] [bmv2] [D] [thread 23662] [10.0] [cxt 0] Processing packet received on port 1
+[08:34:07.254] [bmv2] [D] [thread 23662] [10.0] [cxt 0] Parser 'parser': start
+[08:34:07.254] [bmv2] [D] [thread 23662] [10.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:34:07.254] [bmv2] [D] [thread 23662] [10.0] [cxt 0] Extracting header 'ethernet'
+[08:34:07.254] [bmv2] [D] [thread 23662] [10.0] [cxt 0] Parser state 'start': key is 86dd
+[08:34:07.254] [bmv2] [T] [thread 23662] [10.0] [cxt 0] Bytes parsed: 14
+[08:34:07.254] [bmv2] [D] [thread 23662] [10.0] [cxt 0] Parser 'parser': end
+[08:34:07.254] [bmv2] [D] [thread 23662] [10.0] [cxt 0] Pipeline 'ingress': start
+[08:34:07.254] [bmv2] [T] [thread 23662] [10.0] [cxt 0] Applying table 'tbl_act'
+[08:34:07.254] [bmv2] [D] [thread 23662] [10.0] [cxt 0] Looking up key:
+
+[08:34:07.254] [bmv2] [D] [thread 23662] [10.0] [cxt 0] Table 'tbl_act': miss
+[08:34:07.254] [bmv2] [D] [thread 23662] [10.0] [cxt 0] Action entry is act - 
+[08:34:07.254] [bmv2] [T] [thread 23662] [10.0] [cxt 0] Action act
+[08:34:07.254] [bmv2] [T] [thread 23662] [10.0] [cxt 0] Primitive (no source info)
+[08:34:07.254] [bmv2] [T] [thread 23662] [10.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:34:07.254] [bmv2] [D] [thread 23662] [10.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:34:07.254] [bmv2] [D] [thread 23662] [10.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[08:34:07.254] [bmv2] [D] [thread 23662] [10.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[08:34:07.254] [bmv2] [D] [thread 23662] [10.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[08:34:07.254] [bmv2] [T] [thread 23662] [10.0] [cxt 0] Action MyIngress.dhcp_forward
+[08:34:07.254] [bmv2] [T] [thread 23662] [10.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[08:34:07.254] [bmv2] [T] [thread 23662] [10.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[08:34:07.254] [bmv2] [T] [thread 23662] [10.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[08:34:07.254] [bmv2] [D] [thread 23662] [10.0] [cxt 0] Pipeline 'ingress': end
+[08:34:07.254] [bmv2] [D] [thread 23662] [10.0] [cxt 0] Egress port is 510
+[08:34:07.254] [bmv2] [D] [thread 23662] [11.0] [cxt 0] Processing packet received on port 2
+[08:34:07.254] [bmv2] [D] [thread 23662] [11.0] [cxt 0] Parser 'parser': start
+[08:34:07.254] [bmv2] [D] [thread 23662] [11.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:34:07.254] [bmv2] [D] [thread 23662] [11.0] [cxt 0] Extracting header 'ethernet'
+[08:34:07.254] [bmv2] [D] [thread 23662] [11.0] [cxt 0] Parser state 'start': key is 86dd
+[08:34:07.254] [bmv2] [T] [thread 23662] [11.0] [cxt 0] Bytes parsed: 14
+[08:34:07.254] [bmv2] [D] [thread 23662] [11.0] [cxt 0] Parser 'parser': end
+[08:34:07.254] [bmv2] [D] [thread 23662] [11.0] [cxt 0] Pipeline 'ingress': start
+[08:34:07.254] [bmv2] [T] [thread 23662] [11.0] [cxt 0] Applying table 'tbl_act'
+[08:34:07.254] [bmv2] [D] [thread 23662] [11.0] [cxt 0] Looking up key:
+
+[08:34:07.254] [bmv2] [D] [thread 23662] [11.0] [cxt 0] Table 'tbl_act': miss
+[08:34:07.254] [bmv2] [D] [thread 23662] [11.0] [cxt 0] Action entry is act - 
+[08:34:07.254] [bmv2] [T] [thread 23662] [11.0] [cxt 0] Action act
+[08:34:07.254] [bmv2] [T] [thread 23662] [11.0] [cxt 0] Primitive (no source info)
+[08:34:07.254] [bmv2] [T] [thread 23662] [11.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:34:07.254] [bmv2] [D] [thread 23662] [11.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:34:07.254] [bmv2] [D] [thread 23662] [11.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[08:34:07.254] [bmv2] [D] [thread 23662] [11.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[08:34:07.254] [bmv2] [D] [thread 23662] [11.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[08:34:07.254] [bmv2] [T] [thread 23662] [11.0] [cxt 0] Action MyIngress.dhcp_forward
+[08:34:07.254] [bmv2] [T] [thread 23662] [11.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[08:34:07.254] [bmv2] [T] [thread 23662] [11.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[08:34:07.254] [bmv2] [T] [thread 23662] [11.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[08:34:07.254] [bmv2] [D] [thread 23662] [11.0] [cxt 0] Pipeline 'ingress': end
+[08:34:07.254] [bmv2] [D] [thread 23662] [11.0] [cxt 0] Egress port is 510
+[08:34:07.254] [bmv2] [D] [thread 23665] [10.0] [cxt 0] Pipeline 'egress': start
+[08:34:07.254] [bmv2] [D] [thread 23665] [10.0] [cxt 0] Pipeline 'egress': end
+[08:34:07.254] [bmv2] [D] [thread 23665] [10.0] [cxt 0] Deparser 'deparser': start
+[08:34:07.254] [bmv2] [T] [thread 23665] [10.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[08:34:07.254] [bmv2] [D] [thread 23665] [10.0] [cxt 0] Deparsing header 'ethernet'
+[08:34:07.254] [bmv2] [D] [thread 23665] [10.0] [cxt 0] Deparser 'deparser': end
+[08:34:07.254] [bmv2] [D] [thread 23665] [11.0] [cxt 0] Pipeline 'egress': start
+[08:34:07.254] [bmv2] [D] [thread 23665] [11.0] [cxt 0] Pipeline 'egress': end
+[08:34:07.254] [bmv2] [D] [thread 23665] [11.0] [cxt 0] Deparser 'deparser': start
+[08:34:07.254] [bmv2] [T] [thread 23665] [11.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[08:34:07.254] [bmv2] [D] [thread 23665] [11.0] [cxt 0] Deparsing header 'ethernet'
+[08:34:07.254] [bmv2] [D] [thread 23665] [11.0] [cxt 0] Deparser 'deparser': end
+[08:34:07.254] [bmv2] [D] [thread 23667] [10.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[08:34:07.254] [bmv2] [D] [thread 23667] Transmitting packet-in
+[08:34:07.255] [bmv2] [D] [thread 23667] [11.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[08:34:07.255] [bmv2] [D] [thread 23667] Transmitting packet-in
+[08:34:15.446] [bmv2] [D] [thread 23662] [12.0] [cxt 0] Processing packet received on port 1
+[08:34:15.446] [bmv2] [D] [thread 23662] [12.0] [cxt 0] Parser 'parser': start
+[08:34:15.446] [bmv2] [D] [thread 23662] [12.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:34:15.446] [bmv2] [D] [thread 23662] [12.0] [cxt 0] Extracting header 'ethernet'
+[08:34:15.446] [bmv2] [D] [thread 23662] [12.0] [cxt 0] Parser state 'start': key is 86dd
+[08:34:15.446] [bmv2] [T] [thread 23662] [12.0] [cxt 0] Bytes parsed: 14
+[08:34:15.446] [bmv2] [D] [thread 23662] [12.0] [cxt 0] Parser 'parser': end
+[08:34:15.446] [bmv2] [D] [thread 23662] [12.0] [cxt 0] Pipeline 'ingress': start
+[08:34:15.446] [bmv2] [T] [thread 23662] [12.0] [cxt 0] Applying table 'tbl_act'
+[08:34:15.446] [bmv2] [D] [thread 23662] [12.0] [cxt 0] Looking up key:
+
+[08:34:15.446] [bmv2] [D] [thread 23662] [12.0] [cxt 0] Table 'tbl_act': miss
+[08:34:15.446] [bmv2] [D] [thread 23662] [12.0] [cxt 0] Action entry is act - 
+[08:34:15.446] [bmv2] [T] [thread 23662] [12.0] [cxt 0] Action act
+[08:34:15.446] [bmv2] [T] [thread 23662] [12.0] [cxt 0] Primitive (no source info)
+[08:34:15.446] [bmv2] [T] [thread 23662] [12.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:34:15.446] [bmv2] [D] [thread 23662] [12.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:34:15.446] [bmv2] [D] [thread 23662] [12.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[08:34:15.446] [bmv2] [D] [thread 23662] [12.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[08:34:15.446] [bmv2] [D] [thread 23662] [12.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[08:34:15.446] [bmv2] [T] [thread 23662] [12.0] [cxt 0] Action MyIngress.dhcp_forward
+[08:34:15.446] [bmv2] [T] [thread 23662] [12.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[08:34:15.446] [bmv2] [T] [thread 23662] [12.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[08:34:15.446] [bmv2] [T] [thread 23662] [12.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[08:34:15.446] [bmv2] [D] [thread 23662] [12.0] [cxt 0] Pipeline 'ingress': end
+[08:34:15.446] [bmv2] [D] [thread 23662] [12.0] [cxt 0] Egress port is 510
+[08:34:15.446] [bmv2] [D] [thread 23662] [13.0] [cxt 0] Processing packet received on port 2
+[08:34:15.446] [bmv2] [D] [thread 23662] [13.0] [cxt 0] Parser 'parser': start
+[08:34:15.446] [bmv2] [D] [thread 23662] [13.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:34:15.446] [bmv2] [D] [thread 23662] [13.0] [cxt 0] Extracting header 'ethernet'
+[08:34:15.446] [bmv2] [D] [thread 23662] [13.0] [cxt 0] Parser state 'start': key is 86dd
+[08:34:15.446] [bmv2] [T] [thread 23662] [13.0] [cxt 0] Bytes parsed: 14
+[08:34:15.446] [bmv2] [D] [thread 23662] [13.0] [cxt 0] Parser 'parser': end
+[08:34:15.446] [bmv2] [D] [thread 23662] [13.0] [cxt 0] Pipeline 'ingress': start
+[08:34:15.446] [bmv2] [T] [thread 23662] [13.0] [cxt 0] Applying table 'tbl_act'
+[08:34:15.446] [bmv2] [D] [thread 23662] [13.0] [cxt 0] Looking up key:
+
+[08:34:15.446] [bmv2] [D] [thread 23662] [13.0] [cxt 0] Table 'tbl_act': miss
+[08:34:15.446] [bmv2] [D] [thread 23662] [13.0] [cxt 0] Action entry is act - 
+[08:34:15.446] [bmv2] [T] [thread 23662] [13.0] [cxt 0] Action act
+[08:34:15.446] [bmv2] [T] [thread 23662] [13.0] [cxt 0] Primitive (no source info)
+[08:34:15.446] [bmv2] [T] [thread 23662] [13.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:34:15.446] [bmv2] [D] [thread 23662] [13.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:34:15.446] [bmv2] [D] [thread 23662] [13.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[08:34:15.446] [bmv2] [D] [thread 23662] [13.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[08:34:15.446] [bmv2] [D] [thread 23662] [13.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[08:34:15.446] [bmv2] [T] [thread 23662] [13.0] [cxt 0] Action MyIngress.dhcp_forward
+[08:34:15.446] [bmv2] [T] [thread 23662] [13.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[08:34:15.446] [bmv2] [T] [thread 23662] [13.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[08:34:15.446] [bmv2] [T] [thread 23662] [13.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[08:34:15.446] [bmv2] [D] [thread 23662] [13.0] [cxt 0] Pipeline 'ingress': end
+[08:34:15.446] [bmv2] [D] [thread 23662] [13.0] [cxt 0] Egress port is 510
+[08:34:15.446] [bmv2] [D] [thread 23665] [12.0] [cxt 0] Pipeline 'egress': start
+[08:34:15.446] [bmv2] [D] [thread 23665] [12.0] [cxt 0] Pipeline 'egress': end
+[08:34:15.446] [bmv2] [D] [thread 23665] [12.0] [cxt 0] Deparser 'deparser': start
+[08:34:15.446] [bmv2] [T] [thread 23665] [12.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[08:34:15.446] [bmv2] [D] [thread 23665] [12.0] [cxt 0] Deparsing header 'ethernet'
+[08:34:15.446] [bmv2] [D] [thread 23665] [12.0] [cxt 0] Deparser 'deparser': end
+[08:34:15.446] [bmv2] [D] [thread 23665] [13.0] [cxt 0] Pipeline 'egress': start
+[08:34:15.446] [bmv2] [D] [thread 23665] [13.0] [cxt 0] Pipeline 'egress': end
+[08:34:15.446] [bmv2] [D] [thread 23665] [13.0] [cxt 0] Deparser 'deparser': start
+[08:34:15.446] [bmv2] [T] [thread 23665] [13.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[08:34:15.446] [bmv2] [D] [thread 23665] [13.0] [cxt 0] Deparsing header 'ethernet'
+[08:34:15.446] [bmv2] [D] [thread 23665] [13.0] [cxt 0] Deparser 'deparser': end
+[08:34:15.446] [bmv2] [D] [thread 23667] [12.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[08:34:15.446] [bmv2] [D] [thread 23667] Transmitting packet-in
+[08:34:15.447] [bmv2] [D] [thread 23667] [13.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[08:34:15.447] [bmv2] [D] [thread 23667] Transmitting packet-in
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Processing packet received on port 1
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Parser 'parser': start
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Extracting header 'ethernet'
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Parser state 'start': key is 0800
+[08:34:21.271] [bmv2] [T] [thread 23662] [14.0] [cxt 0] Bytes parsed: 14
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Parser 'parser' entering state 'parse_ipv4'
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Extracting header 'ipv4'
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Parser state 'parse_ipv4': key is 11
+[08:34:21.271] [bmv2] [T] [thread 23662] [14.0] [cxt 0] Bytes parsed: 34
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Parser 'parser' entering state 'parse_udp'
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Extracting header 'udp'
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Parser state 'parse_udp' has no switch, going to default next state
+[08:34:21.271] [bmv2] [T] [thread 23662] [14.0] [cxt 0] Bytes parsed: 42
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Parser 'parser': end
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Pipeline 'ingress': start
+[08:34:21.271] [bmv2] [T] [thread 23662] [14.0] [cxt 0] Applying table 'tbl_act'
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Looking up key:
+
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Table 'tbl_act': miss
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Action entry is act - 
+[08:34:21.271] [bmv2] [T] [thread 23662] [14.0] [cxt 0] Action act
+[08:34:21.271] [bmv2] [T] [thread 23662] [14.0] [cxt 0] Primitive (no source info)
+[08:34:21.271] [bmv2] [T] [thread 23662] [14.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[08:34:21.271] [bmv2] [T] [thread 23662] [14.0] [cxt 0] Action MyIngress.dhcp_forward
+[08:34:21.271] [bmv2] [T] [thread 23662] [14.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[08:34:21.271] [bmv2] [T] [thread 23662] [14.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[08:34:21.271] [bmv2] [T] [thread 23662] [14.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Pipeline 'ingress': end
+[08:34:21.271] [bmv2] [D] [thread 23662] [14.0] [cxt 0] Egress port is 510
+[08:34:21.271] [bmv2] [D] [thread 23665] [14.0] [cxt 0] Pipeline 'egress': start
+[08:34:21.271] [bmv2] [D] [thread 23665] [14.0] [cxt 0] Pipeline 'egress': end
+[08:34:21.271] [bmv2] [D] [thread 23665] [14.0] [cxt 0] Deparser 'deparser': start
+[08:34:21.271] [bmv2] [D] [thread 23665] [14.0] [cxt 0] Updating checksum 'cksum'
+[08:34:21.271] [bmv2] [D] [thread 23665] [14.0] [cxt 0] Deparsing header 'ethernet'
+[08:34:21.271] [bmv2] [D] [thread 23665] [14.0] [cxt 0] Deparsing header 'ipv4'
+[08:34:21.271] [bmv2] [D] [thread 23665] [14.0] [cxt 0] Deparser 'deparser': end
+[08:34:21.271] [bmv2] [D] [thread 23667] [14.0] [cxt 0] Transmitting packet of size 332 out of port 510
+[08:34:21.271] [bmv2] [D] [thread 23667] Transmitting packet-in
+[08:34:22.174] [bmv2] [D] [thread 23683] Entry 0 added to table 'MyIngress.sMAC_exact'
+[08:34:22.174] [bmv2] [D] [thread 23683] Dumping entry 0
+Match key:
+* hdr.ethernet.sEth   : EXACT     000b8201fc42
+Action entry: MyIngress.ns_exact - 1,
+
+[08:34:22.177] [bmv2] [D] [thread 23683] Entry 0 added to table 'MyIngress.dMAC_default'
+[08:34:22.177] [bmv2] [D] [thread 23683] Dumping entry 0
+Match key:
+* meta.current_state  : EXACT     000001
+Action entry: MyIngress.ns_default - 1,
+
+[08:34:22.180] [bmv2] [D] [thread 23682] Entry 0 added to table 'MyIngress.typEth_exact'
+[08:34:22.180] [bmv2] [D] [thread 23682] Dumping entry 0
+Match key:
+* meta.current_state  : EXACT     000001
+* hdr.ethernet.typeEth: EXACT     0800
+Action entry: MyIngress.ns_exact - 1,
+
+[08:34:22.183] [bmv2] [D] [thread 23683] Entry 0 added to table 'MyIngress.proto_exact'
+[08:34:22.183] [bmv2] [D] [thread 23683] Dumping entry 0
+Match key:
+* meta.current_state  : EXACT     000001
+* hdr.ipv4.protocol   : EXACT     06
+Action entry: MyIngress.ns_exact - 1,
+
+[08:34:22.186] [bmv2] [D] [thread 23682] Entry 0 added to table 'MyIngress.sPort_default'
+[08:34:22.186] [bmv2] [D] [thread 23682] Dumping entry 0
+Match key:
+* meta.current_state  : EXACT     000001
+Action entry: MyIngress.ns_default - 1,
+
+[08:34:22.203] [bmv2] [D] [thread 23683] Entry 0 added to table 'MyIngress.dPort_exact'
+[08:34:22.203] [bmv2] [D] [thread 23683] Dumping entry 0
+Match key:
+* meta.current_state  : EXACT     000001
+* meta.dport          : EXACT     01bb
+Action entry: MyIngress.ns_exact - 1,
+
+[08:34:22.205] [bmv2] [D] [thread 23682] Entry 0 added to table 'MyIngress.srcIP_default'
+[08:34:22.206] [bmv2] [D] [thread 23682] Dumping entry 0
+Match key:
+* meta.current_state  : EXACT     000001
+Action entry: MyIngress.ns_default - 1,
+
+[08:34:22.209] [bmv2] [D] [thread 23683] Entry 0 added to table 'MyIngress.dstIP_exact'
+[08:34:22.209] [bmv2] [D] [thread 23683] Dumping entry 0
+Match key:
+* meta.current_state  : EXACT     000001
+* hdr.ipv4.dstAddr    : EXACT     4815c352
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.213] [bmv2] [D] [thread 23682] Entry 1 added to table 'MyIngress.dstIP_exact'
+[08:34:22.213] [bmv2] [D] [thread 23682] Dumping entry 1
+Match key:
+* meta.current_state  : EXACT     000001
+* hdr.ipv4.dstAddr    : EXACT     b020657a
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.217] [bmv2] [D] [thread 23683] Entry 1 added to table 'MyIngress.proto_exact'
+[08:34:22.218] [bmv2] [D] [thread 23683] Dumping entry 1
+Match key:
+* meta.current_state  : EXACT     000001
+* hdr.ipv4.protocol   : EXACT     11
+Action entry: MyIngress.ns_exact - 2,
+
+[08:34:22.220] [bmv2] [D] [thread 23682] Entry 1 added to table 'MyIngress.sPort_default'
+[08:34:22.220] [bmv2] [D] [thread 23682] Dumping entry 1
+Match key:
+* meta.current_state  : EXACT     000002
+Action entry: MyIngress.ns_default - 2,
+
+[08:34:22.225] [bmv2] [D] [thread 23683] Entry 1 added to table 'MyIngress.dPort_exact'
+[08:34:22.225] [bmv2] [D] [thread 23683] Dumping entry 1
+Match key:
+* meta.current_state  : EXACT     000002
+* meta.dport          : EXACT     007b
+Action entry: MyIngress.ns_exact - 2,
+
+[08:34:22.231] [bmv2] [D] [thread 23682] Entry 1 added to table 'MyIngress.srcIP_default'
+[08:34:22.231] [bmv2] [D] [thread 23682] Dumping entry 1
+Match key:
+* meta.current_state  : EXACT     000002
+Action entry: MyIngress.ns_default - 2,
+
+[08:34:22.235] [bmv2] [D] [thread 23683] Entry 2 added to table 'MyIngress.dstIP_exact'
+[08:34:22.235] [bmv2] [D] [thread 23683] Dumping entry 2
+Match key:
+* meta.current_state  : EXACT     000002
+* hdr.ipv4.dstAddr    : EXACT     32cdf427
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.239] [bmv2] [D] [thread 23682] Entry 0 added to table 'MyIngress.typEth_default'
+[08:34:22.239] [bmv2] [D] [thread 23682] Dumping entry 0
+Match key:
+* meta.current_state  : EXACT     000001
+Action entry: MyIngress.ns_default - 2,
+
+[08:34:22.242] [bmv2] [D] [thread 23683] Entry 2 added to table 'MyIngress.proto_exact'
+[08:34:22.242] [bmv2] [D] [thread 23683] Dumping entry 2
+Match key:
+* meta.current_state  : EXACT     000002
+* hdr.ipv4.protocol   : EXACT     02
+Action entry: MyIngress.ns_exact - 3,
+
+[08:34:22.246] [bmv2] [D] [thread 23682] Entry 2 added to table 'MyIngress.sPort_default'
+[08:34:22.246] [bmv2] [D] [thread 23682] Dumping entry 2
+Match key:
+* meta.current_state  : EXACT     000003
+Action entry: MyIngress.ns_default - 3,
+
+[08:34:22.254] [bmv2] [D] [thread 23683] Entry 0 added to table 'MyIngress.dPort_default'
+[08:34:22.254] [bmv2] [D] [thread 23683] Dumping entry 0
+Match key:
+* meta.current_state  : EXACT     000003
+Action entry: MyIngress.ns_default - 3,
+
+[08:34:22.257] [bmv2] [D] [thread 23682] Entry 2 added to table 'MyIngress.srcIP_default'
+[08:34:22.257] [bmv2] [D] [thread 23682] Dumping entry 2
+Match key:
+* meta.current_state  : EXACT     000003
+Action entry: MyIngress.ns_default - 3,
+
+[08:34:22.259] [bmv2] [D] [thread 23683] Entry 3 added to table 'MyIngress.dstIP_exact'
+[08:34:22.259] [bmv2] [D] [thread 23683] Dumping entry 3
+Match key:
+* meta.current_state  : EXACT     000003
+* hdr.ipv4.dstAddr    : EXACT     e0000016
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.263] [bmv2] [D] [thread 23682] Entry 2 added to table 'MyIngress.dPort_exact'
+[08:34:22.263] [bmv2] [D] [thread 23682] Dumping entry 2
+Match key:
+* meta.current_state  : EXACT     000002
+* meta.dport          : EXACT     076c
+Action entry: MyIngress.ns_exact - 4,
+
+[08:34:22.265] [bmv2] [D] [thread 23683] Entry 3 added to table 'MyIngress.srcIP_default'
+[08:34:22.265] [bmv2] [D] [thread 23683] Dumping entry 3
+Match key:
+* meta.current_state  : EXACT     000004
+Action entry: MyIngress.ns_default - 4,
+
+[08:34:22.268] [bmv2] [D] [thread 23682] Entry 4 added to table 'MyIngress.dstIP_exact'
+[08:34:22.268] [bmv2] [D] [thread 23682] Dumping entry 4
+Match key:
+* meta.current_state  : EXACT     000004
+* hdr.ipv4.dstAddr    : EXACT     effffffa
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.276] [bmv2] [D] [thread 23683] Entry 0 added to table 'MyIngress.dMAC_exact'
+[08:34:22.276] [bmv2] [D] [thread 23683] Dumping entry 0
+Match key:
+* meta.current_state  : EXACT     000001
+* hdr.ethernet.dEth   : EXACT     ffffffffffff
+Action entry: MyIngress.ns_exact - 2,
+
+[08:34:22.279] [bmv2] [D] [thread 23682] Entry 1 added to table 'MyIngress.typEth_exact'
+[08:34:22.279] [bmv2] [D] [thread 23682] Dumping entry 1
+Match key:
+* meta.current_state  : EXACT     000002
+* hdr.ethernet.typeEth: EXACT     0800
+Action entry: MyIngress.ns_exact - 3,
+
+[08:34:22.282] [bmv2] [D] [thread 23683] Entry 3 added to table 'MyIngress.proto_exact'
+[08:34:22.282] [bmv2] [D] [thread 23683] Dumping entry 3
+Match key:
+* meta.current_state  : EXACT     000003
+* hdr.ipv4.protocol   : EXACT     11
+Action entry: MyIngress.ns_exact - 4,
+
+[08:34:22.284] [bmv2] [D] [thread 23682] Entry 3 added to table 'MyIngress.sPort_default'
+[08:34:22.284] [bmv2] [D] [thread 23682] Dumping entry 3
+Match key:
+* meta.current_state  : EXACT     000004
+Action entry: MyIngress.ns_default - 4,
+
+[08:34:22.289] [bmv2] [D] [thread 23683] Entry 3 added to table 'MyIngress.dPort_exact'
+[08:34:22.289] [bmv2] [D] [thread 23683] Dumping entry 3
+Match key:
+* meta.current_state  : EXACT     000004
+* meta.dport          : EXACT     0043
+Action entry: MyIngress.ns_exact - 5,
+
+[08:34:22.292] [bmv2] [D] [thread 23682] Entry 4 added to table 'MyIngress.srcIP_default'
+[08:34:22.292] [bmv2] [D] [thread 23682] Dumping entry 4
+Match key:
+* meta.current_state  : EXACT     000005
+Action entry: MyIngress.ns_default - 5,
+
+[08:34:22.299] [bmv2] [D] [thread 23683] Entry 5 added to table 'MyIngress.dstIP_exact'
+[08:34:22.299] [bmv2] [D] [thread 23683] Dumping entry 5
+Match key:
+* meta.current_state  : EXACT     000005
+* hdr.ipv4.dstAddr    : EXACT     ffffffff
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.302] [bmv2] [D] [thread 23682] Entry 6 added to table 'MyIngress.dstIP_exact'
+[08:34:22.302] [bmv2] [D] [thread 23682] Dumping entry 6
+Match key:
+* meta.current_state  : EXACT     000002
+* hdr.ipv4.dstAddr    : EXACT     12cd4496
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.306] [bmv2] [D] [thread 23683] Entry 7 added to table 'MyIngress.dstIP_exact'
+[08:34:22.306] [bmv2] [D] [thread 23683] Dumping entry 7
+Match key:
+* meta.current_state  : EXACT     000001
+* hdr.ipv4.dstAddr    : EXACT     342e8513
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.309] [bmv2] [D] [thread 23682] Entry 0 added to table 'MyIngress.sMAC_default'
+[08:34:22.309] [bmv2] [D] [thread 23682] Dumping entry 0
+Match key:
+* meta.stub_current_state_value: EXACT     000000
+Action entry: MyIngress.ns_default - 2,
+
+[08:34:22.311] [bmv2] [D] [thread 23683] Entry 1 added to table 'MyIngress.dMAC_default'
+[08:34:22.311] [bmv2] [D] [thread 23683] Dumping entry 1
+Match key:
+* meta.current_state  : EXACT     000002
+Action entry: MyIngress.ns_default - 3,
+
+[08:34:22.313] [bmv2] [D] [thread 23682] Entry 2 added to table 'MyIngress.typEth_exact'
+[08:34:22.313] [bmv2] [D] [thread 23682] Dumping entry 2
+Match key:
+* meta.current_state  : EXACT     000003
+* hdr.ethernet.typeEth: EXACT     0800
+Action entry: MyIngress.ns_exact - 4,
+
+[08:34:22.317] [bmv2] [D] [thread 23683] Entry 4 added to table 'MyIngress.proto_exact'
+[08:34:22.317] [bmv2] [D] [thread 23683] Dumping entry 4
+Match key:
+* meta.current_state  : EXACT     000004
+* hdr.ipv4.protocol   : EXACT     01
+Action entry: MyIngress.ns_exact - 5,
+
+[08:34:22.319] [bmv2] [D] [thread 23682] Entry 4 added to table 'MyIngress.sPort_default'
+[08:34:22.319] [bmv2] [D] [thread 23682] Dumping entry 4
+Match key:
+* meta.current_state  : EXACT     000005
+Action entry: MyIngress.ns_default - 5,
+
+[08:34:22.321] [bmv2] [D] [thread 23683] Entry 1 added to table 'MyIngress.dPort_default'
+[08:34:22.321] [bmv2] [D] [thread 23683] Dumping entry 1
+Match key:
+* meta.current_state  : EXACT     000005
+Action entry: MyIngress.ns_default - 6,
+
+[08:34:22.324] [bmv2] [D] [thread 23682] Entry 5 added to table 'MyIngress.srcIP_default'
+[08:34:22.324] [bmv2] [D] [thread 23682] Dumping entry 5
+Match key:
+* meta.current_state  : EXACT     000006
+Action entry: MyIngress.ns_default - 6,
+
+[08:34:22.327] [bmv2] [D] [thread 23683] Entry 0 added to table 'MyIngress.dstIP_default'
+[08:34:22.327] [bmv2] [D] [thread 23683] Dumping entry 0
+Match key:
+* meta.current_state  : EXACT     000006
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.332] [bmv2] [D] [thread 23682] Entry 4 added to table 'MyIngress.dPort_exact'
+[08:34:22.332] [bmv2] [D] [thread 23682] Dumping entry 4
+Match key:
+* meta.current_state  : EXACT     000001
+* meta.dport          : EXACT     0050
+Action entry: MyIngress.ns_exact - 7,
+
+[08:34:22.335] [bmv2] [D] [thread 23683] Entry 6 added to table 'MyIngress.srcIP_default'
+[08:34:22.335] [bmv2] [D] [thread 23683] Dumping entry 6
+Match key:
+* meta.current_state  : EXACT     000007
+Action entry: MyIngress.ns_default - 7,
+
+[08:34:22.338] [bmv2] [D] [thread 23682] Entry 8 added to table 'MyIngress.dstIP_exact'
+[08:34:22.338] [bmv2] [D] [thread 23682] Dumping entry 8
+Match key:
+* meta.current_state  : EXACT     000007
+* hdr.ipv4.dstAddr    : EXACT     5db8d822
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.342] [bmv2] [D] [thread 23683] Entry 5 added to table 'MyIngress.proto_exact'
+[08:34:22.342] [bmv2] [D] [thread 23683] Dumping entry 5
+Match key:
+* meta.current_state  : EXACT     000004
+* hdr.ipv4.protocol   : EXACT     11
+Action entry: MyIngress.ns_exact - 6,
+
+[08:34:22.345] [bmv2] [D] [thread 23682] Entry 5 added to table 'MyIngress.sPort_default'
+[08:34:22.346] [bmv2] [D] [thread 23682] Dumping entry 5
+Match key:
+* meta.current_state  : EXACT     000006
+Action entry: MyIngress.ns_default - 6,
+
+[08:34:22.348] [bmv2] [D] [thread 23683] Entry 5 added to table 'MyIngress.dPort_exact'
+[08:34:22.348] [bmv2] [D] [thread 23683] Dumping entry 5
+Match key:
+* meta.current_state  : EXACT     000006
+* meta.dport          : EXACT     0035
+Action entry: MyIngress.ns_exact - 8,
+
+[08:34:22.350] [bmv2] [D] [thread 23682] Entry 7 added to table 'MyIngress.srcIP_default'
+[08:34:22.350] [bmv2] [D] [thread 23682] Dumping entry 7
+Match key:
+* meta.current_state  : EXACT     000008
+Action entry: MyIngress.ns_default - 8,
+
+[08:34:22.352] [bmv2] [D] [thread 23683] Entry 1 added to table 'MyIngress.dstIP_default'
+[08:34:22.352] [bmv2] [D] [thread 23683] Dumping entry 1
+Match key:
+* meta.current_state  : EXACT     000008
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.356] [bmv2] [D] [thread 23682] Entry 9 added to table 'MyIngress.dstIP_exact'
+[08:34:22.356] [bmv2] [D] [thread 23682] Dumping entry 9
+Match key:
+* meta.current_state  : EXACT     000001
+* hdr.ipv4.dstAddr    : EXACT     3477a627
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.358] [bmv2] [D] [thread 23683] Entry 10 added to table 'MyIngress.dstIP_exact'
+[08:34:22.358] [bmv2] [D] [thread 23683] Dumping entry 10
+Match key:
+* meta.current_state  : EXACT     000001
+* hdr.ipv4.dstAddr    : EXACT     345ed523
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.362] [bmv2] [D] [thread 23682] Entry 6 added to table 'MyIngress.dPort_exact'
+[08:34:22.362] [bmv2] [D] [thread 23682] Dumping entry 6
+Match key:
+* meta.current_state  : EXACT     000002
+* meta.dport          : EXACT     0035
+Action entry: MyIngress.ns_exact - 9,
+
+[08:34:22.364] [bmv2] [D] [thread 23683] Entry 8 added to table 'MyIngress.srcIP_default'
+[08:34:22.364] [bmv2] [D] [thread 23683] Dumping entry 8
+Match key:
+* meta.current_state  : EXACT     000009
+Action entry: MyIngress.ns_default - 9,
+
+[08:34:22.367] [bmv2] [D] [thread 23682] Entry 11 added to table 'MyIngress.dstIP_exact'
+[08:34:22.367] [bmv2] [D] [thread 23682] Dumping entry 11
+Match key:
+* meta.current_state  : EXACT     000009
+* hdr.ipv4.dstAddr    : EXACT     d043dcdc
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.370] [bmv2] [D] [thread 23683] Entry 12 added to table 'MyIngress.dstIP_exact'
+[08:34:22.370] [bmv2] [D] [thread 23683] Dumping entry 12
+Match key:
+* meta.current_state  : EXACT     000001
+* hdr.ipv4.dstAddr    : EXACT     36e780c9
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.375] [bmv2] [D] [thread 23682] Entry 13 added to table 'MyIngress.dstIP_exact'
+[08:34:22.375] [bmv2] [D] [thread 23682] Dumping entry 13
+Match key:
+* meta.current_state  : EXACT     000001
+* hdr.ipv4.dstAddr    : EXACT     0de3b17f
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.380] [bmv2] [D] [thread 23683] Entry 14 added to table 'MyIngress.dstIP_exact'
+[08:34:22.380] [bmv2] [D] [thread 23683] Dumping entry 14
+Match key:
+* meta.current_state  : EXACT     000002
+* hdr.ipv4.dstAddr    : EXACT     26e53c09
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.386] [bmv2] [D] [thread 23682] Entry 15 added to table 'MyIngress.dstIP_exact'
+[08:34:22.386] [bmv2] [D] [thread 23682] Dumping entry 15
+Match key:
+* meta.current_state  : EXACT     000001
+* hdr.ipv4.dstAddr    : EXACT     2278e171
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.390] [bmv2] [D] [thread 23683] Entry 7 added to table 'MyIngress.dPort_exact'
+[08:34:22.390] [bmv2] [D] [thread 23683] Dumping entry 7
+Match key:
+* meta.current_state  : EXACT     000006
+* meta.dport          : EXACT     0043
+Action entry: MyIngress.ns_exact - a,
+
+[08:34:22.393] [bmv2] [D] [thread 23682] Entry 9 added to table 'MyIngress.srcIP_default'
+[08:34:22.394] [bmv2] [D] [thread 23682] Dumping entry 9
+Match key:
+* meta.current_state  : EXACT     00000a
+Action entry: MyIngress.ns_default - a,
+
+[08:34:22.396] [bmv2] [D] [thread 23683] Entry 2 added to table 'MyIngress.dstIP_default'
+[08:34:22.396] [bmv2] [D] [thread 23683] Dumping entry 2
+Match key:
+* meta.current_state  : EXACT     00000a
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.400] [bmv2] [D] [thread 23682] Entry 16 added to table 'MyIngress.dstIP_exact'
+[08:34:22.400] [bmv2] [D] [thread 23682] Dumping entry 16
+Match key:
+* meta.current_state  : EXACT     000002
+* hdr.ipv4.dstAddr    : EXACT     d8c5e4e6
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.407] [bmv2] [D] [thread 23683] Entry 17 added to table 'MyIngress.dstIP_exact'
+[08:34:22.407] [bmv2] [D] [thread 23683] Dumping entry 17
+Match key:
+* meta.current_state  : EXACT     000007
+* hdr.ipv4.dstAddr    : EXACT     b02062cb
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.411] [bmv2] [D] [thread 23682] Entry 18 added to table 'MyIngress.dstIP_exact'
+[08:34:22.411] [bmv2] [D] [thread 23682] Dumping entry 18
+Match key:
+* meta.current_state  : EXACT     000001
+* hdr.ipv4.dstAddr    : EXACT     36d12c08
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.414] [bmv2] [D] [thread 23683] Entry 19 added to table 'MyIngress.dstIP_exact'
+[08:34:22.414] [bmv2] [D] [thread 23683] Dumping entry 19
+Match key:
+* meta.current_state  : EXACT     000001
+* hdr.ipv4.dstAddr    : EXACT     0de3a55c
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.417] [bmv2] [D] [thread 23682] Entry 8 added to table 'MyIngress.dPort_exact'
+[08:34:22.417] [bmv2] [D] [thread 23682] Dumping entry 8
+Match key:
+* meta.current_state  : EXACT     000002
+* meta.dport          : EXACT     14e9
+Action entry: MyIngress.ns_exact - b,
+
+[08:34:22.419] [bmv2] [D] [thread 23683] Entry 10 added to table 'MyIngress.srcIP_default'
+[08:34:22.419] [bmv2] [D] [thread 23683] Dumping entry 10
+Match key:
+* meta.current_state  : EXACT     00000b
+Action entry: MyIngress.ns_default - b,
+
+[08:34:22.423] [bmv2] [D] [thread 23682] Entry 20 added to table 'MyIngress.dstIP_exact'
+[08:34:22.423] [bmv2] [D] [thread 23682] Dumping entry 20
+Match key:
+* meta.current_state  : EXACT     00000b
+* hdr.ipv4.dstAddr    : EXACT     e00000fb
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.429] [bmv2] [D] [thread 23683] Entry 9 added to table 'MyIngress.dPort_exact'
+[08:34:22.429] [bmv2] [D] [thread 23683] Dumping entry 9
+Match key:
+* meta.current_state  : EXACT     000002
+* meta.dport          : EXACT     829a
+Action entry: MyIngress.ns_exact - c,
+
+[08:34:22.433] [bmv2] [D] [thread 23682] Entry 11 added to table 'MyIngress.srcIP_default'
+[08:34:22.433] [bmv2] [D] [thread 23682] Dumping entry 11
+Match key:
+* meta.current_state  : EXACT     00000c
+Action entry: MyIngress.ns_default - c,
+
+[08:34:22.436] [bmv2] [D] [thread 23683] Entry 21 added to table 'MyIngress.dstIP_exact'
+[08:34:22.437] [bmv2] [D] [thread 23683] Dumping entry 21
+Match key:
+* meta.current_state  : EXACT     00000c
+* hdr.ipv4.dstAddr    : EXACT     17174e6d
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.440] [bmv2] [D] [thread 23682] Entry 22 added to table 'MyIngress.dstIP_exact'
+[08:34:22.440] [bmv2] [D] [thread 23682] Dumping entry 22
+Match key:
+* meta.current_state  : EXACT     000001
+* hdr.ipv4.dstAddr    : EXACT     0de3a524
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.444] [bmv2] [D] [thread 23683] Entry 23 added to table 'MyIngress.dstIP_exact'
+[08:34:22.444] [bmv2] [D] [thread 23683] Dumping entry 23
+Match key:
+* meta.current_state  : EXACT     000002
+* hdr.ipv4.dstAddr    : EXACT     2cbe06fe
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.448] [bmv2] [D] [thread 23682] Entry 1 added to table 'MyIngress.dMAC_exact'
+[08:34:22.448] [bmv2] [D] [thread 23682] Dumping entry 1
+Match key:
+* meta.current_state  : EXACT     000002
+* hdr.ethernet.dEth   : EXACT     000b8201fc42
+Action entry: MyIngress.ns_exact - 4,
+
+[08:34:22.450] [bmv2] [D] [thread 23682] Entry 3 added to table 'MyIngress.typEth_exact'
+[08:34:22.450] [bmv2] [D] [thread 23682] Dumping entry 3
+Match key:
+* meta.current_state  : EXACT     000004
+* hdr.ethernet.typeEth: EXACT     0800
+Action entry: MyIngress.ns_exact - 5,
+
+[08:34:22.457] [bmv2] [D] [thread 23682] Entry 6 added to table 'MyIngress.proto_exact'
+[08:34:22.457] [bmv2] [D] [thread 23682] Dumping entry 6
+Match key:
+* meta.current_state  : EXACT     000005
+* hdr.ipv4.protocol   : EXACT     11
+Action entry: MyIngress.ns_exact - 7,
+
+[08:34:22.460] [bmv2] [D] [thread 23683] Entry 0 added to table 'MyIngress.sPort_exact'
+[08:34:22.461] [bmv2] [D] [thread 23683] Dumping entry 0
+Match key:
+* meta.current_state  : EXACT     000007
+* meta.sport          : EXACT     007b
+Action entry: MyIngress.ns_exact - 7,
+
+[08:34:22.464] [bmv2] [D] [thread 23682] Entry 2 added to table 'MyIngress.dPort_default'
+[08:34:22.464] [bmv2] [D] [thread 23682] Dumping entry 2
+Match key:
+* meta.current_state  : EXACT     000007
+Action entry: MyIngress.ns_default - d,
+
+[08:34:22.470] [bmv2] [D] [thread 23682] Entry 0 added to table 'MyIngress.srcIP_exact'
+[08:34:22.470] [bmv2] [D] [thread 23682] Dumping entry 0
+Match key:
+* meta.current_state  : EXACT     00000d
+* hdr.ipv4.srcAddr    : EXACT     32cdf427
+Action entry: MyIngress.ns_exact - d,
+
+[08:34:22.477] [bmv2] [D] [thread 23683] Entry 3 added to table 'MyIngress.dstIP_default'
+[08:34:22.477] [bmv2] [D] [thread 23683] Dumping entry 3
+Match key:
+* meta.current_state  : EXACT     00000d
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.480] [bmv2] [D] [thread 23682] Entry 1 added to table 'MyIngress.srcIP_exact'
+[08:34:22.481] [bmv2] [D] [thread 23682] Dumping entry 1
+Match key:
+* meta.current_state  : EXACT     00000d
+* hdr.ipv4.srcAddr    : EXACT     12cd4496
+Action entry: MyIngress.ns_exact - e,
+
+[08:34:22.484] [bmv2] [D] [thread 23683] Entry 4 added to table 'MyIngress.dstIP_default'
+[08:34:22.484] [bmv2] [D] [thread 23683] Dumping entry 4
+Match key:
+* meta.current_state  : EXACT     00000e
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.489] [bmv2] [D] [thread 23682] Entry 7 added to table 'MyIngress.proto_exact'
+[08:34:22.489] [bmv2] [D] [thread 23682] Dumping entry 7
+Match key:
+* meta.current_state  : EXACT     000005
+* hdr.ipv4.protocol   : EXACT     06
+Action entry: MyIngress.ns_exact - 8,
+
+[08:34:22.492] [bmv2] [D] [thread 23683] Entry 1 added to table 'MyIngress.sPort_exact'
+[08:34:22.492] [bmv2] [D] [thread 23683] Dumping entry 1
+Match key:
+* meta.current_state  : EXACT     000008
+* meta.sport          : EXACT     01bb
+Action entry: MyIngress.ns_exact - 8,
+
+[08:34:22.496] [bmv2] [D] [thread 23682] Entry 3 added to table 'MyIngress.dPort_default'
+[08:34:22.496] [bmv2] [D] [thread 23682] Dumping entry 3
+Match key:
+* meta.current_state  : EXACT     000008
+Action entry: MyIngress.ns_default - e,
+
+[08:34:22.507] [bmv2] [D] [thread 23683] Entry 2 added to table 'MyIngress.srcIP_exact'
+[08:34:22.507] [bmv2] [D] [thread 23683] Dumping entry 2
+Match key:
+* meta.current_state  : EXACT     00000e
+* hdr.ipv4.srcAddr    : EXACT     0de3b17f
+Action entry: MyIngress.ns_exact - f,
+
+[08:34:22.514] [bmv2] [D] [thread 23682] Entry 5 added to table 'MyIngress.dstIP_default'
+[08:34:22.514] [bmv2] [D] [thread 23682] Dumping entry 5
+Match key:
+* meta.current_state  : EXACT     00000f
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.518] [bmv2] [D] [thread 23683] Entry 3 added to table 'MyIngress.srcIP_exact'
+[08:34:22.518] [bmv2] [D] [thread 23683] Dumping entry 3
+Match key:
+* meta.current_state  : EXACT     00000e
+* hdr.ipv4.srcAddr    : EXACT     345ed523
+Action entry: MyIngress.ns_exact - 10,
+
+[08:34:22.534] [bmv2] [D] [thread 23682] Entry 6 added to table 'MyIngress.dstIP_default'
+[08:34:22.534] [bmv2] [D] [thread 23682] Dumping entry 6
+Match key:
+* meta.current_state  : EXACT     000010
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.539] [bmv2] [D] [thread 23683] Entry 4 added to table 'MyIngress.srcIP_exact'
+[08:34:22.539] [bmv2] [D] [thread 23683] Dumping entry 4
+Match key:
+* meta.current_state  : EXACT     00000d
+* hdr.ipv4.srcAddr    : EXACT     d8c5e4e6
+Action entry: MyIngress.ns_exact - 11,
+
+[08:34:22.543] [bmv2] [D] [thread 23682] Entry 7 added to table 'MyIngress.dstIP_default'
+[08:34:22.543] [bmv2] [D] [thread 23682] Dumping entry 7
+Match key:
+* meta.current_state  : EXACT     000011
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.547] [bmv2] [D] [thread 23683] Entry 5 added to table 'MyIngress.srcIP_exact'
+[08:34:22.547] [bmv2] [D] [thread 23683] Dumping entry 5
+Match key:
+* meta.current_state  : EXACT     00000e
+* hdr.ipv4.srcAddr    : EXACT     342e8513
+Action entry: MyIngress.ns_exact - 12,
+
+[08:34:22.550] [bmv2] [D] [thread 23682] Entry 8 added to table 'MyIngress.dstIP_default'
+[08:34:22.550] [bmv2] [D] [thread 23682] Dumping entry 8
+Match key:
+* meta.current_state  : EXACT     000012
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.555] [bmv2] [D] [thread 23683] Entry 6 added to table 'MyIngress.srcIP_exact'
+[08:34:22.555] [bmv2] [D] [thread 23683] Dumping entry 6
+Match key:
+* meta.current_state  : EXACT     00000d
+* hdr.ipv4.srcAddr    : EXACT     26e53c09
+Action entry: MyIngress.ns_exact - 13,
+
+[08:34:22.571] [bmv2] [D] [thread 23682] Entry 9 added to table 'MyIngress.dstIP_default'
+[08:34:22.572] [bmv2] [D] [thread 23682] Dumping entry 9
+Match key:
+* meta.current_state  : EXACT     000013
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.593] [bmv2] [D] [thread 23683] Entry 7 added to table 'MyIngress.srcIP_exact'
+[08:34:22.593] [bmv2] [D] [thread 23683] Dumping entry 7
+Match key:
+* meta.current_state  : EXACT     00000d
+* hdr.ipv4.srcAddr    : EXACT     2cbe06fe
+Action entry: MyIngress.ns_exact - 14,
+
+[08:34:22.596] [bmv2] [D] [thread 23682] Entry 10 added to table 'MyIngress.dstIP_default'
+[08:34:22.596] [bmv2] [D] [thread 23682] Dumping entry 10
+Match key:
+* meta.current_state  : EXACT     000014
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.603] [bmv2] [D] [thread 23683] Entry 2 added to table 'MyIngress.sPort_exact'
+[08:34:22.603] [bmv2] [D] [thread 23683] Dumping entry 2
+Match key:
+* meta.current_state  : EXACT     000008
+* meta.sport          : EXACT     0050
+Action entry: MyIngress.ns_exact - 9,
+
+[08:34:22.607] [bmv2] [D] [thread 23682] Entry 4 added to table 'MyIngress.dPort_default'
+[08:34:22.607] [bmv2] [D] [thread 23682] Dumping entry 4
+Match key:
+* meta.current_state  : EXACT     000009
+Action entry: MyIngress.ns_default - f,
+
+[08:34:22.611] [bmv2] [D] [thread 23683] Entry 8 added to table 'MyIngress.srcIP_exact'
+[08:34:22.611] [bmv2] [D] [thread 23683] Dumping entry 8
+Match key:
+* meta.current_state  : EXACT     00000f
+* hdr.ipv4.srcAddr    : EXACT     5db8d822
+Action entry: MyIngress.ns_exact - 15,
+
+[08:34:22.627] [bmv2] [D] [thread 23682] Entry 11 added to table 'MyIngress.dstIP_default'
+[08:34:22.627] [bmv2] [D] [thread 23682] Dumping entry 11
+Match key:
+* meta.current_state  : EXACT     000015
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.631] [bmv2] [D] [thread 23683] Entry 3 added to table 'MyIngress.sPort_exact'
+[08:34:22.631] [bmv2] [D] [thread 23683] Dumping entry 3
+Match key:
+* meta.current_state  : EXACT     000006
+* meta.sport          : EXACT     0043
+Action entry: MyIngress.ns_exact - a,
+
+[08:34:22.633] [bmv2] [D] [thread 23682] Entry 5 added to table 'MyIngress.dPort_default'
+[08:34:22.633] [bmv2] [D] [thread 23682] Dumping entry 5
+Match key:
+* meta.current_state  : EXACT     00000a
+Action entry: MyIngress.ns_default - 10,
+
+[08:34:22.636] [bmv2] [D] [thread 23683] Entry 12 added to table 'MyIngress.srcIP_default'
+[08:34:22.636] [bmv2] [D] [thread 23683] Dumping entry 12
+Match key:
+* meta.current_state  : EXACT     000010
+Action entry: MyIngress.ns_default - 16,
+
+[08:34:22.639] [bmv2] [D] [thread 23682] Entry 12 added to table 'MyIngress.dstIP_default'
+[08:34:22.640] [bmv2] [D] [thread 23682] Dumping entry 12
+Match key:
+* meta.current_state  : EXACT     000016
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.644] [bmv2] [D] [thread 23683] Entry 4 added to table 'MyIngress.sPort_exact'
+[08:34:22.644] [bmv2] [D] [thread 23683] Dumping entry 4
+Match key:
+* meta.current_state  : EXACT     000007
+* meta.sport          : EXACT     0035
+Action entry: MyIngress.ns_exact - b,
+
+[08:34:22.665] [bmv2] [D] [thread 23682] Entry 6 added to table 'MyIngress.dPort_default'
+[08:34:22.665] [bmv2] [D] [thread 23682] Dumping entry 6
+Match key:
+* meta.current_state  : EXACT     00000b
+Action entry: MyIngress.ns_default - 11,
+
+[08:34:22.668] [bmv2] [D] [thread 23683] Entry 9 added to table 'MyIngress.srcIP_exact'
+[08:34:22.668] [bmv2] [D] [thread 23683] Dumping entry 9
+Match key:
+* meta.current_state  : EXACT     000011
+* hdr.ipv4.srcAddr    : EXACT     d043dcdc
+Action entry: MyIngress.ns_exact - 17,
+
+[08:34:22.673] [bmv2] [D] [thread 23682] Entry 13 added to table 'MyIngress.dstIP_default'
+[08:34:22.673] [bmv2] [D] [thread 23682] Dumping entry 13
+Match key:
+* meta.current_state  : EXACT     000017
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.676] [bmv2] [D] [thread 23683] Entry 10 added to table 'MyIngress.srcIP_exact'
+[08:34:22.676] [bmv2] [D] [thread 23683] Dumping entry 10
+Match key:
+* meta.current_state  : EXACT     00000e
+* hdr.ipv4.srcAddr    : EXACT     36d12c08
+Action entry: MyIngress.ns_exact - 18,
+
+[08:34:22.680] [bmv2] [D] [thread 23682] Entry 14 added to table 'MyIngress.dstIP_default'
+[08:34:22.680] [bmv2] [D] [thread 23682] Dumping entry 14
+Match key:
+* meta.current_state  : EXACT     000018
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.684] [bmv2] [D] [thread 23683] Entry 11 added to table 'MyIngress.srcIP_exact'
+[08:34:22.685] [bmv2] [D] [thread 23683] Dumping entry 11
+Match key:
+* meta.current_state  : EXACT     00000e
+* hdr.ipv4.srcAddr    : EXACT     36e780c9
+Action entry: MyIngress.ns_exact - 19,
+
+[08:34:22.688] [bmv2] [D] [thread 23682] Entry 15 added to table 'MyIngress.dstIP_default'
+[08:34:22.688] [bmv2] [D] [thread 23682] Dumping entry 15
+Match key:
+* meta.current_state  : EXACT     000019
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.693] [bmv2] [D] [thread 23683] Entry 5 added to table 'MyIngress.sPort_exact'
+[08:34:22.693] [bmv2] [D] [thread 23683] Dumping entry 5
+Match key:
+* meta.current_state  : EXACT     000006
+* meta.sport          : EXACT     0035
+Action entry: MyIngress.ns_exact - c,
+
+[08:34:22.695] [bmv2] [D] [thread 23682] Entry 7 added to table 'MyIngress.dPort_default'
+[08:34:22.695] [bmv2] [D] [thread 23682] Dumping entry 7
+Match key:
+* meta.current_state  : EXACT     00000c
+Action entry: MyIngress.ns_default - 12,
+
+[08:34:22.698] [bmv2] [D] [thread 23683] Entry 13 added to table 'MyIngress.srcIP_default'
+[08:34:22.698] [bmv2] [D] [thread 23683] Dumping entry 13
+Match key:
+* meta.current_state  : EXACT     000012
+Action entry: MyIngress.ns_default - 1a,
+
+[08:34:22.700] [bmv2] [D] [thread 23682] Entry 16 added to table 'MyIngress.dstIP_default'
+[08:34:22.700] [bmv2] [D] [thread 23682] Dumping entry 16
+Match key:
+* meta.current_state  : EXACT     00001a
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.703] [bmv2] [D] [thread 23683] Entry 12 added to table 'MyIngress.srcIP_exact'
+[08:34:22.703] [bmv2] [D] [thread 23683] Dumping entry 12
+Match key:
+* meta.current_state  : EXACT     00000e
+* hdr.ipv4.srcAddr    : EXACT     4815c352
+Action entry: MyIngress.ns_exact - 1b,
+
+[08:34:22.707] [bmv2] [D] [thread 23682] Entry 17 added to table 'MyIngress.dstIP_default'
+[08:34:22.707] [bmv2] [D] [thread 23682] Dumping entry 17
+Match key:
+* meta.current_state  : EXACT     00001b
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.712] [bmv2] [D] [thread 23683] Entry 13 added to table 'MyIngress.srcIP_exact'
+[08:34:22.712] [bmv2] [D] [thread 23683] Dumping entry 13
+Match key:
+* meta.current_state  : EXACT     00000e
+* hdr.ipv4.srcAddr    : EXACT     2278e171
+Action entry: MyIngress.ns_exact - 1c,
+
+[08:34:22.715] [bmv2] [D] [thread 23682] Entry 18 added to table 'MyIngress.dstIP_default'
+[08:34:22.715] [bmv2] [D] [thread 23682] Dumping entry 18
+Match key:
+* meta.current_state  : EXACT     00001c
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.718] [bmv2] [D] [thread 23683] Entry 14 added to table 'MyIngress.srcIP_exact'
+[08:34:22.718] [bmv2] [D] [thread 23683] Dumping entry 14
+Match key:
+* meta.current_state  : EXACT     00000e
+* hdr.ipv4.srcAddr    : EXACT     0de3a55c
+Action entry: MyIngress.ns_exact - 1d,
+
+[08:34:22.720] [bmv2] [D] [thread 23682] Entry 19 added to table 'MyIngress.dstIP_default'
+[08:34:22.721] [bmv2] [D] [thread 23682] Dumping entry 19
+Match key:
+* meta.current_state  : EXACT     00001d
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.728] [bmv2] [D] [thread 23683] Entry 6 added to table 'MyIngress.sPort_exact'
+[08:34:22.728] [bmv2] [D] [thread 23683] Dumping entry 6
+Match key:
+* meta.current_state  : EXACT     000007
+* meta.sport          : EXACT     829a
+Action entry: MyIngress.ns_exact - d,
+
+[08:34:22.730] [bmv2] [D] [thread 23682] Entry 8 added to table 'MyIngress.dPort_default'
+[08:34:22.730] [bmv2] [D] [thread 23682] Dumping entry 8
+Match key:
+* meta.current_state  : EXACT     00000d
+Action entry: MyIngress.ns_default - 13,
+
+[08:34:22.732] [bmv2] [D] [thread 23683] Entry 15 added to table 'MyIngress.srcIP_exact'
+[08:34:22.732] [bmv2] [D] [thread 23683] Dumping entry 15
+Match key:
+* meta.current_state  : EXACT     000013
+* hdr.ipv4.srcAddr    : EXACT     17174e6d
+Action entry: MyIngress.ns_exact - 1e,
+
+[08:34:22.735] [bmv2] [D] [thread 23682] Entry 20 added to table 'MyIngress.dstIP_default'
+[08:34:22.735] [bmv2] [D] [thread 23682] Dumping entry 20
+Match key:
+* meta.current_state  : EXACT     00001e
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.738] [bmv2] [D] [thread 23683] Entry 16 added to table 'MyIngress.srcIP_exact'
+[08:34:22.738] [bmv2] [D] [thread 23683] Dumping entry 16
+Match key:
+* meta.current_state  : EXACT     00000f
+* hdr.ipv4.srcAddr    : EXACT     b02062cb
+Action entry: MyIngress.ns_exact - 1f,
+
+[08:34:22.740] [bmv2] [D] [thread 23682] Entry 21 added to table 'MyIngress.dstIP_default'
+[08:34:22.740] [bmv2] [D] [thread 23682] Dumping entry 21
+Match key:
+* meta.current_state  : EXACT     00001f
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.743] [bmv2] [D] [thread 23683] Entry 17 added to table 'MyIngress.srcIP_exact'
+[08:34:22.743] [bmv2] [D] [thread 23683] Dumping entry 17
+Match key:
+* meta.current_state  : EXACT     00000e
+* hdr.ipv4.srcAddr    : EXACT     0de3a524
+Action entry: MyIngress.ns_exact - 20,
+
+[08:34:22.745] [bmv2] [D] [thread 23682] Entry 22 added to table 'MyIngress.dstIP_default'
+[08:34:22.745] [bmv2] [D] [thread 23682] Dumping entry 22
+Match key:
+* meta.current_state  : EXACT     000020
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.750] [bmv2] [D] [thread 23683] Entry 18 added to table 'MyIngress.srcIP_exact'
+[08:34:22.750] [bmv2] [D] [thread 23683] Dumping entry 18
+Match key:
+* meta.current_state  : EXACT     00000e
+* hdr.ipv4.srcAddr    : EXACT     b020657a
+Action entry: MyIngress.ns_exact - 21,
+
+[08:34:22.752] [bmv2] [D] [thread 23682] Entry 23 added to table 'MyIngress.dstIP_default'
+[08:34:22.752] [bmv2] [D] [thread 23682] Dumping entry 23
+Match key:
+* meta.current_state  : EXACT     000021
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.758] [bmv2] [D] [thread 23683] Entry 10 added to table 'MyIngress.dPort_exact'
+[08:34:22.758] [bmv2] [D] [thread 23683] Dumping entry 10
+Match key:
+* meta.current_state  : EXACT     000006
+* meta.dport          : EXACT     c350
+Action entry: MyIngress.ns_exact - 14,
+
+[08:34:22.761] [bmv2] [D] [thread 23682] Entry 14 added to table 'MyIngress.srcIP_default'
+[08:34:22.761] [bmv2] [D] [thread 23682] Dumping entry 14
+Match key:
+* meta.current_state  : EXACT     000014
+Action entry: MyIngress.ns_default - 22,
+
+[08:34:22.764] [bmv2] [D] [thread 23683] Entry 24 added to table 'MyIngress.dstIP_default'
+[08:34:22.764] [bmv2] [D] [thread 23683] Dumping entry 24
+Match key:
+* meta.current_state  : EXACT     000022
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.768] [bmv2] [D] [thread 23682] Entry 19 added to table 'MyIngress.srcIP_exact'
+[08:34:22.768] [bmv2] [D] [thread 23682] Dumping entry 19
+Match key:
+* meta.current_state  : EXACT     00000e
+* hdr.ipv4.srcAddr    : EXACT     3477a627
+Action entry: MyIngress.ns_exact - 23,
+
+[08:34:22.772] [bmv2] [D] [thread 23683] Entry 25 added to table 'MyIngress.dstIP_default'
+[08:34:22.772] [bmv2] [D] [thread 23683] Dumping entry 25
+Match key:
+* meta.current_state  : EXACT     000023
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.777] [bmv2] [D] [thread 23682] Entry 4 added to table 'MyIngress.typEth_exact'
+[08:34:22.777] [bmv2] [D] [thread 23682] Dumping entry 4
+Match key:
+* meta.current_state  : EXACT     000003
+* hdr.ethernet.typeEth: EXACT     0006
+Action entry: MyIngress.ns_exact - 6,
+
+[08:34:22.781] [bmv2] [D] [thread 23682] Entry 0 added to table 'MyIngress.proto_default'
+[08:34:22.781] [bmv2] [D] [thread 23682] Dumping entry 0
+Match key:
+* meta.current_state  : EXACT     000006
+Action entry: MyIngress.ns_default - 9,
+
+[08:34:22.783] [bmv2] [D] [thread 23683] Entry 6 added to table 'MyIngress.sPort_default'
+[08:34:22.783] [bmv2] [D] [thread 23683] Dumping entry 6
+Match key:
+* meta.current_state  : EXACT     000009
+Action entry: MyIngress.ns_default - e,
+
+[08:34:22.785] [bmv2] [D] [thread 23682] Entry 9 added to table 'MyIngress.dPort_default'
+[08:34:22.785] [bmv2] [D] [thread 23682] Dumping entry 9
+Match key:
+* meta.current_state  : EXACT     00000e
+Action entry: MyIngress.ns_default - 15,
+
+[08:34:22.788] [bmv2] [D] [thread 23683] Entry 15 added to table 'MyIngress.srcIP_default'
+[08:34:22.788] [bmv2] [D] [thread 23683] Dumping entry 15
+Match key:
+* meta.current_state  : EXACT     000015
+Action entry: MyIngress.ns_default - 24,
+
+[08:34:22.791] [bmv2] [D] [thread 23682] Entry 26 added to table 'MyIngress.dstIP_default'
+[08:34:22.791] [bmv2] [D] [thread 23682] Dumping entry 26
+Match key:
+* meta.current_state  : EXACT     000024
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:22.795] [bmv2] [D] [thread 23683] Entry 5 added to table 'MyIngress.typEth_exact'
+[08:34:22.795] [bmv2] [D] [thread 23683] Dumping entry 5
+Match key:
+* meta.current_state  : EXACT     000003
+* hdr.ethernet.typeEth: EXACT     888e
+Action entry: MyIngress.ns_exact - 7,
+
+[08:34:22.798] [bmv2] [D] [thread 23682] Entry 1 added to table 'MyIngress.proto_default'
+[08:34:22.798] [bmv2] [D] [thread 23682] Dumping entry 1
+Match key:
+* meta.current_state  : EXACT     000007
+Action entry: MyIngress.ns_default - a,
+
+[08:34:22.801] [bmv2] [D] [thread 23683] Entry 7 added to table 'MyIngress.sPort_default'
+[08:34:22.801] [bmv2] [D] [thread 23683] Dumping entry 7
+Match key:
+* meta.current_state  : EXACT     00000a
+Action entry: MyIngress.ns_default - f,
+
+[08:34:22.806] [bmv2] [D] [thread 23682] Entry 10 added to table 'MyIngress.dPort_default'
+[08:34:22.806] [bmv2] [D] [thread 23682] Dumping entry 10
+Match key:
+* meta.current_state  : EXACT     00000f
+Action entry: MyIngress.ns_default - 16,
+
+[08:34:22.808] [bmv2] [D] [thread 23683] Entry 16 added to table 'MyIngress.srcIP_default'
+[08:34:22.808] [bmv2] [D] [thread 23683] Dumping entry 16
+Match key:
+* meta.current_state  : EXACT     000016
+Action entry: MyIngress.ns_default - 25,
+
+[08:34:22.811] [bmv2] [D] [thread 23682] Entry 27 added to table 'MyIngress.dstIP_default'
+[08:34:22.811] [bmv2] [D] [thread 23682] Dumping entry 27
+Match key:
+* meta.current_state  : EXACT     000025
+Action entry: MyIngress.forward - 80000000222,2,
+
+[08:34:31.317] [bmv2] [D] [thread 23662] [15.0] [cxt 0] Processing packet received on port 1
+[08:34:31.317] [bmv2] [D] [thread 23662] [15.0] [cxt 0] Parser 'parser': start
+[08:34:31.317] [bmv2] [D] [thread 23662] [15.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:34:31.317] [bmv2] [D] [thread 23662] [15.0] [cxt 0] Extracting header 'ethernet'
+[08:34:31.317] [bmv2] [D] [thread 23662] [15.0] [cxt 0] Parser state 'start': key is 86dd
+[08:34:31.317] [bmv2] [T] [thread 23662] [15.0] [cxt 0] Bytes parsed: 14
+[08:34:31.317] [bmv2] [D] [thread 23662] [15.0] [cxt 0] Parser 'parser': end
+[08:34:31.317] [bmv2] [D] [thread 23662] [15.0] [cxt 0] Pipeline 'ingress': start
+[08:34:31.317] [bmv2] [T] [thread 23662] [15.0] [cxt 0] Applying table 'tbl_act'
+[08:34:31.317] [bmv2] [D] [thread 23662] [15.0] [cxt 0] Looking up key:
+
+[08:34:31.317] [bmv2] [D] [thread 23662] [15.0] [cxt 0] Table 'tbl_act': miss
+[08:34:31.317] [bmv2] [D] [thread 23662] [15.0] [cxt 0] Action entry is act - 
+[08:34:31.317] [bmv2] [T] [thread 23662] [15.0] [cxt 0] Action act
+[08:34:31.317] [bmv2] [T] [thread 23662] [15.0] [cxt 0] Primitive (no source info)
+[08:34:31.317] [bmv2] [T] [thread 23662] [15.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:34:31.317] [bmv2] [D] [thread 23662] [15.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:34:31.317] [bmv2] [D] [thread 23662] [15.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[08:34:31.317] [bmv2] [D] [thread 23662] [15.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[08:34:31.317] [bmv2] [D] [thread 23662] [15.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[08:34:31.317] [bmv2] [T] [thread 23662] [15.0] [cxt 0] Action MyIngress.dhcp_forward
+[08:34:31.317] [bmv2] [T] [thread 23662] [15.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[08:34:31.317] [bmv2] [T] [thread 23662] [15.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[08:34:31.317] [bmv2] [T] [thread 23662] [15.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[08:34:31.317] [bmv2] [D] [thread 23662] [15.0] [cxt 0] Pipeline 'ingress': end
+[08:34:31.317] [bmv2] [D] [thread 23662] [15.0] [cxt 0] Egress port is 510
+[08:34:31.317] [bmv2] [D] [thread 23665] [15.0] [cxt 0] Pipeline 'egress': start
+[08:34:31.317] [bmv2] [D] [thread 23665] [15.0] [cxt 0] Pipeline 'egress': end
+[08:34:31.317] [bmv2] [D] [thread 23665] [15.0] [cxt 0] Deparser 'deparser': start
+[08:34:31.317] [bmv2] [T] [thread 23665] [15.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[08:34:31.317] [bmv2] [D] [thread 23665] [15.0] [cxt 0] Deparsing header 'ethernet'
+[08:34:31.318] [bmv2] [D] [thread 23665] [15.0] [cxt 0] Deparser 'deparser': end
+[08:34:31.318] [bmv2] [D] [thread 23667] [15.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[08:34:31.318] [bmv2] [D] [thread 23667] Transmitting packet-in
+[08:34:33.110] [bmv2] [D] [thread 23662] [16.0] [cxt 0] Processing packet received on port 2
+[08:34:33.110] [bmv2] [D] [thread 23662] [16.0] [cxt 0] Parser 'parser': start
+[08:34:33.110] [bmv2] [D] [thread 23662] [16.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:34:33.110] [bmv2] [D] [thread 23662] [16.0] [cxt 0] Extracting header 'ethernet'
+[08:34:33.110] [bmv2] [D] [thread 23662] [16.0] [cxt 0] Parser state 'start': key is 86dd
+[08:34:33.110] [bmv2] [T] [thread 23662] [16.0] [cxt 0] Bytes parsed: 14
+[08:34:33.110] [bmv2] [D] [thread 23662] [16.0] [cxt 0] Parser 'parser': end
+[08:34:33.110] [bmv2] [D] [thread 23662] [16.0] [cxt 0] Pipeline 'ingress': start
+[08:34:33.110] [bmv2] [T] [thread 23662] [16.0] [cxt 0] Applying table 'tbl_act'
+[08:34:33.110] [bmv2] [D] [thread 23662] [16.0] [cxt 0] Looking up key:
+
+[08:34:33.110] [bmv2] [D] [thread 23662] [16.0] [cxt 0] Table 'tbl_act': miss
+[08:34:33.110] [bmv2] [D] [thread 23662] [16.0] [cxt 0] Action entry is act - 
+[08:34:33.110] [bmv2] [T] [thread 23662] [16.0] [cxt 0] Action act
+[08:34:33.110] [bmv2] [T] [thread 23662] [16.0] [cxt 0] Primitive (no source info)
+[08:34:33.110] [bmv2] [T] [thread 23662] [16.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:34:33.110] [bmv2] [D] [thread 23662] [16.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:34:33.110] [bmv2] [D] [thread 23662] [16.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[08:34:33.110] [bmv2] [D] [thread 23662] [16.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[08:34:33.111] [bmv2] [D] [thread 23662] [16.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[08:34:33.111] [bmv2] [T] [thread 23662] [16.0] [cxt 0] Action MyIngress.dhcp_forward
+[08:34:33.111] [bmv2] [T] [thread 23662] [16.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[08:34:33.111] [bmv2] [T] [thread 23662] [16.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[08:34:33.111] [bmv2] [T] [thread 23662] [16.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[08:34:33.111] [bmv2] [D] [thread 23662] [16.0] [cxt 0] Pipeline 'ingress': end
+[08:34:33.111] [bmv2] [D] [thread 23662] [16.0] [cxt 0] Egress port is 510
+[08:34:33.111] [bmv2] [D] [thread 23665] [16.0] [cxt 0] Pipeline 'egress': start
+[08:34:33.111] [bmv2] [D] [thread 23665] [16.0] [cxt 0] Pipeline 'egress': end
+[08:34:33.111] [bmv2] [D] [thread 23665] [16.0] [cxt 0] Deparser 'deparser': start
+[08:34:33.111] [bmv2] [T] [thread 23665] [16.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[08:34:33.111] [bmv2] [D] [thread 23665] [16.0] [cxt 0] Deparsing header 'ethernet'
+[08:34:33.111] [bmv2] [D] [thread 23665] [16.0] [cxt 0] Deparser 'deparser': end
+[08:34:33.111] [bmv2] [D] [thread 23667] [16.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[08:34:33.111] [bmv2] [D] [thread 23667] Transmitting packet-in
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Processing packet received on port 1
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Parser 'parser': start
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Extracting header 'ethernet'
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Parser state 'start': key is 0800
+[08:34:43.163] [bmv2] [T] [thread 23662] [17.0] [cxt 0] Bytes parsed: 14
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Parser 'parser' entering state 'parse_ipv4'
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Extracting header 'ipv4'
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Parser state 'parse_ipv4': key is 11
+[08:34:43.163] [bmv2] [T] [thread 23662] [17.0] [cxt 0] Bytes parsed: 34
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Parser 'parser' entering state 'parse_udp'
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Extracting header 'udp'
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Parser state 'parse_udp' has no switch, going to default next state
+[08:34:43.163] [bmv2] [T] [thread 23662] [17.0] [cxt 0] Bytes parsed: 42
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Parser 'parser': end
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Pipeline 'ingress': start
+[08:34:43.163] [bmv2] [T] [thread 23662] [17.0] [cxt 0] Applying table 'tbl_act'
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Looking up key:
+
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Table 'tbl_act': miss
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Action entry is act - 
+[08:34:43.163] [bmv2] [T] [thread 23662] [17.0] [cxt 0] Action act
+[08:34:43.163] [bmv2] [T] [thread 23662] [17.0] [cxt 0] Primitive (no source info)
+[08:34:43.163] [bmv2] [T] [thread 23662] [17.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[08:34:43.163] [bmv2] [T] [thread 23662] [17.0] [cxt 0] Action MyIngress.dhcp_forward
+[08:34:43.163] [bmv2] [T] [thread 23662] [17.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[08:34:43.163] [bmv2] [T] [thread 23662] [17.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[08:34:43.163] [bmv2] [T] [thread 23662] [17.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Pipeline 'ingress': end
+[08:34:43.163] [bmv2] [D] [thread 23662] [17.0] [cxt 0] Egress port is 510
+[08:34:43.164] [bmv2] [D] [thread 23665] [17.0] [cxt 0] Pipeline 'egress': start
+[08:34:43.164] [bmv2] [D] [thread 23665] [17.0] [cxt 0] Pipeline 'egress': end
+[08:34:43.164] [bmv2] [D] [thread 23665] [17.0] [cxt 0] Deparser 'deparser': start
+[08:34:43.164] [bmv2] [D] [thread 23665] [17.0] [cxt 0] Updating checksum 'cksum'
+[08:34:43.164] [bmv2] [D] [thread 23665] [17.0] [cxt 0] Deparsing header 'ethernet'
+[08:34:43.164] [bmv2] [D] [thread 23665] [17.0] [cxt 0] Deparsing header 'ipv4'
+[08:34:43.164] [bmv2] [D] [thread 23665] [17.0] [cxt 0] Deparser 'deparser': end
+[08:34:43.164] [bmv2] [D] [thread 23667] [17.0] [cxt 0] Transmitting packet of size 332 out of port 510
+[08:34:43.164] [bmv2] [D] [thread 23667] Transmitting packet-in
+[08:35:03.833] [bmv2] [D] [thread 23662] [18.0] [cxt 0] Processing packet received on port 1
+[08:35:03.833] [bmv2] [D] [thread 23662] [18.0] [cxt 0] Parser 'parser': start
+[08:35:03.833] [bmv2] [D] [thread 23662] [18.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:35:03.833] [bmv2] [D] [thread 23662] [18.0] [cxt 0] Extracting header 'ethernet'
+[08:35:03.833] [bmv2] [D] [thread 23662] [18.0] [cxt 0] Parser state 'start': key is 86dd
+[08:35:03.833] [bmv2] [T] [thread 23662] [18.0] [cxt 0] Bytes parsed: 14
+[08:35:03.833] [bmv2] [D] [thread 23662] [18.0] [cxt 0] Parser 'parser': end
+[08:35:03.833] [bmv2] [D] [thread 23662] [18.0] [cxt 0] Pipeline 'ingress': start
+[08:35:03.833] [bmv2] [T] [thread 23662] [18.0] [cxt 0] Applying table 'tbl_act'
+[08:35:03.833] [bmv2] [D] [thread 23662] [18.0] [cxt 0] Looking up key:
+
+[08:35:03.833] [bmv2] [D] [thread 23662] [18.0] [cxt 0] Table 'tbl_act': miss
+[08:35:03.833] [bmv2] [D] [thread 23662] [18.0] [cxt 0] Action entry is act - 
+[08:35:03.833] [bmv2] [T] [thread 23662] [18.0] [cxt 0] Action act
+[08:35:03.833] [bmv2] [T] [thread 23662] [18.0] [cxt 0] Primitive (no source info)
+[08:35:03.833] [bmv2] [T] [thread 23662] [18.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:35:03.833] [bmv2] [D] [thread 23662] [18.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:35:03.833] [bmv2] [D] [thread 23662] [18.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[08:35:03.833] [bmv2] [D] [thread 23662] [18.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[08:35:03.833] [bmv2] [D] [thread 23662] [18.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[08:35:03.833] [bmv2] [T] [thread 23662] [18.0] [cxt 0] Action MyIngress.dhcp_forward
+[08:35:03.833] [bmv2] [T] [thread 23662] [18.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[08:35:03.833] [bmv2] [T] [thread 23662] [18.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[08:35:03.833] [bmv2] [T] [thread 23662] [18.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[08:35:03.833] [bmv2] [D] [thread 23662] [18.0] [cxt 0] Pipeline 'ingress': end
+[08:35:03.833] [bmv2] [D] [thread 23662] [18.0] [cxt 0] Egress port is 510
+[08:35:03.834] [bmv2] [D] [thread 23665] [18.0] [cxt 0] Pipeline 'egress': start
+[08:35:03.834] [bmv2] [D] [thread 23665] [18.0] [cxt 0] Pipeline 'egress': end
+[08:35:03.834] [bmv2] [D] [thread 23665] [18.0] [cxt 0] Deparser 'deparser': start
+[08:35:03.834] [bmv2] [T] [thread 23665] [18.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[08:35:03.834] [bmv2] [D] [thread 23665] [18.0] [cxt 0] Deparsing header 'ethernet'
+[08:35:03.834] [bmv2] [D] [thread 23665] [18.0] [cxt 0] Deparser 'deparser': end
+[08:35:03.835] [bmv2] [D] [thread 23667] [18.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[08:35:03.835] [bmv2] [D] [thread 23667] Transmitting packet-in
+[08:35:05.877] [bmv2] [D] [thread 23662] [19.0] [cxt 0] Processing packet received on port 2
+[08:35:05.878] [bmv2] [D] [thread 23662] [19.0] [cxt 0] Parser 'parser': start
+[08:35:05.878] [bmv2] [D] [thread 23662] [19.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:35:05.878] [bmv2] [D] [thread 23662] [19.0] [cxt 0] Extracting header 'ethernet'
+[08:35:05.878] [bmv2] [D] [thread 23662] [19.0] [cxt 0] Parser state 'start': key is 86dd
+[08:35:05.878] [bmv2] [T] [thread 23662] [19.0] [cxt 0] Bytes parsed: 14
+[08:35:05.878] [bmv2] [D] [thread 23662] [19.0] [cxt 0] Parser 'parser': end
+[08:35:05.878] [bmv2] [D] [thread 23662] [19.0] [cxt 0] Pipeline 'ingress': start
+[08:35:05.878] [bmv2] [T] [thread 23662] [19.0] [cxt 0] Applying table 'tbl_act'
+[08:35:05.878] [bmv2] [D] [thread 23662] [19.0] [cxt 0] Looking up key:
+
+[08:35:05.878] [bmv2] [D] [thread 23662] [19.0] [cxt 0] Table 'tbl_act': miss
+[08:35:05.878] [bmv2] [D] [thread 23662] [19.0] [cxt 0] Action entry is act - 
+[08:35:05.878] [bmv2] [T] [thread 23662] [19.0] [cxt 0] Action act
+[08:35:05.878] [bmv2] [T] [thread 23662] [19.0] [cxt 0] Primitive (no source info)
+[08:35:05.878] [bmv2] [T] [thread 23662] [19.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:35:05.878] [bmv2] [D] [thread 23662] [19.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:35:05.878] [bmv2] [D] [thread 23662] [19.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[08:35:05.878] [bmv2] [D] [thread 23662] [19.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[08:35:05.878] [bmv2] [D] [thread 23662] [19.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[08:35:05.878] [bmv2] [T] [thread 23662] [19.0] [cxt 0] Action MyIngress.dhcp_forward
+[08:35:05.878] [bmv2] [T] [thread 23662] [19.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[08:35:05.878] [bmv2] [T] [thread 23662] [19.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[08:35:05.878] [bmv2] [T] [thread 23662] [19.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[08:35:05.878] [bmv2] [D] [thread 23662] [19.0] [cxt 0] Pipeline 'ingress': end
+[08:35:05.878] [bmv2] [D] [thread 23662] [19.0] [cxt 0] Egress port is 510
+[08:35:05.879] [bmv2] [D] [thread 23665] [19.0] [cxt 0] Pipeline 'egress': start
+[08:35:05.879] [bmv2] [D] [thread 23665] [19.0] [cxt 0] Pipeline 'egress': end
+[08:35:05.879] [bmv2] [D] [thread 23665] [19.0] [cxt 0] Deparser 'deparser': start
+[08:35:05.879] [bmv2] [T] [thread 23665] [19.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[08:35:05.879] [bmv2] [D] [thread 23665] [19.0] [cxt 0] Deparsing header 'ethernet'
+[08:35:05.879] [bmv2] [D] [thread 23665] [19.0] [cxt 0] Deparser 'deparser': end
+[08:35:05.879] [bmv2] [D] [thread 23667] [19.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[08:35:05.879] [bmv2] [D] [thread 23667] Transmitting packet-in
+[08:36:07.318] [bmv2] [D] [thread 23662] [20.0] [cxt 0] Processing packet received on port 1
+[08:36:07.318] [bmv2] [D] [thread 23662] [20.0] [cxt 0] Parser 'parser': start
+[08:36:07.318] [bmv2] [D] [thread 23662] [20.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:36:07.318] [bmv2] [D] [thread 23662] [20.0] [cxt 0] Extracting header 'ethernet'
+[08:36:07.318] [bmv2] [D] [thread 23662] [20.0] [cxt 0] Parser state 'start': key is 86dd
+[08:36:07.318] [bmv2] [T] [thread 23662] [20.0] [cxt 0] Bytes parsed: 14
+[08:36:07.318] [bmv2] [D] [thread 23662] [20.0] [cxt 0] Parser 'parser': end
+[08:36:07.318] [bmv2] [D] [thread 23662] [20.0] [cxt 0] Pipeline 'ingress': start
+[08:36:07.318] [bmv2] [T] [thread 23662] [20.0] [cxt 0] Applying table 'tbl_act'
+[08:36:07.318] [bmv2] [D] [thread 23662] [20.0] [cxt 0] Looking up key:
+
+[08:36:07.318] [bmv2] [D] [thread 23662] [20.0] [cxt 0] Table 'tbl_act': miss
+[08:36:07.318] [bmv2] [D] [thread 23662] [20.0] [cxt 0] Action entry is act - 
+[08:36:07.318] [bmv2] [T] [thread 23662] [20.0] [cxt 0] Action act
+[08:36:07.318] [bmv2] [T] [thread 23662] [20.0] [cxt 0] Primitive (no source info)
+[08:36:07.318] [bmv2] [T] [thread 23662] [20.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:36:07.318] [bmv2] [D] [thread 23662] [20.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:36:07.318] [bmv2] [D] [thread 23662] [20.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[08:36:07.318] [bmv2] [D] [thread 23662] [20.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[08:36:07.318] [bmv2] [D] [thread 23662] [20.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[08:36:07.318] [bmv2] [T] [thread 23662] [20.0] [cxt 0] Action MyIngress.dhcp_forward
+[08:36:07.318] [bmv2] [T] [thread 23662] [20.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[08:36:07.318] [bmv2] [T] [thread 23662] [20.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[08:36:07.318] [bmv2] [T] [thread 23662] [20.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[08:36:07.318] [bmv2] [D] [thread 23662] [20.0] [cxt 0] Pipeline 'ingress': end
+[08:36:07.318] [bmv2] [D] [thread 23662] [20.0] [cxt 0] Egress port is 510
+[08:36:07.319] [bmv2] [D] [thread 23665] [20.0] [cxt 0] Pipeline 'egress': start
+[08:36:07.319] [bmv2] [D] [thread 23665] [20.0] [cxt 0] Pipeline 'egress': end
+[08:36:07.319] [bmv2] [D] [thread 23665] [20.0] [cxt 0] Deparser 'deparser': start
+[08:36:07.319] [bmv2] [T] [thread 23665] [20.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[08:36:07.319] [bmv2] [D] [thread 23665] [20.0] [cxt 0] Deparsing header 'ethernet'
+[08:36:07.319] [bmv2] [D] [thread 23665] [20.0] [cxt 0] Deparser 'deparser': end
+[08:36:07.320] [bmv2] [D] [thread 23667] [20.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[08:36:07.321] [bmv2] [D] [thread 23667] Transmitting packet-in
+[08:36:09.366] [bmv2] [D] [thread 23662] [21.0] [cxt 0] Processing packet received on port 2
+[08:36:09.366] [bmv2] [D] [thread 23662] [21.0] [cxt 0] Parser 'parser': start
+[08:36:09.366] [bmv2] [D] [thread 23662] [21.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:36:09.366] [bmv2] [D] [thread 23662] [21.0] [cxt 0] Extracting header 'ethernet'
+[08:36:09.366] [bmv2] [D] [thread 23662] [21.0] [cxt 0] Parser state 'start': key is 86dd
+[08:36:09.366] [bmv2] [T] [thread 23662] [21.0] [cxt 0] Bytes parsed: 14
+[08:36:09.366] [bmv2] [D] [thread 23662] [21.0] [cxt 0] Parser 'parser': end
+[08:36:09.366] [bmv2] [D] [thread 23662] [21.0] [cxt 0] Pipeline 'ingress': start
+[08:36:09.366] [bmv2] [T] [thread 23662] [21.0] [cxt 0] Applying table 'tbl_act'
+[08:36:09.366] [bmv2] [D] [thread 23662] [21.0] [cxt 0] Looking up key:
+
+[08:36:09.366] [bmv2] [D] [thread 23662] [21.0] [cxt 0] Table 'tbl_act': miss
+[08:36:09.366] [bmv2] [D] [thread 23662] [21.0] [cxt 0] Action entry is act - 
+[08:36:09.366] [bmv2] [T] [thread 23662] [21.0] [cxt 0] Action act
+[08:36:09.366] [bmv2] [T] [thread 23662] [21.0] [cxt 0] Primitive (no source info)
+[08:36:09.366] [bmv2] [T] [thread 23662] [21.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:36:09.366] [bmv2] [D] [thread 23662] [21.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:36:09.366] [bmv2] [D] [thread 23662] [21.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[08:36:09.366] [bmv2] [D] [thread 23662] [21.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[08:36:09.366] [bmv2] [D] [thread 23662] [21.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[08:36:09.366] [bmv2] [T] [thread 23662] [21.0] [cxt 0] Action MyIngress.dhcp_forward
+[08:36:09.366] [bmv2] [T] [thread 23662] [21.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[08:36:09.366] [bmv2] [T] [thread 23662] [21.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[08:36:09.366] [bmv2] [T] [thread 23662] [21.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[08:36:09.366] [bmv2] [D] [thread 23662] [21.0] [cxt 0] Pipeline 'ingress': end
+[08:36:09.366] [bmv2] [D] [thread 23662] [21.0] [cxt 0] Egress port is 510
+[08:36:09.366] [bmv2] [D] [thread 23665] [21.0] [cxt 0] Pipeline 'egress': start
+[08:36:09.366] [bmv2] [D] [thread 23665] [21.0] [cxt 0] Pipeline 'egress': end
+[08:36:09.366] [bmv2] [D] [thread 23665] [21.0] [cxt 0] Deparser 'deparser': start
+[08:36:09.366] [bmv2] [T] [thread 23665] [21.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[08:36:09.366] [bmv2] [D] [thread 23665] [21.0] [cxt 0] Deparsing header 'ethernet'
+[08:36:09.366] [bmv2] [D] [thread 23665] [21.0] [cxt 0] Deparser 'deparser': end
+[08:36:09.367] [bmv2] [D] [thread 23667] [21.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[08:36:09.367] [bmv2] [D] [thread 23667] Transmitting packet-in
+[08:38:12.245] [bmv2] [D] [thread 23662] [22.0] [cxt 0] Processing packet received on port 1
+[08:38:12.245] [bmv2] [D] [thread 23662] [22.0] [cxt 0] Parser 'parser': start
+[08:38:12.245] [bmv2] [D] [thread 23662] [22.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:38:12.245] [bmv2] [D] [thread 23662] [22.0] [cxt 0] Extracting header 'ethernet'
+[08:38:12.245] [bmv2] [D] [thread 23662] [22.0] [cxt 0] Parser state 'start': key is 86dd
+[08:38:12.245] [bmv2] [T] [thread 23662] [22.0] [cxt 0] Bytes parsed: 14
+[08:38:12.245] [bmv2] [D] [thread 23662] [22.0] [cxt 0] Parser 'parser': end
+[08:38:12.245] [bmv2] [D] [thread 23662] [22.0] [cxt 0] Pipeline 'ingress': start
+[08:38:12.245] [bmv2] [T] [thread 23662] [22.0] [cxt 0] Applying table 'tbl_act'
+[08:38:12.245] [bmv2] [D] [thread 23662] [22.0] [cxt 0] Looking up key:
+
+[08:38:12.245] [bmv2] [D] [thread 23662] [22.0] [cxt 0] Table 'tbl_act': miss
+[08:38:12.245] [bmv2] [D] [thread 23662] [22.0] [cxt 0] Action entry is act - 
+[08:38:12.245] [bmv2] [T] [thread 23662] [22.0] [cxt 0] Action act
+[08:38:12.245] [bmv2] [T] [thread 23662] [22.0] [cxt 0] Primitive (no source info)
+[08:38:12.245] [bmv2] [T] [thread 23662] [22.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:38:12.245] [bmv2] [D] [thread 23662] [22.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:38:12.245] [bmv2] [D] [thread 23662] [22.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[08:38:12.245] [bmv2] [D] [thread 23662] [22.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[08:38:12.245] [bmv2] [D] [thread 23662] [22.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[08:38:12.245] [bmv2] [T] [thread 23662] [22.0] [cxt 0] Action MyIngress.dhcp_forward
+[08:38:12.245] [bmv2] [T] [thread 23662] [22.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[08:38:12.245] [bmv2] [T] [thread 23662] [22.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[08:38:12.245] [bmv2] [T] [thread 23662] [22.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[08:38:12.245] [bmv2] [D] [thread 23662] [22.0] [cxt 0] Pipeline 'ingress': end
+[08:38:12.245] [bmv2] [D] [thread 23662] [22.0] [cxt 0] Egress port is 510
+[08:38:12.246] [bmv2] [D] [thread 23665] [22.0] [cxt 0] Pipeline 'egress': start
+[08:38:12.246] [bmv2] [D] [thread 23665] [22.0] [cxt 0] Pipeline 'egress': end
+[08:38:12.246] [bmv2] [D] [thread 23665] [22.0] [cxt 0] Deparser 'deparser': start
+[08:38:12.246] [bmv2] [T] [thread 23665] [22.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[08:38:12.246] [bmv2] [D] [thread 23665] [22.0] [cxt 0] Deparsing header 'ethernet'
+[08:38:12.246] [bmv2] [D] [thread 23665] [22.0] [cxt 0] Deparser 'deparser': end
+[08:38:12.246] [bmv2] [D] [thread 23667] [22.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[08:38:12.246] [bmv2] [D] [thread 23667] Transmitting packet-in
+[08:38:14.296] [bmv2] [D] [thread 23662] [23.0] [cxt 0] Processing packet received on port 2
+[08:38:14.297] [bmv2] [D] [thread 23662] [23.0] [cxt 0] Parser 'parser': start
+[08:38:14.297] [bmv2] [D] [thread 23662] [23.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:38:14.297] [bmv2] [D] [thread 23662] [23.0] [cxt 0] Extracting header 'ethernet'
+[08:38:14.297] [bmv2] [D] [thread 23662] [23.0] [cxt 0] Parser state 'start': key is 86dd
+[08:38:14.297] [bmv2] [T] [thread 23662] [23.0] [cxt 0] Bytes parsed: 14
+[08:38:14.297] [bmv2] [D] [thread 23662] [23.0] [cxt 0] Parser 'parser': end
+[08:38:14.297] [bmv2] [D] [thread 23662] [23.0] [cxt 0] Pipeline 'ingress': start
+[08:38:14.297] [bmv2] [T] [thread 23662] [23.0] [cxt 0] Applying table 'tbl_act'
+[08:38:14.297] [bmv2] [D] [thread 23662] [23.0] [cxt 0] Looking up key:
+
+[08:38:14.297] [bmv2] [D] [thread 23662] [23.0] [cxt 0] Table 'tbl_act': miss
+[08:38:14.297] [bmv2] [D] [thread 23662] [23.0] [cxt 0] Action entry is act - 
+[08:38:14.297] [bmv2] [T] [thread 23662] [23.0] [cxt 0] Action act
+[08:38:14.297] [bmv2] [T] [thread 23662] [23.0] [cxt 0] Primitive (no source info)
+[08:38:14.297] [bmv2] [T] [thread 23662] [23.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:38:14.297] [bmv2] [D] [thread 23662] [23.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:38:14.297] [bmv2] [D] [thread 23662] [23.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[08:38:14.297] [bmv2] [D] [thread 23662] [23.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[08:38:14.297] [bmv2] [D] [thread 23662] [23.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[08:38:14.297] [bmv2] [T] [thread 23662] [23.0] [cxt 0] Action MyIngress.dhcp_forward
+[08:38:14.297] [bmv2] [T] [thread 23662] [23.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[08:38:14.297] [bmv2] [T] [thread 23662] [23.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[08:38:14.297] [bmv2] [T] [thread 23662] [23.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[08:38:14.297] [bmv2] [D] [thread 23662] [23.0] [cxt 0] Pipeline 'ingress': end
+[08:38:14.297] [bmv2] [D] [thread 23662] [23.0] [cxt 0] Egress port is 510
+[08:38:14.297] [bmv2] [D] [thread 23665] [23.0] [cxt 0] Pipeline 'egress': start
+[08:38:14.297] [bmv2] [D] [thread 23665] [23.0] [cxt 0] Pipeline 'egress': end
+[08:38:14.298] [bmv2] [D] [thread 23665] [23.0] [cxt 0] Deparser 'deparser': start
+[08:38:14.298] [bmv2] [T] [thread 23665] [23.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[08:38:14.298] [bmv2] [D] [thread 23665] [23.0] [cxt 0] Deparsing header 'ethernet'
+[08:38:14.298] [bmv2] [D] [thread 23665] [23.0] [cxt 0] Deparser 'deparser': end
+[08:38:14.298] [bmv2] [D] [thread 23667] [23.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[08:38:14.298] [bmv2] [D] [thread 23667] Transmitting packet-in
+[08:42:15.958] [bmv2] [D] [thread 23662] [24.0] [cxt 0] Processing packet received on port 2
+[08:42:15.958] [bmv2] [D] [thread 23662] [24.0] [cxt 0] Parser 'parser': start
+[08:42:15.958] [bmv2] [D] [thread 23662] [24.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:42:15.958] [bmv2] [D] [thread 23662] [24.0] [cxt 0] Extracting header 'ethernet'
+[08:42:15.958] [bmv2] [D] [thread 23662] [24.0] [cxt 0] Parser state 'start': key is 86dd
+[08:42:15.958] [bmv2] [T] [thread 23662] [24.0] [cxt 0] Bytes parsed: 14
+[08:42:15.958] [bmv2] [D] [thread 23662] [24.0] [cxt 0] Parser 'parser': end
+[08:42:15.958] [bmv2] [D] [thread 23662] [24.0] [cxt 0] Pipeline 'ingress': start
+[08:42:15.958] [bmv2] [T] [thread 23662] [24.0] [cxt 0] Applying table 'tbl_act'
+[08:42:15.958] [bmv2] [D] [thread 23662] [24.0] [cxt 0] Looking up key:
+
+[08:42:15.958] [bmv2] [D] [thread 23662] [24.0] [cxt 0] Table 'tbl_act': miss
+[08:42:15.958] [bmv2] [D] [thread 23662] [24.0] [cxt 0] Action entry is act - 
+[08:42:15.958] [bmv2] [T] [thread 23662] [24.0] [cxt 0] Action act
+[08:42:15.958] [bmv2] [T] [thread 23662] [24.0] [cxt 0] Primitive (no source info)
+[08:42:15.958] [bmv2] [T] [thread 23662] [24.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:42:15.958] [bmv2] [D] [thread 23662] [24.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:42:15.958] [bmv2] [D] [thread 23662] [24.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[08:42:15.958] [bmv2] [D] [thread 23662] [24.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[08:42:15.958] [bmv2] [D] [thread 23662] [24.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[08:42:15.958] [bmv2] [T] [thread 23662] [24.0] [cxt 0] Action MyIngress.dhcp_forward
+[08:42:15.958] [bmv2] [T] [thread 23662] [24.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[08:42:15.958] [bmv2] [T] [thread 23662] [24.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[08:42:15.958] [bmv2] [T] [thread 23662] [24.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[08:42:15.958] [bmv2] [D] [thread 23662] [24.0] [cxt 0] Pipeline 'ingress': end
+[08:42:15.958] [bmv2] [D] [thread 23662] [24.0] [cxt 0] Egress port is 510
+[08:42:15.959] [bmv2] [D] [thread 23665] [24.0] [cxt 0] Pipeline 'egress': start
+[08:42:15.959] [bmv2] [D] [thread 23665] [24.0] [cxt 0] Pipeline 'egress': end
+[08:42:15.959] [bmv2] [D] [thread 23665] [24.0] [cxt 0] Deparser 'deparser': start
+[08:42:15.959] [bmv2] [T] [thread 23665] [24.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[08:42:15.959] [bmv2] [D] [thread 23665] [24.0] [cxt 0] Deparsing header 'ethernet'
+[08:42:15.959] [bmv2] [D] [thread 23665] [24.0] [cxt 0] Deparser 'deparser': end
+[08:42:15.959] [bmv2] [D] [thread 23667] [24.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[08:42:15.959] [bmv2] [D] [thread 23667] Transmitting packet-in
+[08:42:48.725] [bmv2] [D] [thread 23662] [25.0] [cxt 0] Processing packet received on port 1
+[08:42:48.725] [bmv2] [D] [thread 23662] [25.0] [cxt 0] Parser 'parser': start
+[08:42:48.725] [bmv2] [D] [thread 23662] [25.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:42:48.725] [bmv2] [D] [thread 23662] [25.0] [cxt 0] Extracting header 'ethernet'
+[08:42:48.725] [bmv2] [D] [thread 23662] [25.0] [cxt 0] Parser state 'start': key is 86dd
+[08:42:48.725] [bmv2] [T] [thread 23662] [25.0] [cxt 0] Bytes parsed: 14
+[08:42:48.725] [bmv2] [D] [thread 23662] [25.0] [cxt 0] Parser 'parser': end
+[08:42:48.725] [bmv2] [D] [thread 23662] [25.0] [cxt 0] Pipeline 'ingress': start
+[08:42:48.725] [bmv2] [T] [thread 23662] [25.0] [cxt 0] Applying table 'tbl_act'
+[08:42:48.725] [bmv2] [D] [thread 23662] [25.0] [cxt 0] Looking up key:
+
+[08:42:48.725] [bmv2] [D] [thread 23662] [25.0] [cxt 0] Table 'tbl_act': miss
+[08:42:48.725] [bmv2] [D] [thread 23662] [25.0] [cxt 0] Action entry is act - 
+[08:42:48.725] [bmv2] [T] [thread 23662] [25.0] [cxt 0] Action act
+[08:42:48.725] [bmv2] [T] [thread 23662] [25.0] [cxt 0] Primitive (no source info)
+[08:42:48.725] [bmv2] [T] [thread 23662] [25.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:42:48.725] [bmv2] [D] [thread 23662] [25.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:42:48.726] [bmv2] [D] [thread 23662] [25.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[08:42:48.726] [bmv2] [D] [thread 23662] [25.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[08:42:48.726] [bmv2] [D] [thread 23662] [25.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[08:42:48.726] [bmv2] [T] [thread 23662] [25.0] [cxt 0] Action MyIngress.dhcp_forward
+[08:42:48.726] [bmv2] [T] [thread 23662] [25.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[08:42:48.726] [bmv2] [T] [thread 23662] [25.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[08:42:48.726] [bmv2] [T] [thread 23662] [25.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[08:42:48.726] [bmv2] [D] [thread 23662] [25.0] [cxt 0] Pipeline 'ingress': end
+[08:42:48.726] [bmv2] [D] [thread 23662] [25.0] [cxt 0] Egress port is 510
+[08:42:48.726] [bmv2] [D] [thread 23665] [25.0] [cxt 0] Pipeline 'egress': start
+[08:42:48.726] [bmv2] [D] [thread 23665] [25.0] [cxt 0] Pipeline 'egress': end
+[08:42:48.726] [bmv2] [D] [thread 23665] [25.0] [cxt 0] Deparser 'deparser': start
+[08:42:48.726] [bmv2] [T] [thread 23665] [25.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[08:42:48.726] [bmv2] [D] [thread 23665] [25.0] [cxt 0] Deparsing header 'ethernet'
+[08:42:48.726] [bmv2] [D] [thread 23665] [25.0] [cxt 0] Deparser 'deparser': end
+[08:42:48.726] [bmv2] [D] [thread 23667] [25.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[08:42:48.726] [bmv2] [D] [thread 23667] Transmitting packet-in
+[08:50:27.478] [bmv2] [D] [thread 23662] [26.0] [cxt 0] Processing packet received on port 2
+[08:50:27.478] [bmv2] [D] [thread 23662] [26.0] [cxt 0] Parser 'parser': start
+[08:50:27.478] [bmv2] [D] [thread 23662] [26.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:50:27.478] [bmv2] [D] [thread 23662] [26.0] [cxt 0] Extracting header 'ethernet'
+[08:50:27.478] [bmv2] [D] [thread 23662] [26.0] [cxt 0] Parser state 'start': key is 86dd
+[08:50:27.478] [bmv2] [T] [thread 23662] [26.0] [cxt 0] Bytes parsed: 14
+[08:50:27.478] [bmv2] [D] [thread 23662] [26.0] [cxt 0] Parser 'parser': end
+[08:50:27.478] [bmv2] [D] [thread 23662] [26.0] [cxt 0] Pipeline 'ingress': start
+[08:50:27.478] [bmv2] [T] [thread 23662] [26.0] [cxt 0] Applying table 'tbl_act'
+[08:50:27.478] [bmv2] [D] [thread 23662] [26.0] [cxt 0] Looking up key:
+
+[08:50:27.478] [bmv2] [D] [thread 23662] [26.0] [cxt 0] Table 'tbl_act': miss
+[08:50:27.478] [bmv2] [D] [thread 23662] [26.0] [cxt 0] Action entry is act - 
+[08:50:27.478] [bmv2] [T] [thread 23662] [26.0] [cxt 0] Action act
+[08:50:27.478] [bmv2] [T] [thread 23662] [26.0] [cxt 0] Primitive (no source info)
+[08:50:27.478] [bmv2] [T] [thread 23662] [26.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:50:27.478] [bmv2] [D] [thread 23662] [26.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:50:27.478] [bmv2] [D] [thread 23662] [26.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[08:50:27.479] [bmv2] [D] [thread 23662] [26.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[08:50:27.479] [bmv2] [D] [thread 23662] [26.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[08:50:27.479] [bmv2] [T] [thread 23662] [26.0] [cxt 0] Action MyIngress.dhcp_forward
+[08:50:27.479] [bmv2] [T] [thread 23662] [26.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[08:50:27.479] [bmv2] [T] [thread 23662] [26.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[08:50:27.479] [bmv2] [T] [thread 23662] [26.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[08:50:27.480] [bmv2] [D] [thread 23662] [26.0] [cxt 0] Pipeline 'ingress': end
+[08:50:27.480] [bmv2] [D] [thread 23662] [26.0] [cxt 0] Egress port is 510
+[08:50:27.480] [bmv2] [D] [thread 23665] [26.0] [cxt 0] Pipeline 'egress': start
+[08:50:27.480] [bmv2] [D] [thread 23665] [26.0] [cxt 0] Pipeline 'egress': end
+[08:50:27.480] [bmv2] [D] [thread 23665] [26.0] [cxt 0] Deparser 'deparser': start
+[08:50:27.480] [bmv2] [T] [thread 23665] [26.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[08:50:27.480] [bmv2] [D] [thread 23665] [26.0] [cxt 0] Deparsing header 'ethernet'
+[08:50:27.480] [bmv2] [D] [thread 23665] [26.0] [cxt 0] Deparser 'deparser': end
+[08:50:27.481] [bmv2] [D] [thread 23667] [26.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[08:50:27.481] [bmv2] [D] [thread 23667] Transmitting packet-in
+[08:51:33.013] [bmv2] [D] [thread 23662] [27.0] [cxt 0] Processing packet received on port 1
+[08:51:33.013] [bmv2] [D] [thread 23662] [27.0] [cxt 0] Parser 'parser': start
+[08:51:33.013] [bmv2] [D] [thread 23662] [27.0] [cxt 0] Parser 'parser' entering state 'start'
+[08:51:33.013] [bmv2] [D] [thread 23662] [27.0] [cxt 0] Extracting header 'ethernet'
+[08:51:33.013] [bmv2] [D] [thread 23662] [27.0] [cxt 0] Parser state 'start': key is 86dd
+[08:51:33.013] [bmv2] [T] [thread 23662] [27.0] [cxt 0] Bytes parsed: 14
+[08:51:33.013] [bmv2] [D] [thread 23662] [27.0] [cxt 0] Parser 'parser': end
+[08:51:33.013] [bmv2] [D] [thread 23662] [27.0] [cxt 0] Pipeline 'ingress': start
+[08:51:33.013] [bmv2] [T] [thread 23662] [27.0] [cxt 0] Applying table 'tbl_act'
+[08:51:33.013] [bmv2] [D] [thread 23662] [27.0] [cxt 0] Looking up key:
+
+[08:51:33.013] [bmv2] [D] [thread 23662] [27.0] [cxt 0] Table 'tbl_act': miss
+[08:51:33.013] [bmv2] [D] [thread 23662] [27.0] [cxt 0] Action entry is act - 
+[08:51:33.013] [bmv2] [T] [thread 23662] [27.0] [cxt 0] Action act
+[08:51:33.013] [bmv2] [T] [thread 23662] [27.0] [cxt 0] Primitive (no source info)
+[08:51:33.013] [bmv2] [T] [thread 23662] [27.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[08:51:33.013] [bmv2] [D] [thread 23662] [27.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[08:51:33.013] [bmv2] [D] [thread 23662] [27.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[08:51:33.013] [bmv2] [D] [thread 23662] [27.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[08:51:33.013] [bmv2] [D] [thread 23662] [27.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[08:51:33.013] [bmv2] [T] [thread 23662] [27.0] [cxt 0] Action MyIngress.dhcp_forward
+[08:51:33.013] [bmv2] [T] [thread 23662] [27.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[08:51:33.013] [bmv2] [T] [thread 23662] [27.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[08:51:33.013] [bmv2] [T] [thread 23662] [27.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[08:51:33.013] [bmv2] [D] [thread 23662] [27.0] [cxt 0] Pipeline 'ingress': end
+[08:51:33.013] [bmv2] [D] [thread 23662] [27.0] [cxt 0] Egress port is 510
+[08:51:33.014] [bmv2] [D] [thread 23665] [27.0] [cxt 0] Pipeline 'egress': start
+[08:51:33.014] [bmv2] [D] [thread 23665] [27.0] [cxt 0] Pipeline 'egress': end
+[08:51:33.014] [bmv2] [D] [thread 23665] [27.0] [cxt 0] Deparser 'deparser': start
+[08:51:33.014] [bmv2] [T] [thread 23665] [27.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[08:51:33.014] [bmv2] [D] [thread 23665] [27.0] [cxt 0] Deparsing header 'ethernet'
+[08:51:33.014] [bmv2] [D] [thread 23665] [27.0] [cxt 0] Deparser 'deparser': end
+[08:51:33.014] [bmv2] [D] [thread 23667] [27.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[08:51:33.014] [bmv2] [D] [thread 23667] Transmitting packet-in
+[09:06:17.749] [bmv2] [D] [thread 23662] [28.0] [cxt 0] Processing packet received on port 2
+[09:06:17.749] [bmv2] [D] [thread 23662] [28.0] [cxt 0] Parser 'parser': start
+[09:06:17.749] [bmv2] [D] [thread 23662] [28.0] [cxt 0] Parser 'parser' entering state 'start'
+[09:06:17.749] [bmv2] [D] [thread 23662] [28.0] [cxt 0] Extracting header 'ethernet'
+[09:06:17.749] [bmv2] [D] [thread 23662] [28.0] [cxt 0] Parser state 'start': key is 86dd
+[09:06:17.749] [bmv2] [T] [thread 23662] [28.0] [cxt 0] Bytes parsed: 14
+[09:06:17.750] [bmv2] [D] [thread 23662] [28.0] [cxt 0] Parser 'parser': end
+[09:06:17.750] [bmv2] [D] [thread 23662] [28.0] [cxt 0] Pipeline 'ingress': start
+[09:06:17.750] [bmv2] [T] [thread 23662] [28.0] [cxt 0] Applying table 'tbl_act'
+[09:06:17.750] [bmv2] [D] [thread 23662] [28.0] [cxt 0] Looking up key:
+
+[09:06:17.750] [bmv2] [D] [thread 23662] [28.0] [cxt 0] Table 'tbl_act': miss
+[09:06:17.750] [bmv2] [D] [thread 23662] [28.0] [cxt 0] Action entry is act - 
+[09:06:17.750] [bmv2] [T] [thread 23662] [28.0] [cxt 0] Action act
+[09:06:17.750] [bmv2] [T] [thread 23662] [28.0] [cxt 0] Primitive (no source info)
+[09:06:17.750] [bmv2] [T] [thread 23662] [28.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[09:06:17.750] [bmv2] [D] [thread 23662] [28.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[09:06:17.750] [bmv2] [D] [thread 23662] [28.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[09:06:17.750] [bmv2] [D] [thread 23662] [28.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[09:06:17.750] [bmv2] [D] [thread 23662] [28.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[09:06:17.750] [bmv2] [T] [thread 23662] [28.0] [cxt 0] Action MyIngress.dhcp_forward
+[09:06:17.750] [bmv2] [T] [thread 23662] [28.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[09:06:17.750] [bmv2] [T] [thread 23662] [28.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[09:06:17.750] [bmv2] [T] [thread 23662] [28.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[09:06:17.750] [bmv2] [D] [thread 23662] [28.0] [cxt 0] Pipeline 'ingress': end
+[09:06:17.750] [bmv2] [D] [thread 23662] [28.0] [cxt 0] Egress port is 510
+[09:06:17.750] [bmv2] [D] [thread 23665] [28.0] [cxt 0] Pipeline 'egress': start
+[09:06:17.750] [bmv2] [D] [thread 23665] [28.0] [cxt 0] Pipeline 'egress': end
+[09:06:17.750] [bmv2] [D] [thread 23665] [28.0] [cxt 0] Deparser 'deparser': start
+[09:06:17.750] [bmv2] [T] [thread 23665] [28.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[09:06:17.750] [bmv2] [D] [thread 23665] [28.0] [cxt 0] Deparsing header 'ethernet'
+[09:06:17.750] [bmv2] [D] [thread 23665] [28.0] [cxt 0] Deparser 'deparser': end
+[09:06:17.751] [bmv2] [D] [thread 23667] [28.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[09:06:17.751] [bmv2] [D] [thread 23667] Transmitting packet-in
+[09:10:23.510] [bmv2] [D] [thread 23662] [29.0] [cxt 0] Processing packet received on port 1
+[09:10:23.510] [bmv2] [D] [thread 23662] [29.0] [cxt 0] Parser 'parser': start
+[09:10:23.510] [bmv2] [D] [thread 23662] [29.0] [cxt 0] Parser 'parser' entering state 'start'
+[09:10:23.510] [bmv2] [D] [thread 23662] [29.0] [cxt 0] Extracting header 'ethernet'
+[09:10:23.510] [bmv2] [D] [thread 23662] [29.0] [cxt 0] Parser state 'start': key is 86dd
+[09:10:23.510] [bmv2] [T] [thread 23662] [29.0] [cxt 0] Bytes parsed: 14
+[09:10:23.510] [bmv2] [D] [thread 23662] [29.0] [cxt 0] Parser 'parser': end
+[09:10:23.510] [bmv2] [D] [thread 23662] [29.0] [cxt 0] Pipeline 'ingress': start
+[09:10:23.510] [bmv2] [T] [thread 23662] [29.0] [cxt 0] Applying table 'tbl_act'
+[09:10:23.510] [bmv2] [D] [thread 23662] [29.0] [cxt 0] Looking up key:
+
+[09:10:23.510] [bmv2] [D] [thread 23662] [29.0] [cxt 0] Table 'tbl_act': miss
+[09:10:23.510] [bmv2] [D] [thread 23662] [29.0] [cxt 0] Action entry is act - 
+[09:10:23.510] [bmv2] [T] [thread 23662] [29.0] [cxt 0] Action act
+[09:10:23.510] [bmv2] [T] [thread 23662] [29.0] [cxt 0] Primitive (no source info)
+[09:10:23.510] [bmv2] [T] [thread 23662] [29.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[09:10:23.510] [bmv2] [D] [thread 23662] [29.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[09:10:23.510] [bmv2] [D] [thread 23662] [29.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[09:10:23.510] [bmv2] [D] [thread 23662] [29.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[09:10:23.510] [bmv2] [D] [thread 23662] [29.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[09:10:23.510] [bmv2] [T] [thread 23662] [29.0] [cxt 0] Action MyIngress.dhcp_forward
+[09:10:23.510] [bmv2] [T] [thread 23662] [29.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[09:10:23.510] [bmv2] [T] [thread 23662] [29.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[09:10:23.510] [bmv2] [T] [thread 23662] [29.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[09:10:23.511] [bmv2] [D] [thread 23662] [29.0] [cxt 0] Pipeline 'ingress': end
+[09:10:23.511] [bmv2] [D] [thread 23662] [29.0] [cxt 0] Egress port is 510
+[09:10:23.524] [bmv2] [D] [thread 23665] [29.0] [cxt 0] Pipeline 'egress': start
+[09:10:23.524] [bmv2] [D] [thread 23665] [29.0] [cxt 0] Pipeline 'egress': end
+[09:10:23.524] [bmv2] [D] [thread 23665] [29.0] [cxt 0] Deparser 'deparser': start
+[09:10:23.524] [bmv2] [T] [thread 23665] [29.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[09:10:23.524] [bmv2] [D] [thread 23665] [29.0] [cxt 0] Deparsing header 'ethernet'
+[09:10:23.524] [bmv2] [D] [thread 23665] [29.0] [cxt 0] Deparser 'deparser': end
+[09:10:23.525] [bmv2] [D] [thread 23667] [29.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[09:10:23.525] [bmv2] [D] [thread 23667] Transmitting packet-in
+[09:38:47.453] [bmv2] [D] [thread 23662] [30.0] [cxt 0] Processing packet received on port 2
+[09:38:47.453] [bmv2] [D] [thread 23662] [30.0] [cxt 0] Parser 'parser': start
+[09:38:47.453] [bmv2] [D] [thread 23662] [30.0] [cxt 0] Parser 'parser' entering state 'start'
+[09:38:47.453] [bmv2] [D] [thread 23662] [30.0] [cxt 0] Extracting header 'ethernet'
+[09:38:47.453] [bmv2] [D] [thread 23662] [30.0] [cxt 0] Parser state 'start': key is 86dd
+[09:38:47.453] [bmv2] [T] [thread 23662] [30.0] [cxt 0] Bytes parsed: 14
+[09:38:47.453] [bmv2] [D] [thread 23662] [30.0] [cxt 0] Parser 'parser': end
+[09:38:47.453] [bmv2] [D] [thread 23662] [30.0] [cxt 0] Pipeline 'ingress': start
+[09:38:47.453] [bmv2] [T] [thread 23662] [30.0] [cxt 0] Applying table 'tbl_act'
+[09:38:47.453] [bmv2] [D] [thread 23662] [30.0] [cxt 0] Looking up key:
+
+[09:38:47.453] [bmv2] [D] [thread 23662] [30.0] [cxt 0] Table 'tbl_act': miss
+[09:38:47.453] [bmv2] [D] [thread 23662] [30.0] [cxt 0] Action entry is act - 
+[09:38:47.453] [bmv2] [T] [thread 23662] [30.0] [cxt 0] Action act
+[09:38:47.453] [bmv2] [T] [thread 23662] [30.0] [cxt 0] Primitive (no source info)
+[09:38:47.453] [bmv2] [T] [thread 23662] [30.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[09:38:47.453] [bmv2] [D] [thread 23662] [30.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[09:38:47.453] [bmv2] [D] [thread 23662] [30.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[09:38:47.453] [bmv2] [D] [thread 23662] [30.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[09:38:47.453] [bmv2] [D] [thread 23662] [30.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[09:38:47.453] [bmv2] [T] [thread 23662] [30.0] [cxt 0] Action MyIngress.dhcp_forward
+[09:38:47.453] [bmv2] [T] [thread 23662] [30.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[09:38:47.453] [bmv2] [T] [thread 23662] [30.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[09:38:47.453] [bmv2] [T] [thread 23662] [30.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[09:38:47.453] [bmv2] [D] [thread 23662] [30.0] [cxt 0] Pipeline 'ingress': end
+[09:38:47.453] [bmv2] [D] [thread 23662] [30.0] [cxt 0] Egress port is 510
+[09:38:47.453] [bmv2] [D] [thread 23665] [30.0] [cxt 0] Pipeline 'egress': start
+[09:38:47.453] [bmv2] [D] [thread 23665] [30.0] [cxt 0] Pipeline 'egress': end
+[09:38:47.453] [bmv2] [D] [thread 23665] [30.0] [cxt 0] Deparser 'deparser': start
+[09:38:47.454] [bmv2] [T] [thread 23665] [30.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[09:38:47.454] [bmv2] [D] [thread 23665] [30.0] [cxt 0] Deparsing header 'ethernet'
+[09:38:47.454] [bmv2] [D] [thread 23665] [30.0] [cxt 0] Deparser 'deparser': end
+[09:38:47.454] [bmv2] [D] [thread 23667] [30.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[09:38:47.454] [bmv2] [D] [thread 23667] Transmitting packet-in
+[09:47:31.734] [bmv2] [D] [thread 23662] [31.0] [cxt 0] Processing packet received on port 1
+[09:47:31.734] [bmv2] [D] [thread 23662] [31.0] [cxt 0] Parser 'parser': start
+[09:47:31.734] [bmv2] [D] [thread 23662] [31.0] [cxt 0] Parser 'parser' entering state 'start'
+[09:47:31.734] [bmv2] [D] [thread 23662] [31.0] [cxt 0] Extracting header 'ethernet'
+[09:47:31.734] [bmv2] [D] [thread 23662] [31.0] [cxt 0] Parser state 'start': key is 86dd
+[09:47:31.734] [bmv2] [T] [thread 23662] [31.0] [cxt 0] Bytes parsed: 14
+[09:47:31.734] [bmv2] [D] [thread 23662] [31.0] [cxt 0] Parser 'parser': end
+[09:47:31.734] [bmv2] [D] [thread 23662] [31.0] [cxt 0] Pipeline 'ingress': start
+[09:47:31.734] [bmv2] [T] [thread 23662] [31.0] [cxt 0] Applying table 'tbl_act'
+[09:47:31.734] [bmv2] [D] [thread 23662] [31.0] [cxt 0] Looking up key:
+
+[09:47:31.734] [bmv2] [D] [thread 23662] [31.0] [cxt 0] Table 'tbl_act': miss
+[09:47:31.734] [bmv2] [D] [thread 23662] [31.0] [cxt 0] Action entry is act - 
+[09:47:31.734] [bmv2] [T] [thread 23662] [31.0] [cxt 0] Action act
+[09:47:31.734] [bmv2] [T] [thread 23662] [31.0] [cxt 0] Primitive (no source info)
+[09:47:31.734] [bmv2] [T] [thread 23662] [31.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[09:47:31.735] [bmv2] [D] [thread 23662] [31.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[09:47:31.735] [bmv2] [D] [thread 23662] [31.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[09:47:31.735] [bmv2] [D] [thread 23662] [31.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[09:47:31.735] [bmv2] [D] [thread 23662] [31.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[09:47:31.735] [bmv2] [T] [thread 23662] [31.0] [cxt 0] Action MyIngress.dhcp_forward
+[09:47:31.735] [bmv2] [T] [thread 23662] [31.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[09:47:31.735] [bmv2] [T] [thread 23662] [31.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[09:47:31.735] [bmv2] [T] [thread 23662] [31.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[09:47:31.735] [bmv2] [D] [thread 23662] [31.0] [cxt 0] Pipeline 'ingress': end
+[09:47:31.735] [bmv2] [D] [thread 23662] [31.0] [cxt 0] Egress port is 510
+[09:47:31.735] [bmv2] [D] [thread 23665] [31.0] [cxt 0] Pipeline 'egress': start
+[09:47:31.735] [bmv2] [D] [thread 23665] [31.0] [cxt 0] Pipeline 'egress': end
+[09:47:31.735] [bmv2] [D] [thread 23665] [31.0] [cxt 0] Deparser 'deparser': start
+[09:47:31.735] [bmv2] [T] [thread 23665] [31.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[09:47:31.735] [bmv2] [D] [thread 23665] [31.0] [cxt 0] Deparsing header 'ethernet'
+[09:47:31.735] [bmv2] [D] [thread 23665] [31.0] [cxt 0] Deparser 'deparser': end
+[09:47:31.736] [bmv2] [D] [thread 23667] [31.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[09:47:31.736] [bmv2] [D] [thread 23667] Transmitting packet-in
+[10:35:35.327] [bmv2] [D] [thread 23662] [32.0] [cxt 0] Processing packet received on port 2
+[10:35:35.327] [bmv2] [D] [thread 23662] [32.0] [cxt 0] Parser 'parser': start
+[10:35:35.327] [bmv2] [D] [thread 23662] [32.0] [cxt 0] Parser 'parser' entering state 'start'
+[10:35:35.327] [bmv2] [D] [thread 23662] [32.0] [cxt 0] Extracting header 'ethernet'
+[10:35:35.327] [bmv2] [D] [thread 23662] [32.0] [cxt 0] Parser state 'start': key is 86dd
+[10:35:35.327] [bmv2] [T] [thread 23662] [32.0] [cxt 0] Bytes parsed: 14
+[10:35:35.327] [bmv2] [D] [thread 23662] [32.0] [cxt 0] Parser 'parser': end
+[10:35:35.327] [bmv2] [D] [thread 23662] [32.0] [cxt 0] Pipeline 'ingress': start
+[10:35:35.327] [bmv2] [T] [thread 23662] [32.0] [cxt 0] Applying table 'tbl_act'
+[10:35:35.327] [bmv2] [D] [thread 23662] [32.0] [cxt 0] Looking up key:
+
+[10:35:35.327] [bmv2] [D] [thread 23662] [32.0] [cxt 0] Table 'tbl_act': miss
+[10:35:35.327] [bmv2] [D] [thread 23662] [32.0] [cxt 0] Action entry is act - 
+[10:35:35.327] [bmv2] [T] [thread 23662] [32.0] [cxt 0] Action act
+[10:35:35.327] [bmv2] [T] [thread 23662] [32.0] [cxt 0] Primitive (no source info)
+[10:35:35.327] [bmv2] [T] [thread 23662] [32.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[10:35:35.327] [bmv2] [D] [thread 23662] [32.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[10:35:35.327] [bmv2] [D] [thread 23662] [32.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[10:35:35.327] [bmv2] [D] [thread 23662] [32.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[10:35:35.327] [bmv2] [D] [thread 23662] [32.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[10:35:35.327] [bmv2] [T] [thread 23662] [32.0] [cxt 0] Action MyIngress.dhcp_forward
+[10:35:35.327] [bmv2] [T] [thread 23662] [32.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[10:35:35.327] [bmv2] [T] [thread 23662] [32.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[10:35:35.327] [bmv2] [T] [thread 23662] [32.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[10:35:35.327] [bmv2] [D] [thread 23662] [32.0] [cxt 0] Pipeline 'ingress': end
+[10:35:35.327] [bmv2] [D] [thread 23662] [32.0] [cxt 0] Egress port is 510
+[10:35:35.328] [bmv2] [D] [thread 23665] [32.0] [cxt 0] Pipeline 'egress': start
+[10:35:35.329] [bmv2] [D] [thread 23665] [32.0] [cxt 0] Pipeline 'egress': end
+[10:35:35.329] [bmv2] [D] [thread 23665] [32.0] [cxt 0] Deparser 'deparser': start
+[10:35:35.329] [bmv2] [T] [thread 23665] [32.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[10:35:35.329] [bmv2] [D] [thread 23665] [32.0] [cxt 0] Deparsing header 'ethernet'
+[10:35:35.329] [bmv2] [D] [thread 23665] [32.0] [cxt 0] Deparser 'deparser': end
+[10:35:35.330] [bmv2] [D] [thread 23667] [32.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[10:35:35.330] [bmv2] [D] [thread 23667] Transmitting packet-in
+[10:44:19.615] [bmv2] [D] [thread 23662] [33.0] [cxt 0] Processing packet received on port 1
+[10:44:19.615] [bmv2] [D] [thread 23662] [33.0] [cxt 0] Parser 'parser': start
+[10:44:19.615] [bmv2] [D] [thread 23662] [33.0] [cxt 0] Parser 'parser' entering state 'start'
+[10:44:19.615] [bmv2] [D] [thread 23662] [33.0] [cxt 0] Extracting header 'ethernet'
+[10:44:19.615] [bmv2] [D] [thread 23662] [33.0] [cxt 0] Parser state 'start': key is 86dd
+[10:44:19.615] [bmv2] [T] [thread 23662] [33.0] [cxt 0] Bytes parsed: 14
+[10:44:19.615] [bmv2] [D] [thread 23662] [33.0] [cxt 0] Parser 'parser': end
+[10:44:19.615] [bmv2] [D] [thread 23662] [33.0] [cxt 0] Pipeline 'ingress': start
+[10:44:19.615] [bmv2] [T] [thread 23662] [33.0] [cxt 0] Applying table 'tbl_act'
+[10:44:19.615] [bmv2] [D] [thread 23662] [33.0] [cxt 0] Looking up key:
+
+[10:44:19.615] [bmv2] [D] [thread 23662] [33.0] [cxt 0] Table 'tbl_act': miss
+[10:44:19.615] [bmv2] [D] [thread 23662] [33.0] [cxt 0] Action entry is act - 
+[10:44:19.615] [bmv2] [T] [thread 23662] [33.0] [cxt 0] Action act
+[10:44:19.615] [bmv2] [T] [thread 23662] [33.0] [cxt 0] Primitive (no source info)
+[10:44:19.615] [bmv2] [T] [thread 23662] [33.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[10:44:19.615] [bmv2] [D] [thread 23662] [33.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[10:44:19.615] [bmv2] [D] [thread 23662] [33.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[10:44:19.615] [bmv2] [D] [thread 23662] [33.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[10:44:19.615] [bmv2] [D] [thread 23662] [33.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[10:44:19.615] [bmv2] [T] [thread 23662] [33.0] [cxt 0] Action MyIngress.dhcp_forward
+[10:44:19.615] [bmv2] [T] [thread 23662] [33.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[10:44:19.615] [bmv2] [T] [thread 23662] [33.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[10:44:19.615] [bmv2] [T] [thread 23662] [33.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[10:44:19.615] [bmv2] [D] [thread 23662] [33.0] [cxt 0] Pipeline 'ingress': end
+[10:44:19.615] [bmv2] [D] [thread 23662] [33.0] [cxt 0] Egress port is 510
+[10:44:19.615] [bmv2] [D] [thread 23665] [33.0] [cxt 0] Pipeline 'egress': start
+[10:44:19.616] [bmv2] [D] [thread 23665] [33.0] [cxt 0] Pipeline 'egress': end
+[10:44:19.616] [bmv2] [D] [thread 23665] [33.0] [cxt 0] Deparser 'deparser': start
+[10:44:19.616] [bmv2] [T] [thread 23665] [33.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[10:44:19.616] [bmv2] [D] [thread 23665] [33.0] [cxt 0] Deparsing header 'ethernet'
+[10:44:19.616] [bmv2] [D] [thread 23665] [33.0] [cxt 0] Deparser 'deparser': end
+[10:44:19.616] [bmv2] [D] [thread 23667] [33.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[10:44:19.616] [bmv2] [D] [thread 23667] Transmitting packet-in
+[11:32:23.194] [bmv2] [D] [thread 23662] [34.0] [cxt 0] Processing packet received on port 2
+[11:32:23.194] [bmv2] [D] [thread 23662] [34.0] [cxt 0] Parser 'parser': start
+[11:32:23.194] [bmv2] [D] [thread 23662] [34.0] [cxt 0] Parser 'parser' entering state 'start'
+[11:32:23.194] [bmv2] [D] [thread 23662] [34.0] [cxt 0] Extracting header 'ethernet'
+[11:32:23.194] [bmv2] [D] [thread 23662] [34.0] [cxt 0] Parser state 'start': key is 86dd
+[11:32:23.194] [bmv2] [T] [thread 23662] [34.0] [cxt 0] Bytes parsed: 14
+[11:32:23.194] [bmv2] [D] [thread 23662] [34.0] [cxt 0] Parser 'parser': end
+[11:32:23.194] [bmv2] [D] [thread 23662] [34.0] [cxt 0] Pipeline 'ingress': start
+[11:32:23.194] [bmv2] [T] [thread 23662] [34.0] [cxt 0] Applying table 'tbl_act'
+[11:32:23.194] [bmv2] [D] [thread 23662] [34.0] [cxt 0] Looking up key:
+
+[11:32:23.194] [bmv2] [D] [thread 23662] [34.0] [cxt 0] Table 'tbl_act': miss
+[11:32:23.194] [bmv2] [D] [thread 23662] [34.0] [cxt 0] Action entry is act - 
+[11:32:23.194] [bmv2] [T] [thread 23662] [34.0] [cxt 0] Action act
+[11:32:23.194] [bmv2] [T] [thread 23662] [34.0] [cxt 0] Primitive (no source info)
+[11:32:23.194] [bmv2] [T] [thread 23662] [34.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[11:32:23.194] [bmv2] [D] [thread 23662] [34.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[11:32:23.194] [bmv2] [D] [thread 23662] [34.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[11:32:23.194] [bmv2] [D] [thread 23662] [34.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[11:32:23.194] [bmv2] [D] [thread 23662] [34.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[11:32:23.194] [bmv2] [T] [thread 23662] [34.0] [cxt 0] Action MyIngress.dhcp_forward
+[11:32:23.194] [bmv2] [T] [thread 23662] [34.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[11:32:23.195] [bmv2] [T] [thread 23662] [34.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[11:32:23.195] [bmv2] [T] [thread 23662] [34.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[11:32:23.195] [bmv2] [D] [thread 23662] [34.0] [cxt 0] Pipeline 'ingress': end
+[11:32:23.195] [bmv2] [D] [thread 23662] [34.0] [cxt 0] Egress port is 510
+[11:32:23.195] [bmv2] [D] [thread 23665] [34.0] [cxt 0] Pipeline 'egress': start
+[11:32:23.195] [bmv2] [D] [thread 23665] [34.0] [cxt 0] Pipeline 'egress': end
+[11:32:23.195] [bmv2] [D] [thread 23665] [34.0] [cxt 0] Deparser 'deparser': start
+[11:32:23.195] [bmv2] [T] [thread 23665] [34.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[11:32:23.195] [bmv2] [D] [thread 23665] [34.0] [cxt 0] Deparsing header 'ethernet'
+[11:32:23.195] [bmv2] [D] [thread 23665] [34.0] [cxt 0] Deparser 'deparser': end
+[11:32:23.195] [bmv2] [D] [thread 23667] [34.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[11:32:23.195] [bmv2] [D] [thread 23667] Transmitting packet-in
+[11:43:18.554] [bmv2] [D] [thread 23662] [35.0] [cxt 0] Processing packet received on port 1
+[11:43:18.554] [bmv2] [D] [thread 23662] [35.0] [cxt 0] Parser 'parser': start
+[11:43:18.554] [bmv2] [D] [thread 23662] [35.0] [cxt 0] Parser 'parser' entering state 'start'
+[11:43:18.554] [bmv2] [D] [thread 23662] [35.0] [cxt 0] Extracting header 'ethernet'
+[11:43:18.554] [bmv2] [D] [thread 23662] [35.0] [cxt 0] Parser state 'start': key is 86dd
+[11:43:18.554] [bmv2] [T] [thread 23662] [35.0] [cxt 0] Bytes parsed: 14
+[11:43:18.554] [bmv2] [D] [thread 23662] [35.0] [cxt 0] Parser 'parser': end
+[11:43:18.554] [bmv2] [D] [thread 23662] [35.0] [cxt 0] Pipeline 'ingress': start
+[11:43:18.554] [bmv2] [T] [thread 23662] [35.0] [cxt 0] Applying table 'tbl_act'
+[11:43:18.554] [bmv2] [D] [thread 23662] [35.0] [cxt 0] Looking up key:
+
+[11:43:18.554] [bmv2] [D] [thread 23662] [35.0] [cxt 0] Table 'tbl_act': miss
+[11:43:18.554] [bmv2] [D] [thread 23662] [35.0] [cxt 0] Action entry is act - 
+[11:43:18.554] [bmv2] [T] [thread 23662] [35.0] [cxt 0] Action act
+[11:43:18.554] [bmv2] [T] [thread 23662] [35.0] [cxt 0] Primitive (no source info)
+[11:43:18.554] [bmv2] [T] [thread 23662] [35.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[11:43:18.554] [bmv2] [D] [thread 23662] [35.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[11:43:18.554] [bmv2] [D] [thread 23662] [35.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[11:43:18.554] [bmv2] [D] [thread 23662] [35.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[11:43:18.554] [bmv2] [D] [thread 23662] [35.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[11:43:18.554] [bmv2] [T] [thread 23662] [35.0] [cxt 0] Action MyIngress.dhcp_forward
+[11:43:18.554] [bmv2] [T] [thread 23662] [35.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[11:43:18.554] [bmv2] [T] [thread 23662] [35.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[11:43:18.554] [bmv2] [T] [thread 23662] [35.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[11:43:18.554] [bmv2] [D] [thread 23662] [35.0] [cxt 0] Pipeline 'ingress': end
+[11:43:18.554] [bmv2] [D] [thread 23662] [35.0] [cxt 0] Egress port is 510
+[11:43:18.555] [bmv2] [D] [thread 23665] [35.0] [cxt 0] Pipeline 'egress': start
+[11:43:18.555] [bmv2] [D] [thread 23665] [35.0] [cxt 0] Pipeline 'egress': end
+[11:43:18.555] [bmv2] [D] [thread 23665] [35.0] [cxt 0] Deparser 'deparser': start
+[11:43:18.555] [bmv2] [T] [thread 23665] [35.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[11:43:18.555] [bmv2] [D] [thread 23665] [35.0] [cxt 0] Deparsing header 'ethernet'
+[11:43:18.555] [bmv2] [D] [thread 23665] [35.0] [cxt 0] Deparser 'deparser': end
+[11:43:18.555] [bmv2] [D] [thread 23667] [35.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[11:43:18.555] [bmv2] [D] [thread 23667] Transmitting packet-in
+[12:40:06.424] [bmv2] [D] [thread 23662] [36.0] [cxt 0] Processing packet received on port 2
+[12:40:06.424] [bmv2] [D] [thread 23662] [36.0] [cxt 0] Parser 'parser': start
+[12:40:06.424] [bmv2] [D] [thread 23662] [36.0] [cxt 0] Parser 'parser' entering state 'start'
+[12:40:06.424] [bmv2] [D] [thread 23662] [36.0] [cxt 0] Extracting header 'ethernet'
+[12:40:06.424] [bmv2] [D] [thread 23662] [36.0] [cxt 0] Parser state 'start': key is 86dd
+[12:40:06.424] [bmv2] [T] [thread 23662] [36.0] [cxt 0] Bytes parsed: 14
+[12:40:06.424] [bmv2] [D] [thread 23662] [36.0] [cxt 0] Parser 'parser': end
+[12:40:06.424] [bmv2] [D] [thread 23662] [36.0] [cxt 0] Pipeline 'ingress': start
+[12:40:06.424] [bmv2] [T] [thread 23662] [36.0] [cxt 0] Applying table 'tbl_act'
+[12:40:06.424] [bmv2] [D] [thread 23662] [36.0] [cxt 0] Looking up key:
+
+[12:40:06.424] [bmv2] [D] [thread 23662] [36.0] [cxt 0] Table 'tbl_act': miss
+[12:40:06.424] [bmv2] [D] [thread 23662] [36.0] [cxt 0] Action entry is act - 
+[12:40:06.424] [bmv2] [T] [thread 23662] [36.0] [cxt 0] Action act
+[12:40:06.424] [bmv2] [T] [thread 23662] [36.0] [cxt 0] Primitive (no source info)
+[12:40:06.424] [bmv2] [T] [thread 23662] [36.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[12:40:06.424] [bmv2] [D] [thread 23662] [36.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[12:40:06.424] [bmv2] [D] [thread 23662] [36.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[12:40:06.424] [bmv2] [D] [thread 23662] [36.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[12:40:06.424] [bmv2] [D] [thread 23662] [36.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[12:40:06.424] [bmv2] [T] [thread 23662] [36.0] [cxt 0] Action MyIngress.dhcp_forward
+[12:40:06.424] [bmv2] [T] [thread 23662] [36.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[12:40:06.424] [bmv2] [T] [thread 23662] [36.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[12:40:06.424] [bmv2] [T] [thread 23662] [36.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[12:40:06.424] [bmv2] [D] [thread 23662] [36.0] [cxt 0] Pipeline 'ingress': end
+[12:40:06.424] [bmv2] [D] [thread 23662] [36.0] [cxt 0] Egress port is 510
+[12:40:06.424] [bmv2] [D] [thread 23665] [36.0] [cxt 0] Pipeline 'egress': start
+[12:40:06.424] [bmv2] [D] [thread 23665] [36.0] [cxt 0] Pipeline 'egress': end
+[12:40:06.424] [bmv2] [D] [thread 23665] [36.0] [cxt 0] Deparser 'deparser': start
+[12:40:06.424] [bmv2] [T] [thread 23665] [36.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[12:40:06.424] [bmv2] [D] [thread 23665] [36.0] [cxt 0] Deparsing header 'ethernet'
+[12:40:06.424] [bmv2] [D] [thread 23665] [36.0] [cxt 0] Deparser 'deparser': end
+[12:40:06.424] [bmv2] [D] [thread 23667] [36.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[12:40:06.424] [bmv2] [D] [thread 23667] Transmitting packet-in
+[12:51:01.781] [bmv2] [D] [thread 23662] [37.0] [cxt 0] Processing packet received on port 1
+[12:51:01.781] [bmv2] [D] [thread 23662] [37.0] [cxt 0] Parser 'parser': start
+[12:51:01.781] [bmv2] [D] [thread 23662] [37.0] [cxt 0] Parser 'parser' entering state 'start'
+[12:51:01.781] [bmv2] [D] [thread 23662] [37.0] [cxt 0] Extracting header 'ethernet'
+[12:51:01.781] [bmv2] [D] [thread 23662] [37.0] [cxt 0] Parser state 'start': key is 86dd
+[12:51:01.781] [bmv2] [T] [thread 23662] [37.0] [cxt 0] Bytes parsed: 14
+[12:51:01.781] [bmv2] [D] [thread 23662] [37.0] [cxt 0] Parser 'parser': end
+[12:51:01.781] [bmv2] [D] [thread 23662] [37.0] [cxt 0] Pipeline 'ingress': start
+[12:51:01.781] [bmv2] [T] [thread 23662] [37.0] [cxt 0] Applying table 'tbl_act'
+[12:51:01.781] [bmv2] [D] [thread 23662] [37.0] [cxt 0] Looking up key:
+
+[12:51:01.781] [bmv2] [D] [thread 23662] [37.0] [cxt 0] Table 'tbl_act': miss
+[12:51:01.781] [bmv2] [D] [thread 23662] [37.0] [cxt 0] Action entry is act - 
+[12:51:01.781] [bmv2] [T] [thread 23662] [37.0] [cxt 0] Action act
+[12:51:01.781] [bmv2] [T] [thread 23662] [37.0] [cxt 0] Primitive (no source info)
+[12:51:01.781] [bmv2] [T] [thread 23662] [37.0] [cxt 0] Applying table 'MyIngress.ipv4_lpm'
+[12:51:01.781] [bmv2] [D] [thread 23662] [37.0] [cxt 0] Looking up key:
+* hdr.ipv4.srcAddr    : 00000000
+
+[12:51:01.781] [bmv2] [D] [thread 23662] [37.0] [cxt 0] Table 'MyIngress.ipv4_lpm': hit with handle 0
+[12:51:01.781] [bmv2] [D] [thread 23662] [37.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.srcAddr    : LPM       00000000/32
+Action entry: MyIngress.dhcp_forward - 1fe,
+
+[12:51:01.781] [bmv2] [D] [thread 23662] [37.0] [cxt 0] Action entry is MyIngress.dhcp_forward - 1fe,
+[12:51:01.781] [bmv2] [T] [thread 23662] [37.0] [cxt 0] Action MyIngress.dhcp_forward
+[12:51:01.781] [bmv2] [T] [thread 23662] [37.0] [cxt 0] scaleIoT.p4(198) Primitive flow_duration.write(1, standard_metadata.enq_timestamp)
+[12:51:01.781] [bmv2] [T] [thread 23662] [37.0] [cxt 0] Wrote register 'MyIngress.flow_duration' at index 1 with value 0
+[12:51:01.781] [bmv2] [T] [thread 23662] [37.0] [cxt 0] scaleIoT.p4(201) Primitive standard_metadata.egress_spec = port
+[12:51:01.781] [bmv2] [D] [thread 23662] [37.0] [cxt 0] Pipeline 'ingress': end
+[12:51:01.781] [bmv2] [D] [thread 23662] [37.0] [cxt 0] Egress port is 510
+[12:51:01.781] [bmv2] [D] [thread 23665] [37.0] [cxt 0] Pipeline 'egress': start
+[12:51:01.781] [bmv2] [D] [thread 23665] [37.0] [cxt 0] Pipeline 'egress': end
+[12:51:01.781] [bmv2] [D] [thread 23665] [37.0] [cxt 0] Deparser 'deparser': start
+[12:51:01.781] [bmv2] [T] [thread 23665] [37.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[12:51:01.781] [bmv2] [D] [thread 23665] [37.0] [cxt 0] Deparsing header 'ethernet'
+[12:51:01.781] [bmv2] [D] [thread 23665] [37.0] [cxt 0] Deparser 'deparser': end
+[12:51:01.782] [bmv2] [D] [thread 23667] [37.0] [cxt 0] Transmitting packet of size 70 out of port 510
+[12:51:01.782] [bmv2] [D] [thread 23667] Transmitting packet-in
