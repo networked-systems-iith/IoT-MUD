@@ -1,0 +1,1633 @@
+version:
+  version: 1.0.1
+  run_id: "7d64974923aa44e0"
+  target: Tofino
+phv ingress:
+  ig_intr_md_from_prsr.global_tstamp.0-31: {  stage 0..5: W2 } 
+  ig_intr_md_from_prsr.global_tstamp.32-47: {  stage 0..5: H6 } 
+  hdr.ethernet.dst_mac.0-15: TH8
+  hdr.ethernet.dst_mac.16-31: TH9
+  hdr.ethernet.dst_mac.32-47: TH12
+  hdr.ethernet.src_mac.0-31: W0
+  hdr.ethernet.src_mac.32-47: H5
+  hdr.ethernet.ether_type: H4
+  hdr.ipv4.version: TW5(28..31)
+  hdr.ipv4.ihl: TW5(24..27)
+  hdr.ipv4.diffserv: TW5(16..23)
+  hdr.ipv4.totalLen: TW5(0..15)
+  hdr.ipv4.identification: TW6(16..31)
+  hdr.ipv4.flags: TW6(13..15)
+  hdr.ipv4.fragOffset: TW6(0..12)
+  hdr.ipv4.ttl: TB4
+  hdr.ipv4.protocol: B2
+  hdr.ipv4.hdrChecksum: TH7
+  hdr.ipv4.src_addr.0-15: TH10
+  hdr.ipv4.src_addr.16-31: TH11
+  hdr.ipv4.dst_addr: W1
+  hdr.tcp.srcPort: TH6
+  hdr.tcp.dstPort: H2
+  hdr.tcp.seqNo: TW9
+  hdr.tcp.ackNo: TW8
+  hdr.tcp.dataOffset: TW4(28..31)
+  hdr.tcp.res: TW4(24..27)
+  hdr.tcp.cwr: TW4(23)
+  hdr.tcp.ece: TW4(22)
+  hdr.tcp.urg: TW4(21)
+  hdr.tcp.ack: TW4(20)
+  hdr.tcp.psh: TW4(19)
+  hdr.tcp.rst: TW4(18)
+  hdr.tcp.syn: TW4(17)
+  hdr.tcp.fin: TW4(16)
+  hdr.tcp.window: TW4(0..15)
+  hdr.tcp.checksum: TW7(16..31)
+  hdr.tcp.urgentPtr: TW7(0..15)
+  hdr.udp.srcPort: TH6
+  hdr.udp.dstPort: H2
+  hdr.udp.length_: TW4(16..31)
+  hdr.udp.checksum: TW4(0..15)
+  meta.current_state: {  stage 1..11: W3(0..23) } 
+  meta.flag: {  stage 6..11: B4 } 
+  meta.dport: {  stage 5..8: H3 } 
+  ig_intr_md_for_dprsr.drop_ctl: {  stage 1..12: B1(0..2) } 
+  ig_intr_md_for_dprsr.mirror_type: {  stage 12: B0(0..2) } 
+  ig_intr_md_for_tm.ucast_egress_port: {  stage 11..12: H0(0..8) } 
+  $tmp2: {  stage 12: H1(0..9) } 
+  hdr.ethernet.$valid: B3(0)
+  hdr.ipv4.$valid: B3(1)
+  hdr.tcp.$valid: B3(2)
+  hdr.udp.$valid: B3(3)
+phv egress:
+  eg_intr_md_from_prsr.global_tstamp.0-31: {  stage 0..5: W16 } 
+  eg_intr_md_from_prsr.global_tstamp.32-47: {  stage 0..5: H17 } 
+  eg_intr_md.egress_port: H16(0..8)
+  hdr.min_parse_depth_padding_0$0.packet_payload.0-31: TW0
+  hdr.min_parse_depth_padding_0$0.packet_payload.32-63: TW1
+  hdr.min_parse_depth_padding_0$0.packet_payload.64-79: TH18
+  hdr.min_parse_depth_padding_0$0.packet_payload.80-87: TB0
+  hdr.min_parse_depth_padding_0$1.packet_payload.0-31: TW2
+  hdr.min_parse_depth_padding_0$1.packet_payload.32-63: TW3
+  hdr.min_parse_depth_padding_0$1.packet_payload.64-79: TH19
+  hdr.min_parse_depth_padding_0$1.packet_payload.80-87: TB1
+  hdr.min_parse_depth_padding_0$2.packet_payload.0-15: TH0
+  hdr.min_parse_depth_padding_0$2.packet_payload.16-31: TH1
+  hdr.min_parse_depth_padding_0$2.packet_payload.32-47: TH2
+  hdr.min_parse_depth_padding_0$2.packet_payload.48-63: TH3
+  hdr.min_parse_depth_padding_0$2.packet_payload.64-79: TH20
+  hdr.min_parse_depth_padding_0$2.packet_payload.80-87: TB2
+  hdr.min_parse_depth_padding_0$3.packet_payload.0-15: TH4
+  hdr.min_parse_depth_padding_0$3.packet_payload.16-31: TH5
+  hdr.min_parse_depth_padding_0$3.packet_payload.32-63: TW12
+  hdr.min_parse_depth_padding_0$3.packet_payload.64-79: TH21
+  hdr.min_parse_depth_padding_0$3.packet_payload.80-87: TB3
+  hdr.min_parse_depth_padding_0.$stkvalid: B16(0..3)
+  hdr.min_parse_depth_padding_0$0.$valid: {  stage 12: B16(3) } 
+  hdr.min_parse_depth_padding_0$1.$valid: {  stage 12: B16(2) } 
+  hdr.min_parse_depth_padding_0$2.$valid: {  stage 12: B16(1) } 
+  hdr.min_parse_depth_padding_0$3.$valid: B16(0)
+parser ingress:
+  start: $entry_point
+  init_zero: [ W2, H6, W3, B4, H3, B1, B0, H1, B3 ]
+  bitwise_or: [ B3 ]
+  hdr_len_adj: 16
+  states:
+    $entry_point:
+      *:
+        56..59: W2  # buffer mapped I/O: bit[448..479] -> W2 bit[31..0]: ingress::ig_intr_md_from_prsr.global_tstamp[31:0].0-31
+        54..55: H6  # buffer mapped I/O: bit[432..447] -> H6 bit[15..0]: ingress::ig_intr_md_from_prsr.global_tstamp[47:32].32-47
+        buf_req: 0
+        next: start
+    start:
+      *:
+        16..17: TH12  # ingress::hdr.ethernet.dst_mac[47:32].32-47
+        18..19: TH9  # ingress::hdr.ethernet.dst_mac[31:16].16-31
+        20..21: TH8  # ingress::hdr.ethernet.dst_mac[15:0].0-15
+        22..23: H5  # ingress::hdr.ethernet.src_mac[47:32].32-47
+        24..27: W0  # ingress::hdr.ethernet.src_mac[31:0].0-31
+        B3: 1  # value 1 -> B3 bit[0]: ingress::hdr.ethernet.$valid
+        load: { half : 28..29 }
+        shift: 28
+        buf_req: 30
+        next: start.$split_0
+    start.$split_0:
+      match: [ half ]
+      0x0800:
+        0..1: H4  # ingress::hdr.ethernet.ether_type
+        load: { byte1 : 11 }
+        shift: 2
+        buf_req: 12
+        next: parse_ipv4
+      0x888e:
+        0..1: H4  # ingress::hdr.ethernet.ether_type
+        load: { byte1 : 11 }
+        shift: 2
+        buf_req: 12
+        next: parse_ipv4
+      0x0006:
+        0..1: H4  # ingress::hdr.ethernet.ether_type
+        load: { byte1 : 11 }
+        shift: 2
+        buf_req: 12
+        next: parse_ipv4
+      0x0000:
+        0..1: H4  # ingress::hdr.ethernet.ether_type
+        load: { byte1 : 11 }
+        shift: 2
+        buf_req: 12
+        next: parse_ipv4
+      0x****:
+        0..1: H4  # ingress::hdr.ethernet.ether_type
+        shift: 2
+        buf_req: 2
+        next: end
+    parse_ipv4:
+      match: [ byte1 ]
+      0x06:
+        0..3: TW5
+            # - bit[0..3] -> TW5 bit[31..28]: ingress::hdr.ipv4.version
+            # - bit[4..7] -> TW5 bit[27..24]: ingress::hdr.ipv4.ihl
+            # - bit[8..15] -> TW5 bit[23..16]: ingress::hdr.ipv4.diffserv
+            # - bit[16..31] -> TW5 bit[15..0]: ingress::hdr.ipv4.totalLen
+        4..7: TW6
+            # - bit[32..47] -> TW6 bit[31..16]: ingress::hdr.ipv4.identification
+            # - bit[48..50] -> TW6 bit[15..13]: ingress::hdr.ipv4.flags
+            # - bit[51..63] -> TW6 bit[12..0]: ingress::hdr.ipv4.fragOffset
+        8: TB4  # ingress::hdr.ipv4.ttl
+        9: B2  # ingress::hdr.ipv4.protocol
+        10..11: TH7  # ingress::hdr.ipv4.hdrChecksum
+        12..13: TH11  # ingress::hdr.ipv4.src_addr[31:16].16-31
+        14..15: TH10  # ingress::hdr.ipv4.src_addr[15:0].0-15
+        16..19: W1  # ingress::hdr.ipv4.dst_addr
+        B3: 2  # value 1 -> B3 bit[1]: ingress::hdr.ipv4.$valid
+        shift: 20
+        buf_req: 20
+        next: parse_tcp
+      0x01:
+        0..3: TW5
+            # - bit[0..3] -> TW5 bit[31..28]: ingress::hdr.ipv4.version
+            # - bit[4..7] -> TW5 bit[27..24]: ingress::hdr.ipv4.ihl
+            # - bit[8..15] -> TW5 bit[23..16]: ingress::hdr.ipv4.diffserv
+            # - bit[16..31] -> TW5 bit[15..0]: ingress::hdr.ipv4.totalLen
+        4..7: TW6
+            # - bit[32..47] -> TW6 bit[31..16]: ingress::hdr.ipv4.identification
+            # - bit[48..50] -> TW6 bit[15..13]: ingress::hdr.ipv4.flags
+            # - bit[51..63] -> TW6 bit[12..0]: ingress::hdr.ipv4.fragOffset
+        8: TB4  # ingress::hdr.ipv4.ttl
+        9: B2  # ingress::hdr.ipv4.protocol
+        10..11: TH7  # ingress::hdr.ipv4.hdrChecksum
+        12..13: TH11  # ingress::hdr.ipv4.src_addr[31:16].16-31
+        14..15: TH10  # ingress::hdr.ipv4.src_addr[15:0].0-15
+        16..19: W1  # ingress::hdr.ipv4.dst_addr
+        B3: 2  # value 1 -> B3 bit[1]: ingress::hdr.ipv4.$valid
+        shift: 20
+        buf_req: 20
+        next: parse_tcp
+      0x02:
+        0..3: TW5
+            # - bit[0..3] -> TW5 bit[31..28]: ingress::hdr.ipv4.version
+            # - bit[4..7] -> TW5 bit[27..24]: ingress::hdr.ipv4.ihl
+            # - bit[8..15] -> TW5 bit[23..16]: ingress::hdr.ipv4.diffserv
+            # - bit[16..31] -> TW5 bit[15..0]: ingress::hdr.ipv4.totalLen
+        4..7: TW6
+            # - bit[32..47] -> TW6 bit[31..16]: ingress::hdr.ipv4.identification
+            # - bit[48..50] -> TW6 bit[15..13]: ingress::hdr.ipv4.flags
+            # - bit[51..63] -> TW6 bit[12..0]: ingress::hdr.ipv4.fragOffset
+        8: TB4  # ingress::hdr.ipv4.ttl
+        9: B2  # ingress::hdr.ipv4.protocol
+        10..11: TH7  # ingress::hdr.ipv4.hdrChecksum
+        12..13: TH11  # ingress::hdr.ipv4.src_addr[31:16].16-31
+        14..15: TH10  # ingress::hdr.ipv4.src_addr[15:0].0-15
+        16..19: W1  # ingress::hdr.ipv4.dst_addr
+        B3: 2  # value 1 -> B3 bit[1]: ingress::hdr.ipv4.$valid
+        shift: 20
+        buf_req: 20
+        next: parse_tcp
+      0x2c:
+        0..3: TW5
+            # - bit[0..3] -> TW5 bit[31..28]: ingress::hdr.ipv4.version
+            # - bit[4..7] -> TW5 bit[27..24]: ingress::hdr.ipv4.ihl
+            # - bit[8..15] -> TW5 bit[23..16]: ingress::hdr.ipv4.diffserv
+            # - bit[16..31] -> TW5 bit[15..0]: ingress::hdr.ipv4.totalLen
+        4..7: TW6
+            # - bit[32..47] -> TW6 bit[31..16]: ingress::hdr.ipv4.identification
+            # - bit[48..50] -> TW6 bit[15..13]: ingress::hdr.ipv4.flags
+            # - bit[51..63] -> TW6 bit[12..0]: ingress::hdr.ipv4.fragOffset
+        8: TB4  # ingress::hdr.ipv4.ttl
+        9: B2  # ingress::hdr.ipv4.protocol
+        10..11: TH7  # ingress::hdr.ipv4.hdrChecksum
+        12..13: TH11  # ingress::hdr.ipv4.src_addr[31:16].16-31
+        14..15: TH10  # ingress::hdr.ipv4.src_addr[15:0].0-15
+        16..19: W1  # ingress::hdr.ipv4.dst_addr
+        B3: 2  # value 1 -> B3 bit[1]: ingress::hdr.ipv4.$valid
+        shift: 20
+        buf_req: 20
+        next: parse_tcp
+      0x3a:
+        0..3: TW5
+            # - bit[0..3] -> TW5 bit[31..28]: ingress::hdr.ipv4.version
+            # - bit[4..7] -> TW5 bit[27..24]: ingress::hdr.ipv4.ihl
+            # - bit[8..15] -> TW5 bit[23..16]: ingress::hdr.ipv4.diffserv
+            # - bit[16..31] -> TW5 bit[15..0]: ingress::hdr.ipv4.totalLen
+        4..7: TW6
+            # - bit[32..47] -> TW6 bit[31..16]: ingress::hdr.ipv4.identification
+            # - bit[48..50] -> TW6 bit[15..13]: ingress::hdr.ipv4.flags
+            # - bit[51..63] -> TW6 bit[12..0]: ingress::hdr.ipv4.fragOffset
+        8: TB4  # ingress::hdr.ipv4.ttl
+        9: B2  # ingress::hdr.ipv4.protocol
+        10..11: TH7  # ingress::hdr.ipv4.hdrChecksum
+        12..13: TH11  # ingress::hdr.ipv4.src_addr[31:16].16-31
+        14..15: TH10  # ingress::hdr.ipv4.src_addr[15:0].0-15
+        16..19: W1  # ingress::hdr.ipv4.dst_addr
+        B3: 2  # value 1 -> B3 bit[1]: ingress::hdr.ipv4.$valid
+        shift: 20
+        buf_req: 20
+        next: parse_tcp
+      0x00:
+        0..3: TW5
+            # - bit[0..3] -> TW5 bit[31..28]: ingress::hdr.ipv4.version
+            # - bit[4..7] -> TW5 bit[27..24]: ingress::hdr.ipv4.ihl
+            # - bit[8..15] -> TW5 bit[23..16]: ingress::hdr.ipv4.diffserv
+            # - bit[16..31] -> TW5 bit[15..0]: ingress::hdr.ipv4.totalLen
+        4..7: TW6
+            # - bit[32..47] -> TW6 bit[31..16]: ingress::hdr.ipv4.identification
+            # - bit[48..50] -> TW6 bit[15..13]: ingress::hdr.ipv4.flags
+            # - bit[51..63] -> TW6 bit[12..0]: ingress::hdr.ipv4.fragOffset
+        8: TB4  # ingress::hdr.ipv4.ttl
+        9: B2  # ingress::hdr.ipv4.protocol
+        10..11: TH7  # ingress::hdr.ipv4.hdrChecksum
+        12..13: TH11  # ingress::hdr.ipv4.src_addr[31:16].16-31
+        14..15: TH10  # ingress::hdr.ipv4.src_addr[15:0].0-15
+        16..19: W1  # ingress::hdr.ipv4.dst_addr
+        B3: 2  # value 1 -> B3 bit[1]: ingress::hdr.ipv4.$valid
+        shift: 20
+        buf_req: 20
+        next: parse_tcp
+      0x63:
+        0..3: TW5
+            # - bit[0..3] -> TW5 bit[31..28]: ingress::hdr.ipv4.version
+            # - bit[4..7] -> TW5 bit[27..24]: ingress::hdr.ipv4.ihl
+            # - bit[8..15] -> TW5 bit[23..16]: ingress::hdr.ipv4.diffserv
+            # - bit[16..31] -> TW5 bit[15..0]: ingress::hdr.ipv4.totalLen
+        4..7: TW6
+            # - bit[32..47] -> TW6 bit[31..16]: ingress::hdr.ipv4.identification
+            # - bit[48..50] -> TW6 bit[15..13]: ingress::hdr.ipv4.flags
+            # - bit[51..63] -> TW6 bit[12..0]: ingress::hdr.ipv4.fragOffset
+        8: TB4  # ingress::hdr.ipv4.ttl
+        9: B2  # ingress::hdr.ipv4.protocol
+        10..11: TH7  # ingress::hdr.ipv4.hdrChecksum
+        12..13: TH11  # ingress::hdr.ipv4.src_addr[31:16].16-31
+        14..15: TH10  # ingress::hdr.ipv4.src_addr[15:0].0-15
+        16..19: W1  # ingress::hdr.ipv4.dst_addr
+        B3: 2  # value 1 -> B3 bit[1]: ingress::hdr.ipv4.$valid
+        shift: 20
+        buf_req: 20
+        next: parse_tcp
+      0x11:
+        0..3: TW5
+            # - bit[0..3] -> TW5 bit[31..28]: ingress::hdr.ipv4.version
+            # - bit[4..7] -> TW5 bit[27..24]: ingress::hdr.ipv4.ihl
+            # - bit[8..15] -> TW5 bit[23..16]: ingress::hdr.ipv4.diffserv
+            # - bit[16..31] -> TW5 bit[15..0]: ingress::hdr.ipv4.totalLen
+        4..7: TW6
+            # - bit[32..47] -> TW6 bit[31..16]: ingress::hdr.ipv4.identification
+            # - bit[48..50] -> TW6 bit[15..13]: ingress::hdr.ipv4.flags
+            # - bit[51..63] -> TW6 bit[12..0]: ingress::hdr.ipv4.fragOffset
+        8: TB4  # ingress::hdr.ipv4.ttl
+        9: B2  # ingress::hdr.ipv4.protocol
+        10..11: TH7  # ingress::hdr.ipv4.hdrChecksum
+        12..13: TH11  # ingress::hdr.ipv4.src_addr[31:16].16-31
+        14..15: TH10  # ingress::hdr.ipv4.src_addr[15:0].0-15
+        16..19: W1  # ingress::hdr.ipv4.dst_addr
+        B3: 2  # value 1 -> B3 bit[1]: ingress::hdr.ipv4.$valid
+        shift: 20
+        buf_req: 20
+        next: parse_udp
+      0x**:
+        0..3: TW5
+            # - bit[0..3] -> TW5 bit[31..28]: ingress::hdr.ipv4.version
+            # - bit[4..7] -> TW5 bit[27..24]: ingress::hdr.ipv4.ihl
+            # - bit[8..15] -> TW5 bit[23..16]: ingress::hdr.ipv4.diffserv
+            # - bit[16..31] -> TW5 bit[15..0]: ingress::hdr.ipv4.totalLen
+        4..7: TW6
+            # - bit[32..47] -> TW6 bit[31..16]: ingress::hdr.ipv4.identification
+            # - bit[48..50] -> TW6 bit[15..13]: ingress::hdr.ipv4.flags
+            # - bit[51..63] -> TW6 bit[12..0]: ingress::hdr.ipv4.fragOffset
+        8: TB4  # ingress::hdr.ipv4.ttl
+        9: B2  # ingress::hdr.ipv4.protocol
+        10..11: TH7  # ingress::hdr.ipv4.hdrChecksum
+        12..13: TH11  # ingress::hdr.ipv4.src_addr[31:16].16-31
+        14..15: TH10  # ingress::hdr.ipv4.src_addr[15:0].0-15
+        16..19: W1  # ingress::hdr.ipv4.dst_addr
+        B3: 2  # value 1 -> B3 bit[1]: ingress::hdr.ipv4.$valid
+        shift: 20
+        buf_req: 20
+        next: end
+    parse_tcp:
+      *:
+        0..1: TH6  # ingress::hdr.tcp.srcPort
+        2..3: H2  # ingress::hdr.tcp.dstPort
+        4..7: TW9  # ingress::hdr.tcp.seqNo
+        8..11: TW8  # ingress::hdr.tcp.ackNo
+        12..15: TW4
+            # - bit[96..99] -> TW4 bit[31..28]: ingress::hdr.tcp.dataOffset
+            # - bit[100..103] -> TW4 bit[27..24]: ingress::hdr.tcp.res
+            # - bit[104] -> TW4 bit[23]: ingress::hdr.tcp.cwr
+            # - bit[105] -> TW4 bit[22]: ingress::hdr.tcp.ece
+            # - bit[106] -> TW4 bit[21]: ingress::hdr.tcp.urg
+            # - bit[107] -> TW4 bit[20]: ingress::hdr.tcp.ack
+            # - bit[108] -> TW4 bit[19]: ingress::hdr.tcp.psh
+            # - bit[109] -> TW4 bit[18]: ingress::hdr.tcp.rst
+            # - bit[110] -> TW4 bit[17]: ingress::hdr.tcp.syn
+            # - bit[111] -> TW4 bit[16]: ingress::hdr.tcp.fin
+            # - bit[112..127] -> TW4 bit[15..0]: ingress::hdr.tcp.window
+        16..19: TW7
+            # - bit[128..143] -> TW7 bit[31..16]: ingress::hdr.tcp.checksum
+            # - bit[144..159] -> TW7 bit[15..0]: ingress::hdr.tcp.urgentPtr
+        B3: 4  # value 1 -> B3 bit[2]: ingress::hdr.tcp.$valid
+        shift: 20
+        buf_req: 20
+        next: end
+    parse_udp:
+      *:
+        0..1: TH6  # ingress::hdr.udp.srcPort
+        2..3: H2  # ingress::hdr.udp.dstPort
+        4..7: TW4
+            # - bit[32..47] -> TW4 bit[31..16]: ingress::hdr.udp.length_
+            # - bit[48..63] -> TW4 bit[15..0]: ingress::hdr.udp.checksum
+        B3: 8  # value 1 -> B3 bit[3]: ingress::hdr.udp.$valid
+        shift: 8
+        buf_req: 8
+        next: end
+deparser ingress:
+  dictionary:
+    TH12: B3(0)  # ingress::hdr.ethernet.dst_mac.32-47 if ingress::hdr.ethernet.$valid
+    TH9: B3(0)  # ingress::hdr.ethernet.dst_mac.16-31 if ingress::hdr.ethernet.$valid
+    TH8: B3(0)  # ingress::hdr.ethernet.dst_mac.0-15 if ingress::hdr.ethernet.$valid
+    H5: B3(0)  # ingress::hdr.ethernet.src_mac.32-47 if ingress::hdr.ethernet.$valid
+    W0: B3(0)  # ingress::hdr.ethernet.src_mac.0-31 if ingress::hdr.ethernet.$valid
+    H4: B3(0)  # ingress::hdr.ethernet.ether_type if ingress::hdr.ethernet.$valid
+    TW5: B3(1)
+        # - bit[31..28]: ingress::hdr.ipv4.version if ingress::hdr.ipv4.$valid
+        # - bit[27..24]: ingress::hdr.ipv4.ihl if ingress::hdr.ipv4.$valid
+        # - bit[23..16]: ingress::hdr.ipv4.diffserv if ingress::hdr.ipv4.$valid
+        # - bit[15..0]: ingress::hdr.ipv4.totalLen if ingress::hdr.ipv4.$valid
+    TW6: B3(1)
+        # - bit[31..16]: ingress::hdr.ipv4.identification if ingress::hdr.ipv4.$valid
+        # - bit[15..13]: ingress::hdr.ipv4.flags if ingress::hdr.ipv4.$valid
+        # - bit[12..0]: ingress::hdr.ipv4.fragOffset if ingress::hdr.ipv4.$valid
+    TB4: B3(1)  # ingress::hdr.ipv4.ttl if ingress::hdr.ipv4.$valid
+    B2: B3(1)  # ingress::hdr.ipv4.protocol if ingress::hdr.ipv4.$valid
+    TH7: B3(1)  # ingress::hdr.ipv4.hdrChecksum if ingress::hdr.ipv4.$valid
+    TH11: B3(1)  # ingress::hdr.ipv4.src_addr.16-31 if ingress::hdr.ipv4.$valid
+    TH10: B3(1)  # ingress::hdr.ipv4.src_addr.0-15 if ingress::hdr.ipv4.$valid
+    W1: B3(1)  # ingress::hdr.ipv4.dst_addr if ingress::hdr.ipv4.$valid
+    TH6: B3(2)  # ingress::hdr.tcp.srcPort if ingress::hdr.tcp.$valid
+    H2: B3(2)  # ingress::hdr.tcp.dstPort if ingress::hdr.tcp.$valid
+    TW9: B3(2)  # ingress::hdr.tcp.seqNo if ingress::hdr.tcp.$valid
+    TW8: B3(2)  # ingress::hdr.tcp.ackNo if ingress::hdr.tcp.$valid
+    TW4: B3(2)
+        # - bit[31..28]: ingress::hdr.tcp.dataOffset if ingress::hdr.tcp.$valid
+        # - bit[27..24]: ingress::hdr.tcp.res if ingress::hdr.tcp.$valid
+        # - bit[23]: ingress::hdr.tcp.cwr if ingress::hdr.tcp.$valid
+        # - bit[22]: ingress::hdr.tcp.ece if ingress::hdr.tcp.$valid
+        # - bit[21]: ingress::hdr.tcp.urg if ingress::hdr.tcp.$valid
+        # - bit[20]: ingress::hdr.tcp.ack if ingress::hdr.tcp.$valid
+        # - bit[19]: ingress::hdr.tcp.psh if ingress::hdr.tcp.$valid
+        # - bit[18]: ingress::hdr.tcp.rst if ingress::hdr.tcp.$valid
+        # - bit[17]: ingress::hdr.tcp.syn if ingress::hdr.tcp.$valid
+        # - bit[16]: ingress::hdr.tcp.fin if ingress::hdr.tcp.$valid
+        # - bit[15..0]: ingress::hdr.tcp.window if ingress::hdr.tcp.$valid
+    TW7: B3(2)
+        # - bit[31..16]: ingress::hdr.tcp.checksum if ingress::hdr.tcp.$valid
+        # - bit[15..0]: ingress::hdr.tcp.urgentPtr if ingress::hdr.tcp.$valid
+    TH6: B3(3)  # ingress::hdr.udp.srcPort if ingress::hdr.udp.$valid
+    H2: B3(3)  # ingress::hdr.udp.dstPort if ingress::hdr.udp.$valid
+    TW4: B3(3)
+        # - bit[31..16]: ingress::hdr.udp.length_ if ingress::hdr.udp.$valid
+        # - bit[15..0]: ingress::hdr.udp.checksum if ingress::hdr.udp.$valid
+  egress_unicast_port: H0(0..8)  # bit[8..0]: ingress::ig_intr_md_for_tm.ucast_egress_port
+  drop_ctl: B1(0..2)  # bit[2..0]: ingress::ig_intr_md_for_dprsr.drop_ctl
+  mirror:
+    select: B0(0..2)  # bit[2..0]: ingress::ig_intr_md_for_dprsr.mirror_type
+    0:
+      - H1(0..9)  # bit[9..0]: ingress::$tmp2
+parser egress:
+  start: $entry_point.start
+  init_zero: [ W16, H17, B16 ]
+  bitwise_or: [ B16 ]
+  hdr_len_adj: 27
+  meta_opt: 8191
+  states:
+    $entry_point.start:
+      *:
+        counter:
+          imm: 38
+        0..1: H16  # bit[7..15] -> H16 bit[8..0]: egress::eg_intr_md.egress_port
+        56..59: W16  # buffer mapped I/O: bit[448..479] -> W16 bit[31..0]: egress::eg_intr_md_from_prsr.global_tstamp[31:0].0-31
+        54..55: H17  # buffer mapped I/O: bit[432..447] -> H17 bit[15..0]: egress::eg_intr_md_from_prsr.global_tstamp[47:32].32-47
+        intr_md: 57
+        shift: 27
+        buf_req: 27
+        next: $entry_point.start.$ctr_stall0
+    $entry_point.start.$ctr_stall0:
+      *:
+        buf_req: 0
+        next: min_parse_depth_accept_initial
+    min_parse_depth_accept_initial:
+      match: [ ctr_neg, ctr_zero ]
+      0x0:
+        counter: dec 11
+        0: TB0  # egress::hdr.min_parse_depth_padding_0[0].packet_payload[87:80].80-87
+        1..2: TH18  # egress::hdr.min_parse_depth_padding_0[0].packet_payload[79:64].64-79
+        3..6: TW1  # egress::hdr.min_parse_depth_padding_0[0].packet_payload[63:32].32-63
+        7..10: TW0  # egress::hdr.min_parse_depth_padding_0[0].packet_payload[31:0].0-31
+        B16: 8  # value 8 -> B16 bit[3..0]: egress::hdr.min_parse_depth_padding_0.$stkvalid
+        shift: 11
+        buf_req: 11
+        next: min_parse_depth_accept_loop.$split_0
+      0b**:
+        buf_req: 0
+        next: end
+    min_parse_depth_accept_loop.$split_0:
+      match: [ ctr_neg, ctr_zero ]
+      0x0:
+        counter: dec 11
+        0: TB1  # egress::hdr.min_parse_depth_padding_0[1].packet_payload[87:80].80-87
+        1..2: TH19  # egress::hdr.min_parse_depth_padding_0[1].packet_payload[79:64].64-79
+        3..6: TW3  # egress::hdr.min_parse_depth_padding_0[1].packet_payload[63:32].32-63
+        7..10: TW2  # egress::hdr.min_parse_depth_padding_0[1].packet_payload[31:0].0-31
+        B16: 4  # value 4 -> B16 bit[3..0]: egress::hdr.min_parse_depth_padding_0.$stkvalid
+        shift: 11
+        buf_req: 11
+        next: min_parse_depth_accept_loop.$it1.$split_0
+      0b**:
+        buf_req: 0
+        next: end
+    min_parse_depth_accept_loop.$it1.$split_0:
+      match: [ ctr_neg, ctr_zero ]
+      0x0:
+        counter: dec 11
+        0: TB2  # egress::hdr.min_parse_depth_padding_0[2].packet_payload[87:80].80-87
+        1..2: TH20  # egress::hdr.min_parse_depth_padding_0[2].packet_payload[79:64].64-79
+        3..4: TH3  # egress::hdr.min_parse_depth_padding_0[2].packet_payload[63:48].48-63
+        5..6: TH2  # egress::hdr.min_parse_depth_padding_0[2].packet_payload[47:32].32-47
+        7..8: TH1  # egress::hdr.min_parse_depth_padding_0[2].packet_payload[31:16].16-31
+        B16: 2  # value 2 -> B16 bit[3..0]: egress::hdr.min_parse_depth_padding_0.$stkvalid
+        shift: 9
+        buf_req: 9
+        next: min_parse_depth_accept_loop.$it2.$split_0
+      0b**:
+        buf_req: 0
+        next: end
+    min_parse_depth_accept_loop.$it2.$split_0:
+      match: [ ctr_neg, ctr_zero ]
+      0x0:
+        0..1: TH0  # egress::hdr.min_parse_depth_padding_0[2].packet_payload[15:0].0-15
+        shift: 2
+        buf_req: 2
+        next: min_parse_depth_accept_loop.$it3
+      0b**:
+        0..1: TH0  # egress::hdr.min_parse_depth_padding_0[2].packet_payload[15:0].0-15
+        shift: 2
+        buf_req: 2
+        next: end
+    min_parse_depth_accept_loop.$it3:
+      *:
+        counter: dec 11
+        0: TB3  # egress::hdr.min_parse_depth_padding_0[3].packet_payload[87:80].80-87
+        1..2: TH21  # egress::hdr.min_parse_depth_padding_0[3].packet_payload[79:64].64-79
+        3..6: TW12  # egress::hdr.min_parse_depth_padding_0[3].packet_payload[63:32].32-63
+        7..8: TH5  # egress::hdr.min_parse_depth_padding_0[3].packet_payload[31:16].16-31
+        9..10: TH4  # egress::hdr.min_parse_depth_padding_0[3].packet_payload[15:0].0-15
+        B16: 1  # value 1 -> B16 bit[3..0]: egress::hdr.min_parse_depth_padding_0.$stkvalid
+        shift: 11
+        buf_req: 11
+        next: end
+deparser egress:
+  dictionary:
+    TB0: B16(3)  # egress::hdr.min_parse_depth_padding_0[0].packet_payload.80-87 if egress::hdr.min_parse_depth_padding_0[0].$valid
+    TH18: B16(3)  # egress::hdr.min_parse_depth_padding_0[0].packet_payload.64-79 if egress::hdr.min_parse_depth_padding_0[0].$valid
+    TW1: B16(3)  # egress::hdr.min_parse_depth_padding_0[0].packet_payload.32-63 if egress::hdr.min_parse_depth_padding_0[0].$valid
+    TW0: B16(3)  # egress::hdr.min_parse_depth_padding_0[0].packet_payload.0-31 if egress::hdr.min_parse_depth_padding_0[0].$valid
+    TB1: B16(2)  # egress::hdr.min_parse_depth_padding_0[1].packet_payload.80-87 if egress::hdr.min_parse_depth_padding_0[1].$valid
+    TH19: B16(2)  # egress::hdr.min_parse_depth_padding_0[1].packet_payload.64-79 if egress::hdr.min_parse_depth_padding_0[1].$valid
+    TW3: B16(2)  # egress::hdr.min_parse_depth_padding_0[1].packet_payload.32-63 if egress::hdr.min_parse_depth_padding_0[1].$valid
+    TW2: B16(2)  # egress::hdr.min_parse_depth_padding_0[1].packet_payload.0-31 if egress::hdr.min_parse_depth_padding_0[1].$valid
+    TB2: B16(1)  # egress::hdr.min_parse_depth_padding_0[2].packet_payload.80-87 if egress::hdr.min_parse_depth_padding_0[2].$valid
+    TH20: B16(1)  # egress::hdr.min_parse_depth_padding_0[2].packet_payload.64-79 if egress::hdr.min_parse_depth_padding_0[2].$valid
+    TH3: B16(1)  # egress::hdr.min_parse_depth_padding_0[2].packet_payload.48-63 if egress::hdr.min_parse_depth_padding_0[2].$valid
+    TH2: B16(1)  # egress::hdr.min_parse_depth_padding_0[2].packet_payload.32-47 if egress::hdr.min_parse_depth_padding_0[2].$valid
+    TH1: B16(1)  # egress::hdr.min_parse_depth_padding_0[2].packet_payload.16-31 if egress::hdr.min_parse_depth_padding_0[2].$valid
+    TH0: B16(1)  # egress::hdr.min_parse_depth_padding_0[2].packet_payload.0-15 if egress::hdr.min_parse_depth_padding_0[2].$valid
+    TB3: B16(0)  # egress::hdr.min_parse_depth_padding_0[3].packet_payload.80-87 if egress::hdr.min_parse_depth_padding_0[3].$valid
+    TH21: B16(0)  # egress::hdr.min_parse_depth_padding_0[3].packet_payload.64-79 if egress::hdr.min_parse_depth_padding_0[3].$valid
+    TW12: B16(0)  # egress::hdr.min_parse_depth_padding_0[3].packet_payload.32-63 if egress::hdr.min_parse_depth_padding_0[3].$valid
+    TH5: B16(0)  # egress::hdr.min_parse_depth_padding_0[3].packet_payload.16-31 if egress::hdr.min_parse_depth_padding_0[3].$valid
+    TH4: B16(0)  # egress::hdr.min_parse_depth_padding_0[3].packet_payload.0-15 if egress::hdr.min_parse_depth_padding_0[3].$valid
+  egress_unicast_port: H16(0..8)  # bit[8..0]: egress::eg_intr_md.egress_port
+stage 0 ingress:
+  phase0_match IngressParser.$PORT_METADATA:
+    p4:
+      name: IngressParser.$PORT_METADATA
+      size: 288
+      preferred_match_type: exact
+      match_type: exact
+    size: 288
+    p4_param_order:
+      ig_intr_md.ingress_port: { type: exact, size: 9 }
+    format: {ig_intr_md: 0..63}
+    constant_value: 0
+    actions:
+      set_port_metadata:
+      - handle: 0x20000000
+      - p4_param_order: { ig_intr_md: 64 } 
+  exact_match sMAC_exact_0$st0 0:
+    p4: { name: Ingress.sMAC_exact, size: 710000 }
+    p4_param_order: 
+      hdr.ethernet.src_mac: { type: exact, size: 48, full_size: 48 }
+    row: [ 4, 5, 6, 7, 0, 1, 2, 3 ]
+    bus: [ 0, 0, 0, 0, 0, 0, 0, 0 ]
+    column:
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    stash: 
+      row: [ 4, 5, 6, 7 ]
+      col: [ 2, 2, 2, 2 ]
+      unit: [ 0, 0, 0, 0 ]
+    ways:
+      - { group: 0, index: 0..9, select: 40..51 & 0x3, rams: [[7, 2], [6, 2], [5, 2], [4, 2], [7, 3], [6, 3], [5, 3], [4, 3], [7, 4], [6, 4], [5, 4], [4, 4], [7, 5], [6, 5], [5, 5], [4, 5]] }
+      - { group: 0, index: 10..19, select: 40..51 & 0xc, rams: [[7, 6], [6, 6], [5, 6], [4, 6], [7, 7], [6, 7], [5, 7], [4, 7], [7, 8], [6, 8], [5, 8], [4, 8], [7, 9], [6, 9], [5, 9], [4, 9]] }
+      - { group: 0, index: 20..29, select: 40..51 & 0x30, rams: [[7, 10], [6, 10], [5, 10], [4, 10], [7, 11], [6, 11], [5, 11], [4, 11], [3, 2], [2, 2], [1, 2], [0, 2], [3, 3], [2, 3], [1, 3], [0, 3]] }
+      - { group: 0, index: 30..39, select: 40..51 & 0xc0, rams: [[3, 4], [2, 4], [1, 4], [0, 4], [3, 5], [2, 5], [1, 5], [0, 5], [3, 6], [2, 6], [1, 6], [0, 6], [3, 7], [2, 7], [1, 7], [0, 7]] }
+      - { group: 0, index: 0..9, select: 40..51 & 0x3, rams: [[3, 8], [2, 8], [1, 8], [0, 8], [3, 9], [2, 9], [1, 9], [0, 9], [3, 10], [2, 10], [1, 10], [0, 10], [3, 11], [2, 11], [1, 11], [0, 11]] }
+    input_xbar:
+      exact group 0: { 0: hdr.ethernet.src_mac.0-31, 32: hdr.ethernet.src_mac.32-47 }
+      hash 0:
+        0..7: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(0..7)
+        8..9: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(8..9)
+        40..41: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(10..11)
+        11..18: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(0..7)
+        19: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(8)
+        10: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(11)
+        42..43: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(9..10)
+        22..29: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(0..7)
+        20..21: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(10..11)
+        44..45: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(8..9)
+        33..39: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(0..6)
+        30..32: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(9..11)
+        46: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(7)
+        47: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(8)
+      hash group 0:
+        table: [0]
+        seed: 0x2285f0584945
+    format: { action(0): 0..0, immediate(0): 2..25, version(0): 112..115, match(0): 52..87, action(1): 1..1, immediate(1): 26..49, version(1): 244..247, match(1): [ 116..119, 88..111, 120..127 ], action(2): 128..128, immediate(2): 130..153, version(2): 240..243, match(2): 180..215, action(3): 129..129, immediate(3): 154..177, version(3): 372..375, match(3): [ 348..351, 216..239, 248..255 ], action(4): 256..256, immediate(4): 258..281, version(4): 368..371, match(4): 308..343, action(5): 257..257, immediate(5): 282..305, version(5): 500..503, match(5): [ 460..463, 352..367, 376..383, 448..455 ], action(6): 384..384, immediate(6): 385..408, version(6): 496..499, match(6): 412..447 }
+    match: [ hdr.ethernet.src_mac.32-47(12..15), hdr.ethernet.src_mac.0-31(0..7), hdr.ethernet.src_mac.0-31(8..15), hdr.ethernet.src_mac.0-31(16..23), hdr.ethernet.src_mac.0-31(24..31) ]
+    match_group_map: [ [ 1, 0 ], [ 1, 3, 2 ], [ 3, 5, 4 ], [ 5, 6 ] ]
+    hit: [  tbl_mudsram438 ]
+    miss:  sMAC_exact_0$st1
+    action_bus: { 96..99 : immediate(0..23) }
+    instruction: sMAC_exact_0$st0(action, $DEFAULT)
+    actions:
+      Ingress.ns_exact(0, 1):
+      - p4_param_order: { next_state: 24 }
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x20000005
+      - next_table: 0
+      - { next_state: immediate(0..23) }
+      - set meta.current_state, next_state
+      Ingress.drop(1, 2):
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x20000006
+      - next_table: 0
+      - {  }
+      - set ig_intr_md_for_dprsr.drop_ctl, 1
+    default_action: Ingress.drop
+stage 1 ingress:
+  dependency: action
+  exact_match sMAC_exact_0$st1 0:
+    p4: { name: Ingress.sMAC_exact, size: 710000 }
+    p4_param_order: 
+      hdr.ethernet.src_mac: { type: exact, size: 48, full_size: 48 }
+    row: [ 4, 5, 6, 7, 0, 1, 2, 3 ]
+    bus: [ 0, 0, 0, 0, 0, 0, 0, 0 ]
+    column:
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    stash: 
+      row: [ 4, 5, 6, 7 ]
+      col: [ 2, 2, 2, 2 ]
+      unit: [ 0, 0, 0, 0 ]
+    ways:
+      - { group: 0, index: 0..9, select: 40..51 & 0x3, rams: [[7, 2], [6, 2], [5, 2], [4, 2], [7, 3], [6, 3], [5, 3], [4, 3], [7, 4], [6, 4], [5, 4], [4, 4], [7, 5], [6, 5], [5, 5], [4, 5]] }
+      - { group: 0, index: 10..19, select: 40..51 & 0xc, rams: [[7, 6], [6, 6], [5, 6], [4, 6], [7, 7], [6, 7], [5, 7], [4, 7], [7, 8], [6, 8], [5, 8], [4, 8], [7, 9], [6, 9], [5, 9], [4, 9]] }
+      - { group: 0, index: 20..29, select: 40..51 & 0x30, rams: [[7, 10], [6, 10], [5, 10], [4, 10], [7, 11], [6, 11], [5, 11], [4, 11], [3, 2], [2, 2], [1, 2], [0, 2], [3, 3], [2, 3], [1, 3], [0, 3]] }
+      - { group: 0, index: 30..39, select: 40..51 & 0xc0, rams: [[3, 4], [2, 4], [1, 4], [0, 4], [3, 5], [2, 5], [1, 5], [0, 5], [3, 6], [2, 6], [1, 6], [0, 6], [3, 7], [2, 7], [1, 7], [0, 7]] }
+      - { group: 0, index: 0..9, select: 40..51 & 0x3, rams: [[3, 8], [2, 8], [1, 8], [0, 8], [3, 9], [2, 9], [1, 9], [0, 9], [3, 10], [2, 10], [1, 10], [0, 10], [3, 11], [2, 11], [1, 11], [0, 11]] }
+    input_xbar:
+      exact group 0: { 0: hdr.ethernet.src_mac.0-31, 32: hdr.ethernet.src_mac.32-47 }
+      hash 0:
+        0..7: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(0..7)
+        8..9: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(8..9)
+        40..41: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(10..11)
+        11..18: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(0..7)
+        19: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(8)
+        10: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(11)
+        42..43: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(9..10)
+        22..29: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(0..7)
+        20..21: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(10..11)
+        44..45: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(8..9)
+        33..39: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(0..6)
+        30..32: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(9..11)
+        46: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(7)
+        47: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(8)
+      hash group 0:
+        table: [0]
+        seed: 0x9e9ae2ea3cf2
+    format: { action(0): 0..0, immediate(0): 2..25, version(0): 112..115, match(0): 52..87, action(1): 1..1, immediate(1): 26..49, version(1): 244..247, match(1): [ 116..119, 88..111, 120..127 ], action(2): 128..128, immediate(2): 130..153, version(2): 240..243, match(2): 180..215, action(3): 129..129, immediate(3): 154..177, version(3): 372..375, match(3): [ 348..351, 216..239, 248..255 ], action(4): 256..256, immediate(4): 258..281, version(4): 368..371, match(4): 308..343, action(5): 257..257, immediate(5): 282..305, version(5): 500..503, match(5): [ 460..463, 352..367, 376..383, 448..455 ], action(6): 384..384, immediate(6): 385..408, version(6): 496..499, match(6): 412..447 }
+    match: [ hdr.ethernet.src_mac.32-47(12..15), hdr.ethernet.src_mac.0-31(0..7), hdr.ethernet.src_mac.0-31(8..15), hdr.ethernet.src_mac.0-31(16..23), hdr.ethernet.src_mac.0-31(24..31) ]
+    match_group_map: [ [ 1, 0 ], [ 1, 3, 2 ], [ 3, 5, 4 ], [ 5, 6 ] ]
+    hit: [  tbl_mudsram438 ]
+    miss:  sMAC_exact_0$st2
+    action_bus: { 96..99 : immediate(0..23) }
+    instruction: sMAC_exact_0$st1(action, $DEFAULT)
+    actions:
+      Ingress.ns_exact(0, 1):
+      - p4_param_order: { next_state: 24 }
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x20000005
+      - next_table: 0
+      - { next_state: immediate(0..23) }
+      - set meta.current_state, next_state
+      Ingress.drop(1, 2):
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x20000006
+      - next_table: 0
+      - {  }
+      - set ig_intr_md_for_dprsr.drop_ctl, 1
+    default_action: Ingress.drop
+stage 2 ingress:
+  dependency: action
+  exact_match sMAC_exact_0$st2 0:
+    p4: { name: Ingress.sMAC_exact, size: 710000 }
+    p4_param_order: 
+      hdr.ethernet.src_mac: { type: exact, size: 48, full_size: 48 }
+    row: [ 4, 5, 6, 7, 0, 1, 2, 3 ]
+    bus: [ 0, 0, 0, 0, 0, 0, 0, 0 ]
+    column:
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    stash: 
+      row: [ 4, 5, 6, 7 ]
+      col: [ 2, 2, 2, 2 ]
+      unit: [ 0, 0, 0, 0 ]
+    ways:
+      - { group: 0, index: 0..9, select: 40..51 & 0x3, rams: [[7, 2], [6, 2], [5, 2], [4, 2], [7, 3], [6, 3], [5, 3], [4, 3], [7, 4], [6, 4], [5, 4], [4, 4], [7, 5], [6, 5], [5, 5], [4, 5]] }
+      - { group: 0, index: 10..19, select: 40..51 & 0xc, rams: [[7, 6], [6, 6], [5, 6], [4, 6], [7, 7], [6, 7], [5, 7], [4, 7], [7, 8], [6, 8], [5, 8], [4, 8], [7, 9], [6, 9], [5, 9], [4, 9]] }
+      - { group: 0, index: 20..29, select: 40..51 & 0x30, rams: [[7, 10], [6, 10], [5, 10], [4, 10], [7, 11], [6, 11], [5, 11], [4, 11], [3, 2], [2, 2], [1, 2], [0, 2], [3, 3], [2, 3], [1, 3], [0, 3]] }
+      - { group: 0, index: 30..39, select: 40..51 & 0xc0, rams: [[3, 4], [2, 4], [1, 4], [0, 4], [3, 5], [2, 5], [1, 5], [0, 5], [3, 6], [2, 6], [1, 6], [0, 6], [3, 7], [2, 7], [1, 7], [0, 7]] }
+      - { group: 0, index: 0..9, select: 40..51 & 0x3, rams: [[3, 8], [2, 8], [1, 8], [0, 8], [3, 9], [2, 9], [1, 9], [0, 9], [3, 10], [2, 10], [1, 10], [0, 10], [3, 11], [2, 11], [1, 11], [0, 11]] }
+    input_xbar:
+      exact group 0: { 0: hdr.ethernet.src_mac.0-31, 32: hdr.ethernet.src_mac.32-47 }
+      hash 0:
+        0..7: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(0..7)
+        8..9: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(8..9)
+        40..41: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(10..11)
+        11..18: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(0..7)
+        19: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(8)
+        10: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(11)
+        42..43: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(9..10)
+        22..29: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(0..7)
+        20..21: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(10..11)
+        44..45: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(8..9)
+        33..39: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(0..6)
+        30..32: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(9..11)
+        46: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(7)
+        47: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(8)
+      hash group 0:
+        table: [0]
+        seed: 0x1fa514780ee
+    format: { action(0): 0..0, immediate(0): 2..25, version(0): 112..115, match(0): 52..87, action(1): 1..1, immediate(1): 26..49, version(1): 244..247, match(1): [ 116..119, 88..111, 120..127 ], action(2): 128..128, immediate(2): 130..153, version(2): 240..243, match(2): 180..215, action(3): 129..129, immediate(3): 154..177, version(3): 372..375, match(3): [ 348..351, 216..239, 248..255 ], action(4): 256..256, immediate(4): 258..281, version(4): 368..371, match(4): 308..343, action(5): 257..257, immediate(5): 282..305, version(5): 500..503, match(5): [ 460..463, 352..367, 376..383, 448..455 ], action(6): 384..384, immediate(6): 385..408, version(6): 496..499, match(6): 412..447 }
+    match: [ hdr.ethernet.src_mac.32-47(12..15), hdr.ethernet.src_mac.0-31(0..7), hdr.ethernet.src_mac.0-31(8..15), hdr.ethernet.src_mac.0-31(16..23), hdr.ethernet.src_mac.0-31(24..31) ]
+    match_group_map: [ [ 1, 0 ], [ 1, 3, 2 ], [ 3, 5, 4 ], [ 5, 6 ] ]
+    hit: [  tbl_mudsram438 ]
+    miss:  sMAC_exact_0$st3
+    action_bus: { 96..99 : immediate(0..23) }
+    instruction: sMAC_exact_0$st2(action, $DEFAULT)
+    actions:
+      Ingress.ns_exact(0, 1):
+      - p4_param_order: { next_state: 24 }
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x20000005
+      - next_table: 0
+      - { next_state: immediate(0..23) }
+      - set meta.current_state, next_state
+      Ingress.drop(1, 2):
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x20000006
+      - next_table: 0
+      - {  }
+      - set ig_intr_md_for_dprsr.drop_ctl, 1
+    default_action: Ingress.drop
+stage 3 ingress:
+  dependency: action
+  exact_match sMAC_exact_0$st3 0:
+    p4: { name: Ingress.sMAC_exact, size: 710000 }
+    p4_param_order: 
+      hdr.ethernet.src_mac: { type: exact, size: 48, full_size: 48 }
+    row: [ 4, 5, 6, 7, 0, 1, 2, 3 ]
+    bus: [ 0, 0, 0, 0, 0, 0, 0, 0 ]
+    column:
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    stash: 
+      row: [ 4, 5, 6, 7 ]
+      col: [ 2, 2, 2, 2 ]
+      unit: [ 0, 0, 0, 0 ]
+    ways:
+      - { group: 0, index: 0..9, select: 40..51 & 0x3, rams: [[7, 2], [6, 2], [5, 2], [4, 2], [7, 3], [6, 3], [5, 3], [4, 3], [7, 4], [6, 4], [5, 4], [4, 4], [7, 5], [6, 5], [5, 5], [4, 5]] }
+      - { group: 0, index: 10..19, select: 40..51 & 0xc, rams: [[7, 6], [6, 6], [5, 6], [4, 6], [7, 7], [6, 7], [5, 7], [4, 7], [7, 8], [6, 8], [5, 8], [4, 8], [7, 9], [6, 9], [5, 9], [4, 9]] }
+      - { group: 0, index: 20..29, select: 40..51 & 0x30, rams: [[7, 10], [6, 10], [5, 10], [4, 10], [7, 11], [6, 11], [5, 11], [4, 11], [3, 2], [2, 2], [1, 2], [0, 2], [3, 3], [2, 3], [1, 3], [0, 3]] }
+      - { group: 0, index: 30..39, select: 40..51 & 0xc0, rams: [[3, 4], [2, 4], [1, 4], [0, 4], [3, 5], [2, 5], [1, 5], [0, 5], [3, 6], [2, 6], [1, 6], [0, 6], [3, 7], [2, 7], [1, 7], [0, 7]] }
+      - { group: 0, index: 0..9, select: 40..51 & 0x3, rams: [[3, 8], [2, 8], [1, 8], [0, 8], [3, 9], [2, 9], [1, 9], [0, 9], [3, 10], [2, 10], [1, 10], [0, 10], [3, 11], [2, 11], [1, 11], [0, 11]] }
+    input_xbar:
+      exact group 0: { 0: hdr.ethernet.src_mac.0-31, 32: hdr.ethernet.src_mac.32-47 }
+      hash 0:
+        0..7: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(0..7)
+        8..9: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(8..9)
+        40..41: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(10..11)
+        11..18: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(0..7)
+        19: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(8)
+        10: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(11)
+        42..43: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(9..10)
+        22..29: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(0..7)
+        20..21: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(10..11)
+        44..45: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(8..9)
+        33..39: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(0..6)
+        30..32: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(9..11)
+        46: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(7)
+        47: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(8)
+      hash group 0:
+        table: [0]
+        seed: 0xf4d7a618b71d
+    format: { action(0): 0..0, immediate(0): 2..25, version(0): 112..115, match(0): 52..87, action(1): 1..1, immediate(1): 26..49, version(1): 244..247, match(1): [ 116..119, 88..111, 120..127 ], action(2): 128..128, immediate(2): 130..153, version(2): 240..243, match(2): 180..215, action(3): 129..129, immediate(3): 154..177, version(3): 372..375, match(3): [ 348..351, 216..239, 248..255 ], action(4): 256..256, immediate(4): 258..281, version(4): 368..371, match(4): 308..343, action(5): 257..257, immediate(5): 282..305, version(5): 500..503, match(5): [ 460..463, 352..367, 376..383, 448..455 ], action(6): 384..384, immediate(6): 385..408, version(6): 496..499, match(6): 412..447 }
+    match: [ hdr.ethernet.src_mac.32-47(12..15), hdr.ethernet.src_mac.0-31(0..7), hdr.ethernet.src_mac.0-31(8..15), hdr.ethernet.src_mac.0-31(16..23), hdr.ethernet.src_mac.0-31(24..31) ]
+    match_group_map: [ [ 1, 0 ], [ 1, 3, 2 ], [ 3, 5, 4 ], [ 5, 6 ] ]
+    hit: [  tbl_mudsram438 ]
+    miss:  sMAC_exact_0$st4
+    action_bus: { 96..99 : immediate(0..23) }
+    instruction: sMAC_exact_0$st3(action, $DEFAULT)
+    actions:
+      Ingress.ns_exact(0, 1):
+      - p4_param_order: { next_state: 24 }
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x20000005
+      - next_table: 0
+      - { next_state: immediate(0..23) }
+      - set meta.current_state, next_state
+      Ingress.drop(1, 2):
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x20000006
+      - next_table: 0
+      - {  }
+      - set ig_intr_md_for_dprsr.drop_ctl, 1
+    default_action: Ingress.drop
+stage 4 ingress:
+  dependency: action
+  exact_match sMAC_exact_0$st4 0:
+    p4: { name: Ingress.sMAC_exact, size: 710000 }
+    p4_param_order: 
+      hdr.ethernet.src_mac: { type: exact, size: 48, full_size: 48 }
+    row: [ 4, 5, 6, 7, 0, 1, 2, 3 ]
+    bus: [ 0, 0, 0, 0, 0, 0, 0, 0 ]
+    column:
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    - [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+    stash: 
+      row: [ 4, 5, 6, 7 ]
+      col: [ 2, 2, 2, 2 ]
+      unit: [ 0, 0, 0, 0 ]
+    ways:
+      - { group: 0, index: 0..9, select: 40..51 & 0x3, rams: [[7, 2], [6, 2], [5, 2], [4, 2], [7, 3], [6, 3], [5, 3], [4, 3], [7, 4], [6, 4], [5, 4], [4, 4], [7, 5], [6, 5], [5, 5], [4, 5]] }
+      - { group: 0, index: 10..19, select: 40..51 & 0xc, rams: [[7, 6], [6, 6], [5, 6], [4, 6], [7, 7], [6, 7], [5, 7], [4, 7], [7, 8], [6, 8], [5, 8], [4, 8], [7, 9], [6, 9], [5, 9], [4, 9]] }
+      - { group: 0, index: 20..29, select: 40..51 & 0x30, rams: [[7, 10], [6, 10], [5, 10], [4, 10], [7, 11], [6, 11], [5, 11], [4, 11], [3, 2], [2, 2], [1, 2], [0, 2], [3, 3], [2, 3], [1, 3], [0, 3]] }
+      - { group: 0, index: 30..39, select: 40..51 & 0xc0, rams: [[3, 4], [2, 4], [1, 4], [0, 4], [3, 5], [2, 5], [1, 5], [0, 5], [3, 6], [2, 6], [1, 6], [0, 6], [3, 7], [2, 7], [1, 7], [0, 7]] }
+      - { group: 0, index: 0..9, select: 40..51 & 0x3, rams: [[3, 8], [2, 8], [1, 8], [0, 8], [3, 9], [2, 9], [1, 9], [0, 9], [3, 10], [2, 10], [1, 10], [0, 10], [3, 11], [2, 11], [1, 11], [0, 11]] }
+    input_xbar:
+      exact group 0: { 0: hdr.ethernet.src_mac.0-31, 32: hdr.ethernet.src_mac.32-47 }
+      hash 0:
+        0..7: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(0..7)
+        8..9: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(8..9)
+        40..41: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(10..11)
+        11..18: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(0..7)
+        19: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(8)
+        10: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(11)
+        42..43: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(9..10)
+        22..29: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(0..7)
+        20..21: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(10..11)
+        44..45: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(8..9)
+        33..39: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(0..6)
+        30..32: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(9..11)
+        46: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(7)
+        47: random(hdr.ethernet.src_mac.0-31, hdr.ethernet.src_mac.32-47(12..15)) ^ hdr.ethernet.src_mac.32-47(8)
+      hash group 0:
+        table: [0]
+        seed: 0x6428cffb5001
+    format: { action(0): 0..0, immediate(0): 2..25, version(0): 112..115, match(0): 52..87, action(1): 1..1, immediate(1): 26..49, version(1): 244..247, match(1): [ 116..119, 88..111, 120..127 ], action(2): 128..128, immediate(2): 130..153, version(2): 240..243, match(2): 180..215, action(3): 129..129, immediate(3): 154..177, version(3): 372..375, match(3): [ 348..351, 216..239, 248..255 ], action(4): 256..256, immediate(4): 258..281, version(4): 368..371, match(4): 308..343, action(5): 257..257, immediate(5): 282..305, version(5): 500..503, match(5): [ 460..463, 352..367, 376..383, 448..455 ], action(6): 384..384, immediate(6): 385..408, version(6): 496..499, match(6): 412..447 }
+    match: [ hdr.ethernet.src_mac.32-47(12..15), hdr.ethernet.src_mac.0-31(0..7), hdr.ethernet.src_mac.0-31(8..15), hdr.ethernet.src_mac.0-31(16..23), hdr.ethernet.src_mac.0-31(24..31) ]
+    match_group_map: [ [ 1, 0 ], [ 1, 3, 2 ], [ 3, 5, 4 ], [ 5, 6 ] ]
+    hit: [  tbl_mudsram438 ]
+    miss:  tbl_mudsram438
+    action_bus: { 96..99 : immediate(0..23) }
+    instruction: sMAC_exact_0$st4(action, $DEFAULT)
+    actions:
+      Ingress.ns_exact(0, 1):
+      - p4_param_order: { next_state: 24 }
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x20000005
+      - next_table: 0
+      - { next_state: immediate(0..23) }
+      - set meta.current_state, next_state
+      Ingress.drop(1, 2):
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x20000006
+      - next_table: 0
+      - {  }
+      - set ig_intr_md_for_dprsr.drop_ctl, 1
+    default_action: Ingress.drop
+  ternary_match tbl_mudsram438 1:
+    p4: { name: tbl_mudsram438, hidden: true }
+    gateway:
+      name: cond-6
+      input_xbar:
+        exact group 0: { 50: hdr.tcp.$valid }
+      row: 0
+      bus: 1
+      unit: 0
+      match: { 2: hdr.tcp.$valid }
+      0x1:
+        run_table: true
+      miss:
+        next:  tbl_mudsram442
+      condition: 
+        expression: "(hdr.tcp.$valid == 1)"
+        true:  tbl_mudsram438
+        false:  tbl_mudsram442
+    hit: [  typEth_exact_0 ]
+    miss:  typEth_exact_0
+    indirect: tbl_mudsram438$tind
+  ternary_indirect tbl_mudsram438$tind:
+    row: 0
+    bus: 0
+    format: { action: 0..0 }
+    instruction: tbl_mudsram438$tind(action, $DEFAULT)
+    actions:
+      mudsram438(1, 3):
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true, is_constant: true }
+      - handle: 0x20000003
+      - next_table: 0
+      - set meta.dport, hdr.tcp.dstPort
+    default_action: mudsram438
+  ternary_match tbl_mudsram442 2:
+    p4: { name: tbl_mudsram442, hidden: true }
+    gateway:
+      name: cond-7
+      input_xbar:
+        exact group 0: { 51: hdr.udp.$valid }
+      row: 1
+      bus: 1
+      unit: 0
+      match: { 3: hdr.udp.$valid }
+      0x1:
+        run_table: true
+      miss:
+        next:  typEth_exact_0
+      condition: 
+        expression: "(hdr.udp.$valid == 1)"
+        true:  tbl_mudsram442
+        false:  typEth_exact_0
+    hit: [  typEth_exact_0 ]
+    miss:  typEth_exact_0
+    indirect: tbl_mudsram442$tind
+  ternary_indirect tbl_mudsram442$tind:
+    row: 0
+    bus: 1
+    format: { action: 0..0 }
+    instruction: tbl_mudsram442$tind(action, $DEFAULT)
+    actions:
+      mudsram442(1, 4):
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true, is_constant: true }
+      - handle: 0x20000004
+      - next_table: 0
+      - set meta.dport, hdr.udp.dstPort
+    default_action: mudsram442
+stage 5 ingress:
+  dependency: match
+  exact_match typEth_exact_0 0:
+    p4: { name: Ingress.typEth_exact, size: 28 }
+    p4_param_order: 
+      meta.current_state: { type: exact, size: 24, full_size: 24 }
+      hdr.ethernet.ether_type: { type: exact, size: 16, full_size: 16 }
+    row: 7
+    bus: 0
+    column: [ 2, 3, 4, 5 ]
+    stash: 
+      row: [ 7 ]
+      col: [ 2 ]
+      unit: [ 0 ]
+    ways:
+      - { group: 0, index: 0..9, select: 40..51 & 0x0, rams: [[7, 2]] }
+      - { group: 0, index: 10..19, select: 40..51 & 0x0, rams: [[7, 3]] }
+      - { group: 0, index: 20..29, select: 40..51 & 0x0, rams: [[7, 4]] }
+      - { group: 0, index: 30..39, select: 40..51 & 0x0, rams: [[7, 5]] }
+    input_xbar:
+      exact group 0: { 0: meta.current_state, 24: hdr.ethernet.ether_type(8..15), 32: hdr.ethernet.ether_type(0..7) }
+      hash 0:
+        0..1: random(meta.current_state, hdr.ethernet.ether_type(10..15)) ^ hdr.ethernet.ether_type(8..9)
+        2..9: random(meta.current_state, hdr.ethernet.ether_type(10..15)) ^ hdr.ethernet.ether_type(0..7)
+        11..12: random(meta.current_state, hdr.ethernet.ether_type(10..15)) ^ hdr.ethernet.ether_type(8..9)
+        13..19: random(meta.current_state, hdr.ethernet.ether_type(10..15)) ^ hdr.ethernet.ether_type(0..6)
+        10: random(meta.current_state, hdr.ethernet.ether_type(10..15)) ^ hdr.ethernet.ether_type(7)
+        22..23: random(meta.current_state, hdr.ethernet.ether_type(10..15)) ^ hdr.ethernet.ether_type(8..9)
+        24..29: random(meta.current_state, hdr.ethernet.ether_type(10..15)) ^ hdr.ethernet.ether_type(0..5)
+        20..21: random(meta.current_state, hdr.ethernet.ether_type(10..15)) ^ hdr.ethernet.ether_type(6..7)
+        33..34: random(meta.current_state, hdr.ethernet.ether_type(10..15)) ^ hdr.ethernet.ether_type(8..9)
+        35..39: random(meta.current_state, hdr.ethernet.ether_type(10..15)) ^ hdr.ethernet.ether_type(0..4)
+        30..32: random(meta.current_state, hdr.ethernet.ether_type(10..15)) ^ hdr.ethernet.ether_type(5..7)
+      hash group 0:
+        table: [0]
+        seed: 0x59eabe6137
+    format: { action(0): 0..0, immediate(0): 2..25, version(0): 112..115, match(0): 50..79, action(1): 1..1, immediate(1): 26..49, version(1): 116..119, match(1): [ 106..111, 80..103 ] }
+    match: [ hdr.ethernet.ether_type(10..15), meta.current_state(0..7), meta.current_state(8..15), meta.current_state(16..23) ]
+    match_group_map: [ [ 0, 1 ] ]
+    hit: [  tbl_mudsram435 ]
+    miss:  tbl_mudsram435
+    action_bus: { 96..99 : immediate(0..23) }
+    instruction: typEth_exact_0(action, $DEFAULT)
+    actions:
+      Ingress.ns_exact(0, 1):
+      - p4_param_order: { next_state: 24 }
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x20000007
+      - next_table: 0
+      - { next_state_2: immediate(0..23), next_state: next_state_2 }
+      - set meta.flag, 1
+      - set meta.current_state, next_state
+      NoAction(1, 0):
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x20000008
+      - next_table: 0
+      - {  }
+    default_action: NoAction
+  ternary_match tbl_mudsram435 1:
+    p4: { name: tbl_mudsram435, hidden: true }
+    hit: [  tbl_mudsram434 ]
+    miss:  tbl_mudsram434
+    indirect: tbl_mudsram435$tind
+  stateful tbl_mudsram435$salu.Ingress.tst_ingg:
+    p4: { name: Ingress.tst_ingg, size: 1 }
+    row: 7
+    logical_bus: S
+    column: [ 0, 1 ]
+    maprams: [ 0, 1 ]
+    home_row: 7
+    input_xbar:
+      exact group 0: { 64: ig_intr_md_from_prsr.global_tstamp.0-31 }
+    data_bytemask: 15
+    format: { lo: 32 }
+    actions:
+      tst_actionn_0:
+      - alu_a lo, phv_lo
+  ternary_indirect tbl_mudsram435$tind:
+    row: 1
+    bus: 0
+    format: { action: 0..0, meter_addr: 1..10 }
+    stateful: tbl_mudsram435$salu.Ingress.tst_ingg(meter_addr, $DEFAULT, $DEFAULT)
+    instruction: tbl_mudsram435$tind(action, $DEFAULT)
+    actions:
+      mudsram435(0, 0):
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true, is_constant: true }
+      - handle: 0x20000002
+      - next_table: 0
+      - tbl_mudsram435$salu.Ingress.tst_ingg(tst_actionn_0, 0)
+    default_action: mudsram435
+  ternary_match tbl_mudsram434 2:
+    p4: { name: tbl_mudsram434, hidden: true }
+    hit: [  typEth_default_0 ]
+    miss:  typEth_default_0
+    indirect: tbl_mudsram434$tind
+  stateful tbl_mudsram434$salu.Ingress.tst_ing:
+    p4: { name: Ingress.tst_ing, size: 1 }
+    row: 11
+    logical_bus: S
+    column: [ 0, 1 ]
+    maprams: [ 0, 1 ]
+    home_row: 11
+    input_xbar:
+      exact group 0: { 64: ig_intr_md_from_prsr.global_tstamp.0-31, 96: ig_intr_md_from_prsr.global_tstamp.32-47 }
+      hash 1:
+        0..31: ig_intr_md_from_prsr.global_tstamp.0-31
+        32..47: ig_intr_md_from_prsr.global_tstamp.32-47
+      hash group 1:
+        table: [1]
+        seed: 0x0
+    hash_bytemask: 63
+    format: { lo: 32, hi:32 }
+    actions:
+      tst_action_0:
+      - alu_a lo, phv_hi(0..15)
+      - alu_a hi, phv_lo
+  ternary_indirect tbl_mudsram434$tind:
+    row: 0
+    bus: 1
+    format: { action: 0..0, meter_addr: 1..10 }
+    stateful: tbl_mudsram434$salu.Ingress.tst_ing(meter_addr, $DEFAULT, $DEFAULT)
+    instruction: tbl_mudsram434$tind(action, $DEFAULT)
+    actions:
+      mudsram434(0, 0):
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true, is_constant: true }
+      - handle: 0x20000001
+      - next_table: 0
+      - tbl_mudsram434$salu.Ingress.tst_ing(tst_action_0, 0)
+    default_action: mudsram434
+stage 6 ingress:
+  dependency: match
+  exact_match typEth_default_0 0:
+    p4: { name: Ingress.typEth_default, size: 12 }
+    p4_param_order: 
+      meta.current_state: { type: exact, size: 24, full_size: 24 }
+    row: 7
+    bus: 0
+    column: [ 2, 3, 4, 5 ]
+    stash: 
+      row: [ 7 ]
+      col: [ 2 ]
+      unit: [ 0 ]
+    ways:
+      - { group: 0, index: 0..9, select: 40..51 & 0x0, rams: [[7, 2]] }
+      - { group: 0, index: 10..19, select: 40..51 & 0x0, rams: [[7, 3]] }
+      - { group: 0, index: 20..29, select: 40..51 & 0x0, rams: [[7, 4]] }
+      - { group: 0, index: 30..39, select: 40..51 & 0x0, rams: [[7, 5]] }
+    input_xbar:
+      exact group 0: { 0: meta.current_state }
+      hash 0:
+        0..7: random(meta.current_state(10..23)) ^ meta.current_state(0..7)
+        8..9: random(meta.current_state(10..23)) ^ meta.current_state(8..9)
+        11..18: random(meta.current_state(10..23)) ^ meta.current_state(0..7)
+        19: random(meta.current_state(10..23)) ^ meta.current_state(8)
+        10: random(meta.current_state(10..23)) ^ meta.current_state(9)
+        22..29: random(meta.current_state(10..23)) ^ meta.current_state(0..7)
+        20..21: random(meta.current_state(10..23)) ^ meta.current_state(8..9)
+        33..39: random(meta.current_state(10..23)) ^ meta.current_state(0..6)
+        30: random(meta.current_state(10..23)) ^ meta.current_state(7)
+        31..32: random(meta.current_state(10..23)) ^ meta.current_state(8..9)
+      hash group 0:
+        table: [0]
+        seed: 0x1d469cc72d
+    format: { action(0): 0..1, immediate(0): 4..27, version(0): 112..115, match(0): [ 66..71, 56..63 ], action(1): 2..3, immediate(1): 28..51, version(1): 116..119, match(1): [ 82..87, 72..79 ] }
+    match: [ meta.current_state(10..15), meta.current_state(16..23) ]
+    match_group_map: [ [ 0, 1 ] ]
+    gateway:
+      name: cond-8
+      input_xbar:
+        exact group 0: { 24: meta.flag }
+      row: 7
+      bus: 0
+      unit: 0
+      match: { 0: meta.flag }
+      0x00:
+        run_table: true
+      miss:
+        next:  tbl_mudsram457
+      condition: 
+        expression: "(meta.flag == 0)"
+        true:  typEth_default_0
+        false:  tbl_mudsram457
+    hit: [  tbl_mudsram457 ]
+    miss:  tbl_mudsram457
+    action_bus: { 96..99 : immediate(0..23) }
+    instruction: typEth_default_0(action, $DEFAULT)
+    actions:
+      Ingress.ns_default(1, 1):
+      - p4_param_order: { next_state: 24 }
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x20000009
+      - next_table: 0
+      - { next_state_5: immediate(0..23), next_state: next_state_5 }
+      - set meta.current_state, next_state
+      Ingress.drop(2, 2):
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x2000000a
+      - next_table: 0
+      - {  }
+      - set ig_intr_md_for_dprsr.drop_ctl, 1
+    default_action: Ingress.drop
+  ternary_match tbl_mudsram457 1:
+    p4: { name: tbl_mudsram457, hidden: true }
+    hit: [  protocol_exact_0 ]
+    miss:  protocol_exact_0
+    indirect: tbl_mudsram457$tind
+  ternary_indirect tbl_mudsram457$tind:
+    row: 0
+    bus: 0
+    format: { action: 0..0 }
+    instruction: tbl_mudsram457$tind(action, $DEFAULT)
+    actions:
+      mudsram457(0, 3):
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true, is_constant: true }
+      - handle: 0x2000000d
+      - next_table: 0
+      - set meta.flag, 0
+    default_action: mudsram457
+stage 7 ingress:
+  dependency: match
+  exact_match protocol_exact_0 0:
+    p4: { name: Ingress.protocol_exact, size: 87 }
+    p4_param_order: 
+      meta.current_state: { type: exact, size: 24, full_size: 24 }
+      hdr.ipv4.protocol: { type: exact, size: 8, full_size: 8 }
+    row: 7
+    bus: 0
+    column: [ 2, 3, 4, 5 ]
+    stash: 
+      row: [ 7 ]
+      col: [ 2 ]
+      unit: [ 0 ]
+    ways:
+      - { group: 0, index: 0..9, select: 40..51 & 0x0, rams: [[7, 2]] }
+      - { group: 0, index: 10..19, select: 40..51 & 0x0, rams: [[7, 3]] }
+      - { group: 0, index: 20..29, select: 40..51 & 0x0, rams: [[7, 4]] }
+      - { group: 0, index: 30..39, select: 40..51 & 0x0, rams: [[7, 5]] }
+    input_xbar:
+      exact group 0: { 0: meta.current_state, 24: hdr.ipv4.protocol }
+      hash 0:
+        0..1: random(meta.current_state(2..23)) ^ meta.current_state(0..1)
+        2..9: random(meta.current_state(2..23)) ^ hdr.ipv4.protocol
+        11..12: random(meta.current_state(2..23)) ^ meta.current_state(0..1)
+        13..19: random(meta.current_state(2..23)) ^ hdr.ipv4.protocol(0..6)
+        10: random(meta.current_state(2..23)) ^ hdr.ipv4.protocol(7)
+        22..23: random(meta.current_state(2..23)) ^ meta.current_state(0..1)
+        24..29: random(meta.current_state(2..23)) ^ hdr.ipv4.protocol(0..5)
+        20..21: random(meta.current_state(2..23)) ^ hdr.ipv4.protocol(6..7)
+        33..34: random(meta.current_state(2..23)) ^ meta.current_state(0..1)
+        35..39: random(meta.current_state(2..23)) ^ hdr.ipv4.protocol(0..4)
+        30..32: random(meta.current_state(2..23)) ^ hdr.ipv4.protocol(5..7)
+      hash group 0:
+        table: [0]
+        seed: 0x3d1218f896
+    format: { action(0): 0..0, immediate(0): 2..25, version(0): 112..115, match(0): 50..71, action(1): 1..1, immediate(1): 26..49, version(1): 116..119, match(1): [ 90..95, 72..87 ] }
+    match: [ meta.current_state(2..7), meta.current_state(8..15), meta.current_state(16..23) ]
+    match_group_map: [ [ 0, 1 ] ]
+    hit: [  dPort_exact_0 ]
+    miss:  dPort_exact_0
+    action_bus: { 96..99 : immediate(0..23) }
+    instruction: protocol_exact_0(action, $DEFAULT)
+    actions:
+      Ingress.ns_exact(0, 1):
+      - p4_param_order: { next_state: 24 }
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x2000000b
+      - next_table: 0
+      - { next_state_3: immediate(0..23), next_state: next_state_3 }
+      - set meta.current_state, next_state
+      Ingress.drop(1, 2):
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x2000000c
+      - next_table: 0
+      - {  }
+      - set ig_intr_md_for_dprsr.drop_ctl, 1
+    default_action: Ingress.drop
+stage 8 ingress:
+  dependency: match
+  exact_match dPort_exact_0 0:
+    p4: { name: Ingress.dPort_exact, size: 132 }
+    p4_param_order: 
+      meta.current_state: { type: exact, size: 24, full_size: 24 }
+      meta.dport: { type: exact, size: 16, full_size: 16 }
+    row: 7
+    bus: 0
+    column: [ 2, 3, 4, 5 ]
+    stash: 
+      row: [ 7 ]
+      col: [ 2 ]
+      unit: [ 0 ]
+    ways:
+      - { group: 0, index: 0..9, select: 40..51 & 0x0, rams: [[7, 2]] }
+      - { group: 0, index: 10..19, select: 40..51 & 0x0, rams: [[7, 3]] }
+      - { group: 0, index: 20..29, select: 40..51 & 0x0, rams: [[7, 4]] }
+      - { group: 0, index: 30..39, select: 40..51 & 0x0, rams: [[7, 5]] }
+    input_xbar:
+      exact group 0: { 0: meta.current_state, 24: meta.dport(8..15), 32: meta.dport(0..7) }
+      hash 0:
+        0..1: random(meta.current_state, meta.dport(10..15)) ^ meta.dport(8..9)
+        2..9: random(meta.current_state, meta.dport(10..15)) ^ meta.dport(0..7)
+        11..12: random(meta.current_state, meta.dport(10..15)) ^ meta.dport(8..9)
+        13..19: random(meta.current_state, meta.dport(10..15)) ^ meta.dport(0..6)
+        10: random(meta.current_state, meta.dport(10..15)) ^ meta.dport(7)
+        22..23: random(meta.current_state, meta.dport(10..15)) ^ meta.dport(8..9)
+        24..29: random(meta.current_state, meta.dport(10..15)) ^ meta.dport(0..5)
+        20..21: random(meta.current_state, meta.dport(10..15)) ^ meta.dport(6..7)
+        33..34: random(meta.current_state, meta.dport(10..15)) ^ meta.dport(8..9)
+        35..39: random(meta.current_state, meta.dport(10..15)) ^ meta.dport(0..4)
+        30..32: random(meta.current_state, meta.dport(10..15)) ^ meta.dport(5..7)
+      hash group 0:
+        table: [0]
+        seed: 0xd4c5e8d07
+    format: { action(0): 0..0, immediate(0): 2..25, version(0): 112..115, match(0): 50..79, action(1): 1..1, immediate(1): 26..49, version(1): 116..119, match(1): [ 106..111, 80..103 ] }
+    match: [ meta.dport(10..15), meta.current_state(0..7), meta.current_state(8..15), meta.current_state(16..23) ]
+    match_group_map: [ [ 0, 1 ] ]
+    hit: [  dPort_default_0 ]
+    miss:  dPort_default_0
+    action_bus: { 96..99 : immediate(0..23) }
+    instruction: dPort_exact_0(action, $DEFAULT)
+    actions:
+      Ingress.ns_exact(0, 1):
+      - p4_param_order: { next_state: 24 }
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x2000000e
+      - next_table: 0
+      - { next_state_4: immediate(0..23), next_state: next_state_4 }
+      - set meta.flag, 1
+      - set meta.current_state, next_state
+      NoAction(1, 0):
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x2000000f
+      - next_table: 0
+      - {  }
+    default_action: NoAction
+stage 9 ingress:
+  dependency: match
+  exact_match dPort_default_0 0:
+    p4: { name: Ingress.dPort_default, size: 37 }
+    p4_param_order: 
+      meta.current_state: { type: exact, size: 24, full_size: 24 }
+    row: 7
+    bus: 0
+    column: [ 2, 3, 4, 5 ]
+    stash: 
+      row: [ 7 ]
+      col: [ 2 ]
+      unit: [ 0 ]
+    ways:
+      - { group: 0, index: 0..9, select: 40..51 & 0x0, rams: [[7, 2]] }
+      - { group: 0, index: 10..19, select: 40..51 & 0x0, rams: [[7, 3]] }
+      - { group: 0, index: 20..29, select: 40..51 & 0x0, rams: [[7, 4]] }
+      - { group: 0, index: 30..39, select: 40..51 & 0x0, rams: [[7, 5]] }
+    input_xbar:
+      exact group 0: { 0: meta.current_state }
+      hash 0:
+        0..7: random(meta.current_state(10..23)) ^ meta.current_state(0..7)
+        8..9: random(meta.current_state(10..23)) ^ meta.current_state(8..9)
+        11..18: random(meta.current_state(10..23)) ^ meta.current_state(0..7)
+        19: random(meta.current_state(10..23)) ^ meta.current_state(8)
+        10: random(meta.current_state(10..23)) ^ meta.current_state(9)
+        22..29: random(meta.current_state(10..23)) ^ meta.current_state(0..7)
+        20..21: random(meta.current_state(10..23)) ^ meta.current_state(8..9)
+        33..39: random(meta.current_state(10..23)) ^ meta.current_state(0..6)
+        30: random(meta.current_state(10..23)) ^ meta.current_state(7)
+        31..32: random(meta.current_state(10..23)) ^ meta.current_state(8..9)
+      hash group 0:
+        table: [0]
+        seed: 0x2dc662ef36
+    format: { action(0): 0..1, immediate(0): 4..27, version(0): 112..115, match(0): [ 66..71, 56..63 ], action(1): 2..3, immediate(1): 28..51, version(1): 116..119, match(1): [ 82..87, 72..79 ] }
+    match: [ meta.current_state(10..15), meta.current_state(16..23) ]
+    match_group_map: [ [ 0, 1 ] ]
+    gateway:
+      name: cond-9
+      input_xbar:
+        exact group 0: { 24: meta.flag }
+      row: 7
+      bus: 0
+      unit: 0
+      match: { 0: meta.flag }
+      0x00:
+        run_table: true
+      miss:
+        next:  tbl_mudsram463
+      condition: 
+        expression: "(meta.flag == 0)"
+        true:  dPort_default_0
+        false:  tbl_mudsram463
+    hit: [  tbl_mudsram463 ]
+    miss:  tbl_mudsram463
+    action_bus: { 96..99 : immediate(0..23) }
+    instruction: dPort_default_0(action, $DEFAULT)
+    actions:
+      Ingress.ns_default(1, 1):
+      - p4_param_order: { next_state: 24 }
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x20000010
+      - next_table: 0
+      - { next_state_6: immediate(0..23), next_state: next_state_6 }
+      - set meta.current_state, next_state
+      Ingress.drop(2, 2):
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x20000011
+      - next_table: 0
+      - {  }
+      - set ig_intr_md_for_dprsr.drop_ctl, 1
+    default_action: Ingress.drop
+  ternary_match tbl_mudsram463 1:
+    p4: { name: tbl_mudsram463, hidden: true }
+    hit: [  dstIP_exact_0 ]
+    miss:  dstIP_exact_0
+    indirect: tbl_mudsram463$tind
+  ternary_indirect tbl_mudsram463$tind:
+    row: 0
+    bus: 0
+    format: { action: 0..0 }
+    instruction: tbl_mudsram463$tind(action, $DEFAULT)
+    actions:
+      mudsram463(0, 3):
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true, is_constant: true }
+      - handle: 0x20000012
+      - next_table: 0
+      - set meta.flag, 0
+    default_action: mudsram463
+stage 10 ingress:
+  dependency: match
+  exact_match dstIP_exact_0 0:
+    p4: { name: Ingress.dstIP_exact, size: 432 }
+    p4_param_order: 
+      meta.current_state: { type: exact, size: 24, full_size: 24 }
+      hdr.ipv4.dst_addr: { type: exact, size: 32, full_size: 32 }
+    row: 7
+    bus: 0
+    column: [ 2, 3, 4, 5 ]
+    stash: 
+      row: [ 7 ]
+      col: [ 2 ]
+      unit: [ 0 ]
+    ways:
+      - { group: 0, index: 0..9, select: 40..51 & 0x0, rams: [[7, 2]] }
+      - { group: 0, index: 10..19, select: 40..51 & 0x0, rams: [[7, 3]] }
+      - { group: 0, index: 20..29, select: 40..51 & 0x0, rams: [[7, 4]] }
+      - { group: 0, index: 30..39, select: 40..51 & 0x0, rams: [[7, 5]] }
+    input_xbar:
+      exact group 0: { 0: hdr.ipv4.dst_addr, 32: meta.current_state }
+      hash 0:
+        0..7: random(hdr.ipv4.dst_addr(10..31), meta.current_state) ^ hdr.ipv4.dst_addr(0..7)
+        8..9: random(hdr.ipv4.dst_addr(10..31), meta.current_state) ^ hdr.ipv4.dst_addr(8..9)
+        11..18: random(hdr.ipv4.dst_addr(10..31), meta.current_state) ^ hdr.ipv4.dst_addr(0..7)
+        19: random(hdr.ipv4.dst_addr(10..31), meta.current_state) ^ hdr.ipv4.dst_addr(8)
+        10: random(hdr.ipv4.dst_addr(10..31), meta.current_state) ^ hdr.ipv4.dst_addr(9)
+        22..29: random(hdr.ipv4.dst_addr(10..31), meta.current_state) ^ hdr.ipv4.dst_addr(0..7)
+        20..21: random(hdr.ipv4.dst_addr(10..31), meta.current_state) ^ hdr.ipv4.dst_addr(8..9)
+        33..39: random(hdr.ipv4.dst_addr(10..31), meta.current_state) ^ hdr.ipv4.dst_addr(0..6)
+        30: random(hdr.ipv4.dst_addr(10..31), meta.current_state) ^ hdr.ipv4.dst_addr(7)
+        31..32: random(hdr.ipv4.dst_addr(10..31), meta.current_state) ^ hdr.ipv4.dst_addr(8..9)
+      hash group 0:
+        table: [0]
+        seed: 0x84238ea9a0
+    format: { action(0): 0..0, immediate(0): 2..10, version(0): 112..115, match(0): [ 74..79, 32..71 ], action(1): 1..1, immediate(1): 11..19, version(1): 116..119, match(1): [ 122..127, 80..111, 24..31 ] }
+    match: [ hdr.ipv4.dst_addr(10..15), hdr.ipv4.dst_addr(16..23), hdr.ipv4.dst_addr(24..31), meta.current_state(0..7), meta.current_state(8..15), meta.current_state(16..23) ]
+    match_group_map: [ [ 0, 1 ] ]
+    hit: [  dstIP_default_0 ]
+    miss:  dstIP_default_0
+    action_bus: { 32..33 : immediate(0..8) }
+    instruction: dstIP_exact_0(action, $DEFAULT)
+    actions:
+      Ingress.ns_exact_last(0, 1):
+      - p4_param_order: { switchPort: 9 }
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x20000013
+      - next_table: 0
+      - { $constant0: immediate(0..8), $constant0: 148 }
+      - set meta.flag, 1
+      - set ig_intr_md_for_tm.ucast_egress_port, $constant0
+      NoAction(1, 0):
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x20000014
+      - next_table: 0
+      - {  }
+    default_action: NoAction
+stage 11 ingress:
+  dependency: match
+  exact_match dstIP_default_0 0:
+    p4: { name: Ingress.dstIP_default, size: 1 }
+    p4_param_order: 
+      meta.current_state: { type: exact, size: 24, full_size: 24 }
+    row: 7
+    bus: 0
+    column: [ 2, 3, 4, 5 ]
+    stash: 
+      row: [ 7 ]
+      col: [ 2 ]
+      unit: [ 0 ]
+    ways:
+      - { group: 0, index: 0..9, select: 40..51 & 0x0, rams: [[7, 2]] }
+      - { group: 0, index: 10..19, select: 40..51 & 0x0, rams: [[7, 3]] }
+      - { group: 0, index: 20..29, select: 40..51 & 0x0, rams: [[7, 4]] }
+      - { group: 0, index: 30..39, select: 40..51 & 0x0, rams: [[7, 5]] }
+    input_xbar:
+      exact group 0: { 0: meta.current_state }
+      hash 0:
+        0..7: random(meta.current_state(10..23)) ^ meta.current_state(0..7)
+        8..9: random(meta.current_state(10..23)) ^ meta.current_state(8..9)
+        11..18: random(meta.current_state(10..23)) ^ meta.current_state(0..7)
+        19: random(meta.current_state(10..23)) ^ meta.current_state(8)
+        10: random(meta.current_state(10..23)) ^ meta.current_state(9)
+        22..29: random(meta.current_state(10..23)) ^ meta.current_state(0..7)
+        20..21: random(meta.current_state(10..23)) ^ meta.current_state(8..9)
+        33..39: random(meta.current_state(10..23)) ^ meta.current_state(0..6)
+        30: random(meta.current_state(10..23)) ^ meta.current_state(7)
+        31..32: random(meta.current_state(10..23)) ^ meta.current_state(8..9)
+      hash group 0:
+        table: [0]
+        seed: 0x94b5be43cd
+    format: { action(0): 0..1, immediate(0): 8..16, version(0): 112..115, match(0): [ 58..63, 48..55 ], action(1): 2..3, immediate(1): 17..25, version(1): 116..119, match(1): [ 74..79, 64..71 ], action(2): 4..5, immediate(2): 26..34, version(2): 120..123, match(2): [ 90..95, 80..87 ], action(3): 6..7, immediate(3): 35..43, version(3): 124..127, match(3): [ 106..111, 96..103 ] }
+    match: [ meta.current_state(10..15), meta.current_state(16..23) ]
+    match_group_map: [ [ 0, 1, 2, 3 ] ]
+    gateway:
+      name: cond-10
+      input_xbar:
+        exact group 0: { 24: meta.flag }
+      row: 7
+      bus: 0
+      unit: 0
+      match: { 0: meta.flag }
+      0x00:
+        run_table: true
+      miss:
+        next:  END
+      condition: 
+        expression: "(meta.flag == 0)"
+        true:  dstIP_default_0
+        false:  END
+    hit: [  END ]
+    miss:  END
+    action_bus: { 32..33 : immediate(0..8) }
+    instruction: dstIP_default_0(action, $DEFAULT)
+    actions:
+      Ingress.ns_default_last(1, 1):
+      - p4_param_order: { switchPort: 9 }
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x20000015
+      - next_table: 0
+      - { $constant0: immediate(0..8), $constant0: 148 }
+      - set ig_intr_md_for_tm.ucast_egress_port, $constant0
+      Ingress.drop(2, 2):
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true }
+      - handle: 0x20000016
+      - next_table: 0
+      - {  }
+      - set ig_intr_md_for_dprsr.drop_ctl, 1
+    default_action: Ingress.drop
+stage 0 egress:
+  gateway $egress_starter_pistol 1:
+    name: $egress_starter_pistol-gateway
+    row: 0
+    bus: 0
+    unit: 0
+    0x0:  tbl_mudsram568
+    miss:  tbl_mudsram568
+    condition: 
+      expression: "true(always hit)"
+      true:  tbl_mudsram568
+      false:  tbl_mudsram568
+stage 1 egress:
+  dependency: match
+stage 2 egress:
+  dependency: match
+stage 3 egress:
+  dependency: match
+stage 4 egress:
+  dependency: match
+stage 5 egress:
+  dependency: match
+  ternary_match tbl_mudsram568 3:
+    p4: { name: tbl_mudsram568, hidden: true }
+    hit: [  tbl_mudsram567 ]
+    miss:  tbl_mudsram567
+    indirect: tbl_mudsram568$tind
+  stateful tbl_mudsram568$salu.Egress.tst_ingg:
+    p4: { name: Egress.tst_ingg, size: 1 }
+    row: 15
+    logical_bus: S
+    column: [ 0, 1 ]
+    maprams: [ 0, 1 ]
+    home_row: 15
+    input_xbar:
+      exact group 1: { 64: eg_intr_md_from_prsr.global_tstamp.0-31 }
+    data_bytemask: 15
+    format: { lo: 32 }
+    actions:
+      tst_actionn_1:
+      - alu_a lo, phv_lo
+  ternary_indirect tbl_mudsram568$tind:
+    row: 0
+    bus: 0
+    format: { action: 0..0, meter_addr: 1..10 }
+    stateful: tbl_mudsram568$salu.Egress.tst_ingg(meter_addr, $DEFAULT, $DEFAULT)
+    instruction: tbl_mudsram568$tind(action, $DEFAULT)
+    actions:
+      mudsram568(0, 0):
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true, is_constant: true }
+      - handle: 0x20000018
+      - next_table: 0
+      - tbl_mudsram568$salu.Egress.tst_ingg(tst_actionn_1, 0)
+    default_action: mudsram568
+  ternary_match tbl_mudsram567 4:
+    p4: { name: tbl_mudsram567, hidden: true }
+    hit: [  END ]
+    miss:  END
+    indirect: tbl_mudsram567$tind
+  stateful tbl_mudsram567$salu.Egress.tst_ing:
+    p4: { name: Egress.tst_ing, size: 1 }
+    row: 3
+    logical_bus: S
+    column: [ 0, 1 ]
+    maprams: [ 0, 1 ]
+    home_row: 3
+    input_xbar:
+      exact group 1: { 0: eg_intr_md_from_prsr.global_tstamp.32-47, 64: eg_intr_md_from_prsr.global_tstamp.0-31 }
+      hash 2:
+        32..47: eg_intr_md_from_prsr.global_tstamp.32-47
+      hash 3:
+        0..31: eg_intr_md_from_prsr.global_tstamp.0-31
+      hash group 2:
+        table: [2, 3]
+        seed: 0x0
+    hash_bytemask: 63
+    format: { lo: 32, hi:32 }
+    actions:
+      tst_action_1:
+      - alu_a lo, phv_hi(0..15)
+      - alu_a hi, phv_lo
+  ternary_indirect tbl_mudsram567$tind:
+    row: 1
+    bus: 1
+    format: { action: 0..0, meter_addr: 1..10 }
+    stateful: tbl_mudsram567$salu.Egress.tst_ing(meter_addr, $DEFAULT, $DEFAULT)
+    instruction: tbl_mudsram567$tind(action, $DEFAULT)
+    actions:
+      mudsram567(0, 0):
+      - hit_allowed: { allowed: true }
+      - default_action: { allowed: true, is_constant: true }
+      - handle: 0x20000017
+      - next_table: 0
+      - tbl_mudsram567$salu.Egress.tst_ing(tst_action_1, 0)
+    default_action: mudsram567
+
+
+primitives: "mudsram.prim.json"
+dynhash: "mudsram.dynhash.json"

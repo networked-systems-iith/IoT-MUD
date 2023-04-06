@@ -1,0 +1,13 @@
+digraph egress {
+tbl_mudsram567 [ shape=record, style="filled", fillcolor=cornsilk, label="tbl_mudsram567\l\l
+R:\l
+ eg_intr_md_from_prsr.global_tstamp\l
+\l "];
+tbl_mudsram568 [ shape=record, style="filled", fillcolor=cornsilk, label="tbl_mudsram568\l\l
+R:\l
+ eg_intr_md_from_prsr.global_tstamp\l
+\l "];
+    PARSER -> tbl_mudsram567
+    tbl_mudsram567 -> tbl_mudsram568
+    tbl_mudsram568 -> DEPARSER
+}

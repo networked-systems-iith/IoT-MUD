@@ -1,0 +1,125 @@
+digraph ingress {
+tbl_mudsram434 [ shape=record, style="filled", fillcolor=cornsilk, label="tbl_mudsram434\l\l
+R:\l
+ ig_intr_md_from_prsr.global_tstamp\l
+\l "];
+tbl_mudsram435 [ shape=record, style="filled", fillcolor=cornsilk, label="tbl_mudsram435\l\l
+R:\l
+ ig_intr_md_from_prsr.global_tstamp\l
+\l "];
+cond_6 [ shape=record, style="filled", fillcolor=cornsilk, label="hdr.tcp.$valid == 1\l\l
+ "];
+tbl_mudsram438 [ shape=record, style="filled", fillcolor=cornsilk, label="tbl_mudsram438\l\l
+R:\l
+ hdr.tcp.dstPort\l
+\lW:\l
+ meta.dport\l
+ "];
+cond_7 [ shape=record, style="filled", fillcolor=cornsilk, label="hdr.udp.$valid == 1\l\l
+ "];
+sMAC_exact_0 [ shape=record, style="filled", fillcolor=cornsilk, label="sMAC_exact_0\l\l
+M:\l
+ hdr.ethernet.src_mac\l
+\lW:\l
+ meta.current_state\l
+ ig_intr_md_for_dprsr.drop_ctl\l
+ "];
+tbl_mudsram442 [ shape=record, style="filled", fillcolor=cornsilk, label="tbl_mudsram442\l\l
+R:\l
+ hdr.udp.dstPort\l
+\lW:\l
+ meta.dport\l
+ "];
+typEth_exact_0 [ shape=record, style="filled", fillcolor=cornsilk, label="typEth_exact_0\l\l
+M:\l
+ meta.current_state\l
+ hdr.ethernet.ether_type\l
+\lW:\l
+ meta.flag\l
+ meta.current_state\l
+ "];
+cond_8 [ shape=record, style="filled", fillcolor=cornsilk, label="meta.flag == 0\l\l
+ "];
+typEth_default_0 [ shape=record, style="filled", fillcolor=cornsilk, label="typEth_default_0\l\l
+M:\l
+ meta.current_state\l
+\lW:\l
+ meta.current_state\l
+ ig_intr_md_for_dprsr.drop_ctl\l
+ "];
+protocol_exact_0 [ shape=record, style="filled", fillcolor=cornsilk, label="protocol_exact_0\l\l
+M:\l
+ meta.current_state\l
+ hdr.ipv4.protocol\l
+\lW:\l
+ meta.current_state\l
+ ig_intr_md_for_dprsr.drop_ctl\l
+ "];
+tbl_mudsram457 [ shape=record, style="filled", fillcolor=cornsilk, label="tbl_mudsram457\l\l
+W:\l
+ meta.flag\l
+ "];
+dPort_exact_0 [ shape=record, style="filled", fillcolor=cornsilk, label="dPort_exact_0\l\l
+M:\l
+ meta.current_state\l
+ meta.dport\l
+\lW:\l
+ meta.flag\l
+ meta.current_state\l
+ "];
+cond_9 [ shape=record, style="filled", fillcolor=cornsilk, label="meta.flag == 0\l\l
+ "];
+dPort_default_0 [ shape=record, style="filled", fillcolor=cornsilk, label="dPort_default_0\l\l
+M:\l
+ meta.current_state\l
+\lW:\l
+ meta.current_state\l
+ ig_intr_md_for_dprsr.drop_ctl\l
+ "];
+tbl_mudsram463 [ shape=record, style="filled", fillcolor=cornsilk, label="tbl_mudsram463\l\l
+W:\l
+ meta.flag\l
+ "];
+dstIP_exact_0 [ shape=record, style="filled", fillcolor=cornsilk, label="dstIP_exact_0\l\l
+M:\l
+ meta.current_state\l
+ hdr.ipv4.dst_addr\l
+\lW:\l
+ meta.flag\l
+ ig_intr_md_for_tm.ucast_egress_port\l
+ "];
+cond_10 [ shape=record, style="filled", fillcolor=cornsilk, label="meta.flag == 0\l\l
+ "];
+dstIP_default_0 [ shape=record, style="filled", fillcolor=cornsilk, label="dstIP_default_0\l\l
+M:\l
+ meta.current_state\l
+\lW:\l
+ ig_intr_md_for_tm.ucast_egress_port\l
+ ig_intr_md_for_dprsr.drop_ctl\l
+ "];
+    PARSER -> tbl_mudsram434
+    tbl_mudsram434 -> tbl_mudsram435
+    tbl_mudsram435 -> cond_6
+    cond_6 -> tbl_mudsram438
+    cond_6 -> cond_7
+    tbl_mudsram438 -> sMAC_exact_0
+    cond_7 -> tbl_mudsram442
+    cond_7 -> sMAC_exact_0
+    tbl_mudsram442 -> sMAC_exact_0
+    sMAC_exact_0 -> typEth_exact_0
+    typEth_exact_0 -> cond_8
+    cond_8 -> typEth_default_0
+    cond_8 -> protocol_exact_0
+    typEth_default_0 -> protocol_exact_0
+    protocol_exact_0 -> tbl_mudsram457
+    tbl_mudsram457 -> dPort_exact_0
+    dPort_exact_0 -> cond_9
+    cond_9 -> dPort_default_0
+    cond_9 -> tbl_mudsram463
+    dPort_default_0 -> tbl_mudsram463
+    tbl_mudsram463 -> dstIP_exact_0
+    dstIP_exact_0 -> cond_10
+    cond_10 -> dstIP_default_0
+    cond_10 -> DEPARSER
+    dstIP_default_0 -> DEPARSER
+}
